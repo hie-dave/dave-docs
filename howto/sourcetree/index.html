@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Version Control via SourceTree - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../markdown-math/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../git-cli/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#version-control-via-sourcetree" class="nav-link">Version Control via SourceTree</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#key-concepts" class="nav-link">Key Concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#core-workflow" class="nav-link">Core Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installing-sourcetree" class="nav-link">Installing SourceTree</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configure-ssh-authentication-in-sourcetree" class="nav-link">Configure SSH Authentication in SourceTree</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cloning-the-repository" class="nav-link">Cloning the Repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#overview-of-the-sourcetree-window" class="nav-link">Overview of the SourceTree Window</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creating-a-branch" class="nav-link">Creating a Branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#making-and-staging-changes" class="nav-link">Making and Staging Changes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#committing" class="nav-link">Committing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stashing-changes" class="nav-link">Stashing Changes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pushing-to-gitlab" class="nav-link">Pushing to GitLab</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bringing-a-branch-up-to-date" class="nav-link">Bringing a Branch Up to Date</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#opening-a-merge-request" class="nav-link">Opening a Merge Request</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="version-control-via-sourcetree">Version Control via SourceTree</h1>
+<p><a href="https://www.sourcetreeapp.com/">SourceTree</a> is a free graphical Git client
+for Windows and macOS. This page walks through the full workflow for
+contributing to LPJ-GUESS DAVE — from cloning the repository to opening a
+Merge Request on GitLab.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<p>Git manages a complete history of changes to the codebase. Understanding a
+few terms will make the rest of this guide easier to follow:</p>
+<p><strong>Repository (repo)</strong>
+: The project folder plus the complete record of every change ever made to
+  it. The authoritative copy lives on GitLab; everyone who works on the code
+  has their own local copy.</p>
+<p><strong>Commit</strong>
+: A saved snapshot of the repository at a point in time, with a short
+  description of what changed and why. Commits are permanent and can always
+  be recovered.</p>
+<p><strong>Branch</strong>
+: An isolated line of development. The main branch (<code>lpjguess_dave</code>) always
+  contains tested, reviewed code. You do your work on a separate branch so
+  that the main branch is never broken by work in progress.</p>
+<p><strong>Staging area</strong>
+: Before a commit is made, you choose exactly which changed files (and even
+  which lines within a file) to include. This is called <em>staging</em>. It lets
+  you make several unrelated edits and then commit them separately with
+  meaningful descriptions.</p>
+<p><strong>Remote</strong>
+: The shared copy of the repository on GitLab. "Pushing" sends your local
+  commits to the remote; "pulling" brings in commits others have pushed.</p>
+<p><strong>Merge Request (MR)</strong>
+: A GitLab feature. When your branch is ready, you open an MR to ask for it
+  to be reviewed and merged into <code>lpjguess_dave</code>. The CI pipeline runs
+  automatically and reviewers can leave comments on your changes.</p>
+<hr />
+<h2 id="core-workflow">Core Workflow</h2>
+<p>If you already have SourceTree set up, this is the main day-to-day workflow:</p>
+<ol>
+<li>(Optional) Create a branch for new work (or continue on your long-lived
+   development branch): <a href="#creating-a-branch">Creating a Branch</a></li>
+<li>Pull latest updates into your branch:
+   <a href="#bringing-a-branch-up-to-date">Bringing a Branch Up to Date</a></li>
+<li>Check repository state in <strong>File Status</strong> and edit files:
+  <a href="#check-repository-state-in-file-status">Check Repository State in File Status</a></li>
+<li>Stage the files for one logical change:
+   <a href="#making-and-staging-changes">Making and Staging Changes</a></li>
+<li>Commit your staged changes: <a href="#committing">Committing</a></li>
+<li>Push your branch to GitLab: <a href="#pushing-to-gitlab">Pushing to GitLab</a></li>
+<li>(Optional) Open or update a Merge Request:
+   <a href="#opening-a-merge-request">Opening a Merge Request</a></li>
+</ol>
+<p>The rest of this page includes setup details, deeper explanations, and
+troubleshooting guidance.</p>
+<hr />
+<h2 id="installing-sourcetree">Installing SourceTree</h2>
+<p>Download and install SourceTree from
+<a href="https://www.sourcetreeapp.com/">sourcetreeapp.com</a>. During setup it will ask
+you to sign in with an Atlassian account. This is optional; there is no need to
+do this.</p>
+<p>You can also opt to disable merccurial support, which we won't be using.</p>
+<p>Once installed, SourceTree will prompt you to set your user name and email. This
+is important — it will be recorded in your commits. These don't strictly need to
+be the same as in your GitLab account, but it's conventional to do so. You can
+change these later in the settings if needed.</p>
+<hr />
+<h2 id="configure-ssh-authentication-in-sourcetree">Configure SSH Authentication in SourceTree</h2>
+<p>For LPJ-GUESS DAVE, we recommend using Git over SSH rather than HTTPS.</p>
+<p>Using SSH is useful because it avoids repeated password prompts and avoids
+relying on password-based authentication, which is increasingly restricted on
+Git hosting services.</p>
+<p>Before configuring SourceTree, make sure you have an SSH key pair and your
+public key is registered with GitLab. See <a href="../ssh-keys/">SSH Key Management</a>
+for instructions to create a key or locate an existing one.</p>
+<p>In SourceTree, set your SSH client and key:</p>
+<ol>
+<li>Open <strong>Tools → Options</strong>.</li>
+<li>In the <strong>General</strong> tab, go to <strong>SSH Client Configuration</strong>.</li>
+<li>Set <strong>SSH Client</strong> to <strong>OpenSSH</strong>.</li>
+<li>Select your SSH <strong>private</strong> key (the key file without <code>.pub</code>).</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>After this, use SSH repository URLs (<code>git@...</code>) when cloning and managing
+remotes.</p>
+<hr />
+<h2 id="cloning-the-repository">Cloning the Repository</h2>
+<p>Cloning creates a local copy of the repository on your machine.</p>
+<ol>
+<li>In SourceTree, open <strong>File → New...</strong> and select the <strong>Clone</strong> tab.</li>
+<li>Paste the SSH repository URL into the <strong>Source Path</strong> field (use
+  <code>git@...</code>, not <code>https://...</code>):
+   <code>git@stormbringer4.nateko.lu.se:dave/lpj-guess-dave.git</code></li>
+<li>Set <strong>Destination Path</strong> to a folder on your machine
+   (e.g. <code>C:\Users\you\code\lpj-guess-dave</code>).</li>
+<li>Leave <strong>Name</strong> as the default, then click <strong>Clone</strong>.</li>
+</ol>
+<p><img alt="SourceTree clone dialog" src="../img/sourcetree/clone.png" /></p>
+<p>SourceTree will download the full repository. This may take a minute or two
+on the first clone.</p>
+<hr />
+<h2 id="overview-of-the-sourcetree-window">Overview of the SourceTree Window</h2>
+<p>Once cloned, SourceTree opens the repository view.</p>
+<p><img alt="SourceTree main window" src="../img/sourcetree/main.png" /></p>
+<p>The key areas are:</p>
+<ul>
+<li><strong>Toolbar</strong> — buttons for the most common actions: Commit, Pull, Push,
+  Fetch, Branch.</li>
+<li><strong>Left sidebar</strong> — lists your local branches, remote branches, and tags.
+  The branch you currently have checked out is shown in bold.</li>
+<li><strong>Commit graph</strong> (centre) — shows the history of commits as a timeline.
+  Each dot is a commit; branches and merges are visible as lines.</li>
+<li><strong>Working Copy</strong> entry (top of the history list) — click this to see
+  your uncommitted changes.</li>
+</ul>
+<hr />
+<h2 id="creating-a-branch">Creating a Branch</h2>
+<p>Always do new work on its own branch, never directly on <code>lpjguess_dave</code>.</p>
+<ol>
+<li>Click the <strong>Branch</strong> button in the toolbar.</li>
+<li>Enter a short, descriptive name in the <strong>New Branch</strong> field
+   (e.g. <code>fix-canopy-conductance</code> or <code>add-thome-docs</code>). Use hyphens, not
+   spaces.</li>
+<li>Make sure <strong>Checkout New Branch</strong> is ticked.</li>
+<li>Click <strong>Create Branch</strong>.</li>
+</ol>
+<p><img alt="SourceTree new branch dialog" src="../img/sourcetree/new-branch.png" /></p>
+<p>The sidebar will now show your new branch in bold, meaning it is the active
+branch. Any commits you make will go onto this branch.</p>
+<hr />
+<h2 id="making-and-staging-changes">Making and Staging Changes</h2>
+<p>Edit files in the repository folder using whatever tools you normally use
+(an IDE, VSCode, a text editor). When you return to SourceTree you will see
+your changes listed.</p>
+<h3 id="check-repository-state-in-file-status">Check Repository State in File Status</h3>
+<p>If you are unsure "what state am I in right now?", always start by opening
+<strong>File Status</strong>. This is the main place to inspect repository state before
+you commit, pull, or push.</p>
+<p>In <code>File Status</code>, look for:</p>
+<ul>
+<li><strong>Ignored files</strong>: files Git is configured to ignore (for example build
+  outputs). These are typically not part of commits.</li>
+<li><strong>Untracked files</strong>: new files Git sees but is not yet tracking. They will
+  not be committed unless you stage them.</li>
+<li><strong>Unstaged files</strong>: changed files that are not yet selected for commit.</li>
+<li><strong>Staged files</strong>: changes that will be included in the next commit.</li>
+<li>No changed files in either panel: your working tree is <strong>clean</strong>.</li>
+</ul>
+<p>A "clean working tree" simply means there are no uncommitted local file
+changes. This is the safest state for pulling updates.</p>
+<p>Click <strong>File Status</strong> below the toolbar to open the staging
+view:</p>
+<p><img alt="SourceTree staging area" src="../img/sourcetree/working-copy.png" /></p>
+<p>The panel has two sections:</p>
+<ul>
+<li><strong>Staged files</strong> (top) — files that will be included in the next commit.</li>
+<li><strong>Unstaged files</strong> (bottom) — files you have changed but not yet selected for
+  the next commit.</li>
+</ul>
+<p>To stage a file, click the checkbox to the left of its name in the
+<strong>Unstaged files</strong> panel. It moves to <strong>Staged files</strong>. You can stage all
+changed files at once with the <strong>Stage All</strong> button.</p>
+<p>The diff viewer on the right shows exactly what changed in the selected
+file — lines added in green, lines removed in red.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Stage only the files related to one logical change. If you made two
+unrelated edits, stage and commit them separately with different
+descriptions. This makes the history easier to read and simplifies
+reviewing.</p>
+</div>
+<hr />
+<h2 id="committing">Committing</h2>
+<p>Once you have staged the files you want, write a commit message in the text
+box at the bottom of the staging view.</p>
+<p>A good commit message:</p>
+<ul>
+<li>Is a single sentence in the imperative present tense:
+  <em>"Fix negative VPD crash when RH input is 1.0"</em>
+  <em>"Add temperature acclimation documentation"</em></li>
+<li>Describes <strong>why</strong> the change was made, not just what files were touched.</li>
+</ul>
+<p>Click <strong>Commit</strong> to save the snapshot. The commit appears immediately in the
+graph — it is saved locally, but not yet on GitLab.</p>
+<hr />
+<h2 id="stashing-changes">Stashing Changes</h2>
+<p>Sometimes you want to temporarily set aside local edits without making a commit
+(for example, before pulling updates).</p>
+<p>A <strong>stash</strong> is a temporary shelf for uncommitted changes. You can re-apply them
+later.</p>
+<p>In SourceTree:</p>
+<ol>
+<li>Open <strong>File Status</strong>.</li>
+<li>Click <strong>Stash</strong>.</li>
+<li>Enter a short message describing what was stashed.</li>
+<li>Confirm to create the stash.</li>
+</ol>
+<p>Later, when you are ready to restore those changes, open your stash list in
+SourceTree and choose <strong>Apply Stash</strong> (keeps the stash) or <strong>Pop Stash</strong>
+(restores and removes it from the stash list).</p>
+<hr />
+<h2 id="pushing-to-gitlab">Pushing to GitLab</h2>
+<p>"Pushing" sends your local commits to GitLab so others can see them and so
+that they are backed up remotely.</p>
+<ol>
+<li>Click the <strong>Push</strong> button in the toolbar.</li>
+<li>In the dialog, make sure your branch is ticked.</li>
+<li>Click <strong>Push</strong>.</li>
+</ol>
+<p><img alt="SourceTree push dialog" src="../img/sourcetree/push.png" /></p>
+<p>If this is the first time you have pushed this branch, GitLab will create
+a remote copy of it automatically.</p>
+<hr />
+<h2 id="bringing-a-branch-up-to-date">Bringing a Branch Up to Date</h2>
+<p>There are two common reasons to pull changes:</p>
+<ol>
+<li>You want your long-lived development branch to include the latest commits
+   from <code>lpjguess_dave</code>.</li>
+<li>You made commits to <em>the same branch</em> on another machine and now want
+   those commits on this machine too.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before pulling, check your repository state in <a href="#check-repository-state-in-file-status">Check Repository State in
+File Status</a> and make sure your
+working tree is clean.</p>
+<p>If it is not clean, either commit your changes (see
+<a href="#committing">Committing</a>) or stash them (see
+<a href="#stashing-changes">Stashing Changes</a>).</p>
+</div>
+<p><img alt="SourceTree pull dialog" src="../img/sourcetree/pull.png" /></p>
+<h3 id="workflow-a-bring-in-latest-lpjguess_dave-changes">Workflow A: Bring in Latest <code>lpjguess_dave</code> Changes</h3>
+<ol>
+<li>Click <strong>Fetch</strong> in the toolbar to update remote-tracking branches.</li>
+<li>Check out your development branch in the left sidebar.</li>
+<li>Click <strong>Pull</strong>.</li>
+<li>In the pull dialog, choose <code>origin/lpjguess_dave</code> as the branch to pull from.</li>
+<li>Choose one integration method:</li>
+<li><strong>Merge</strong> (simpler, safer default for beginners)</li>
+<li><strong>Rebase</strong> (cleaner history; rewrites your local branch commits)</li>
+<li>Complete the pull and resolve any conflicts if prompted.</li>
+</ol>
+<h3 id="workflow-b-pull-your-own-branch-from-another-machine">Workflow B: Pull Your Own Branch from Another Machine</h3>
+<p>If you pushed commits from another computer to the same branch name:</p>
+<ol>
+<li>Click <strong>Fetch</strong>.</li>
+<li>Check out that branch locally.</li>
+<li>Click <strong>Pull</strong> and pull from the matching remote branch (e.g.
+   <code>origin/my-feature-branch</code>).</li>
+</ol>
+<p>This updates your local branch with the commits you already pushed from the
+other machine.</p>
+<h3 id="merge-vs-rebase-which-should-i-use">Merge vs Rebase (Which Should I Use?)</h3>
+<ul>
+<li><strong>Merge</strong> adds a merge commit and keeps the exact branch history.</li>
+<li><strong>Rebase</strong> replays your commits on top of newer commits, creating a more
+  linear history.</li>
+</ul>
+<p>For this project, a practical rule is:</p>
+<ul>
+<li>Use <strong>Merge</strong> if you are unsure or if multiple people share the branch.</li>
+<li>Use <strong>Rebase</strong> if you are comfortable with Git and want a cleaner history
+  before opening/updating an MR.</li>
+</ul>
+<p>Avoid rebasing commits that have already been pulled by collaborators unless
+your team has explicitly agreed to that workflow.</p>
+<h3 id="resolving-conflicts-in-sourcetree">Resolving Conflicts in SourceTree</h3>
+<p>When Git reports a conflict, it means both sides changed overlapping parts of
+the same file and Git cannot safely decide which version to keep.</p>
+<p>In conflict markers, you will often see:</p>
+<pre><code class="language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+your current branch changes
+=======
+incoming branch changes
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/lpjguess_dave
+</code></pre>
+<ul>
+<li>The block above <code>=======</code> is your current branch version.</li>
+<li>The block below <code>=======</code> is the incoming version.</li>
+<li>You resolve the conflict by choosing one side, or combining both, then
+  removing the markers.</li>
+</ul>
+<p>Practical SourceTree workflow:</p>
+<ol>
+<li>In <strong>File Status</strong>, locate files marked as conflicted.</li>
+<li>Open each conflicted file in the merge tool or your editor.</li>
+<li>For each conflict, choose <strong>Mine</strong>, <strong>Theirs</strong>, or edit manually to keep
+  the correct final content.</li>
+<li>Save the file after all markers are removed.</li>
+<li>Stage the resolved file.</li>
+<li>Continue the operation:</li>
+<li>For a merge-based pull: complete the merge commit.</li>
+<li>For a rebase-based pull: click <strong>Continue Rebase</strong>.</li>
+</ol>
+<p>Repeat until no conflicted files remain.</p>
+<hr />
+<h2 id="opening-a-merge-request">Opening a Merge Request</h2>
+<p>Once your branch is pushed:</p>
+<ol>
+<li>Open the repository on GitLab in your browser.</li>
+<li>GitLab will usually show a banner: <strong>"You pushed a branch — create a
+   Merge Request."</strong> Click the <strong>Create Merge Request</strong> button.</li>
+<li>Fill in the title and description. The description should explain what
+   the change does and how to test it.</li>
+<li>Set <strong>Target branch</strong> to <code>lpjguess_dave</code>.</li>
+<li>Submit the MR.</li>
+</ol>
+<p>The CI pipeline will run automatically. Your MR can be merged once the
+pipeline passes and a reviewer has approved it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not need to open a new MR every time you push. If you push
+additional commits to the same branch, they appear in the already-open
+MR automatically.</p>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

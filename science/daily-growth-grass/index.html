@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Daily Grass Growth - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../../howto/common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../../howto/ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../../howto/climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../../howto/debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../../howto/migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../../howto/contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../../howto/markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../../howto/sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../../howto/git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../daily-growth-tree/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../howto/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#daily-grass-growth" class="nav-link">Daily Grass Growth</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#general-model-structure" class="nav-link">General model structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#plant-functional-types" class="nav-link">Plant functional types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#plant-structure" class="nav-link">Plant structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#radiation-transfer-and-leaf-to-canopy-scaling" class="nav-link">Radiation transfer and leaf-to-canopy scaling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#photosynthesis-and-stomatal-conductance" class="nav-link">Photosynthesis and stomatal conductance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#respiration" class="nav-link">Respiration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#growth" class="nav-link">Growth</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#source-sink-feedbacks" class="nav-link">Source-sink feedbacks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fate-of-excess-carbon" class="nav-link">Fate of 'excess carbon'</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#carbon-allocation" class="nav-link">Carbon allocation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phenology" class="nav-link">Phenology</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#shoot-senescence" class="nav-link">Shoot Senescence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#plant-turnover" class="nav-link">Plant turnover</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mortality" class="nav-link">Mortality</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#seedbank" class="nav-link">Seedbank</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#germination" class="nav-link">Germination</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#establishment" class="nav-link">Establishment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#seed-dispersal" class="nav-link">Seed dispersal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#n-cycling" class="nav-link">N cycling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#references" class="nav-link">References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#appendix-a-photosynthesis" class="nav-link">Appendix A: Photosynthesis</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#c3-photosynthesis" class="nav-link">C3 photosynthesis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#c4-photosynthesis" class="nav-link">C4 photosynthesis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#leaf-maintenance-respiration" class="nav-link">Leaf maintenance respiration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#temperature-responses-of-photosynthetic-parameters" class="nav-link">Temperature responses of photosynthetic parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#relationship-between-photosynthetic-parameters-and-leaf-nitrogen" class="nav-link">Relationship between photosynthetic parameters and leaf nitrogen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#transpiration" class="nav-link">Transpiration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#appendix-b-soil-water-and-root-distribution" class="nav-link">Appendix B: Soil water and root distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="daily-grass-growth">Daily Grass Growth</h1>
+<h2 id="general-model-structure">General model structure</h2>
+<p>In the following, we present the DAVE-Grass model. The version presented here
+([commit hashtag]{.mark}) is embedded into the LPJ-GUESS dynamic vegetation
+model (refs). The model is highly modular and as such can be readily transferred
+to any other land surface or dynamic vegetation model.</p>
+<p>The model can be applied at the site level (e.g. at eddy covariance or phenocam
+locations), as well as in gridded simulations that cover larger areas, including
+continental and global scales. In all cases, the spatial heterogeneity of the
+unit of interest (whether a site or grid cell) is represented by patches
+(usually n &gt; 20) that vary based on the time since the last disturbance. In
+each patch, herbaceous plant functional types (PFTs) are represented by a single
+'average' individual, which means that different age classes are not
+distinguished. Therefore, spatial heterogeneity is captured exclusively through
+the representation of patches, with the final output for a site or grid cell
+calculated as the average across patches.</p>
+<p>DAVE-Grass simulates biogeochemical processes (e.g. growth, storage dynamics,
+allocation, N cycling) as well as demographic processes (e.g. establishment,
+competition) at the daily time scale but uses sub-daily time steps (usually
+half-hourly to 3-hourly) for 'fast processes' such as photosynthesis and
+available radiation.</p>
+<h2 id="plant-functional-types">Plant functional types</h2>
+<p>The model distinguishes four herbaceous plant functional types according to
+their life cycle and photosynthetic pathway: <span class="arithmatex">\(C_3\)</span> perennial herbaceous, <span class="arithmatex">\(C_3\)</span>
+annual herbaceous, <span class="arithmatex">\(C_4\)</span> perennial herbaceous, and <span class="arithmatex">\(C_4\)</span> annual herbaceous. The
+PFTs differ in various key traits (e.g. SLA, N:C ratios, allocation fraction to
+reproductive tissues) as well as functional behaviour (e.g. higher senescence in
+annuals compared to perennials, temperature responses).</p>
+<p><img alt="A diagram of photosynthetic pathway Description automatically
+generated" src="../img/dailygrass/fig1.png" /></p>
+<p>[Fig. 1:]{.mark} diagram showing PFTs and their most important
+differences + all structural and non-structural pools.</p>
+<h2 id="plant-structure">Plant structure</h2>
+<p>The model represents four structural carbon pools in the plant: shoots, roots,
+crowns, and reproductive tissues, and one non-structural (storage) pool (Figure
+XX). All carbon pools are in <span class="arithmatex">\(kg C m^{-2}\)</span>.</p>
+<div class="arithmatex">\[
+C_{total} = C_{struct} + C_{storage}
+\tag{1} 
+\]</div>
+<div class="arithmatex">\[
+C_{struct}\  = {\ C}_{shoot}\  + \ C_{root}\  + \ C_{crown}\  + {\ C}_{repr} \tag{2} 
+\]</div>
+<p>Shoots are divided into culm and leaf components according to a culm
+fraction parameter <span class="arithmatex">\(p_{culm}\)</span>.</p>
+<div class="arithmatex">\[
+C_{shoot}\  = C_{leaf} + C_{culm} \tag{3} 
+\]</div>
+<div class="arithmatex">\[
+C_{leaf}\  = C_{shoot} \times \ (1.0 - p_{culm}) \tag{4} 
+\]</div>
+<p>Green leaf area index (LAI) is then calculated as:</p>
+<div class="arithmatex">\[
+LAI = C_{leaf} \times SLA + C_{culm} \times SCA\  \tag{5} 
+\]</div>
+<p>where SLA is specific leaf area (<span class="arithmatex">\(m^2\)</span> kg<span class="arithmatex">\(^{-1}\)</span> C) and SCA is specific culm
+area (<span class="arithmatex">\(m^2\)</span> kg<span class="arithmatex">\(^{-1}\)</span> C). Parameters <span class="arithmatex">\(p_{culm}\)</span>, SLA, and SCA are assumed
+constant over the course of the developmental cycle but differ among
+PFTs (see Table X). [Justify.]{.mark}</p>
+<p>The crown constitutes the interface between above-ground and
+below-ground components and is located partly above- and belowground,
+but for simplicity is assumed to be located belowground in the model
+(Fig. 1).</p>
+<p>The storage pool (<span class="arithmatex">\(C_{storage}\)</span>) represents non-structural carbohydrate
+(NSC) reserves in the plant, including glucose, sucrose, starch, and
+other carbohydrates of varying complexity (ref). This pool does not have
+an explicit location within the plant, but its maximum capacity
+(<span class="arithmatex">\(C_{storage,max}\)</span>) depends on the individual pool sizes as follows:</p>
+<div class="arithmatex">\[
+C_{storage,max} = p_{storage1} \times \left( C_{shoot} + C_{root} \right) + p_{storage2} \times C_{crown} \tag{6} 
+\]</div>
+<p>where <span class="arithmatex">\(p_{storage1}\)</span> and <span class="arithmatex">\(p_{storage2}\)</span> represent the maximum fraction of
+NSCs relative to structural C of the pools where it is located in
+(shoots and roots for <span class="arithmatex">\(p_{storage1}\)</span>, and crown for <span class="arithmatex">\(p_{storage2}\)</span>). Eq.
+(6) assumes that 1) the overall size of the NSC pool in the plant
+depends on the size of the plant, and 2) that most of the NSCs are
+typically stored in crowns, with smaller concentrations also found in
+roots and leaves (refs).</p>
+<p>For shoots, the senescence of <span class="arithmatex">\(C_{shoot}\)</span> into a brown shoot pool
+(<span class="arithmatex">\(C_{shoot,brown}\)</span>) is tracked. The green pool represents physiologically
+active shoot components (leaves and culms) and the brown pool represents
+physiologically inactive and fully senesced (standing dead) components.
+Brown LAI can be calculated from Eq. (5) using brown instead of green C
+pools. Brown components of other structural C pools are not tracked.</p>
+<p><img alt="Figure 2" src="../img/dailygrass/fig2.png" /></p>
+<p>[Fig. 2:]{.mark} Illustrative figure showing the three phenological
+phases, LAI, NSC content.</p>
+<h2 id="radiation-transfer-and-leaf-to-canopy-scaling">Radiation transfer and leaf-to-canopy scaling</h2>
+<p>The canopy is assumed horizontally homogenous and discretised along LAI,
+each layer having a prescribed depth of LAI (0.5 by default). The model
+assumes radiation transfer within the canopy according to the
+Beer-Lambert law (ref). The incident PAR <span class="arithmatex">\(I_{inc}\)</span> (<span class="arithmatex">\(W m^{-2}\)</span>) in the
+middle of layer <span class="arithmatex">\(i\)</span> is given by:</p>
+<div class="arithmatex">\[
+I_{inc,i} = \frac{k}{1 - \ \tau}\ I_{0}\ e^{- kL}\  \tag{7} 
+\]</div>
+<p>where <span class="arithmatex">\(k\)</span> is the canopy light extinction coefficient, <span class="arithmatex">\(I_0\)</span> is the PAR
+above the canopy (<span class="arithmatex">\(W m^{-2}\)</span>), and <span class="arithmatex">\(L\)</span> is the cumulative leaf area (summed
+across all PFTs) at the middle of layer <span class="arithmatex">\(i\)</span>.</p>
+<p>Light competition among herbaceous PFTs is accounted for by the
+distribution of LAI across the layers. Here we assume that PFTs have
+their leaf area distributed equally across all layers.</p>
+<p>We assume the following distribution of N within the canopy:</p>
+<div class="arithmatex">\[
+{rN}_{i} = exp( - k_{n}\ L) \tag{8} 
+\]</div>
+<p>where <span class="arithmatex">\(rN_{i}\)</span> is the N content of layer <span class="arithmatex">\(i\)</span> relative to the top of the
+canopy, and <span class="arithmatex">\(k_{n}\)</span> is the canopy N extinction coefficient (Hikosaka et
+al., 2016).</p>
+<h2 id="photosynthesis-and-stomatal-conductance">Photosynthesis and stomatal conductance</h2>
+<p>Photosynthesis is modelled according to Farquhar et al. (1980) for <span class="arithmatex">\(C_3\)</span>
+plants and von Caemmerer (2000) for <span class="arithmatex">\(C_4\)</span> plants. Detailed Equations and
+parameter values are given in Appendix A. Stomatal conductance for water
+vapour (<span class="arithmatex">\(g_{sw}\)</span>) is modelled according to Lombardozzi et al. (2017) and
+Duursma et al. (2019), based on the Medlyn et al. (2011) model for both
+<span class="arithmatex">\(C_3\)</span> and <span class="arithmatex">\(C_4\)</span> plants:</p>
+<div class="arithmatex">\[
+g_{sw} = \max\left( {\max(g_{\min},g}_{0}),\ 1.6\left( 1 + \ \frac{g_{1}}{\sqrt{D}} \right)\frac{A_{n}}{C_{a}} \right) \tag{9} 
+\]</div>
+<p>where <span class="arithmatex">\(g_{min}\)</span> is the minimum stomatal conductance (<span class="arithmatex">\(\text{mol m}^{-2}
+\text{s}^{-1}\)</span>), <span class="arithmatex">\(g_0\)</span> is the stomatal conductance at night under unstressed
+conditions (<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>), <span class="arithmatex">\(g_1\)</span> is the stomatal slope
+parameter (kPa^0.5^), <span class="arithmatex">\(A_n\)</span> is net photosynthesis, D is vapour pressure deficit
+at the leaf surface (kPa), and <span class="arithmatex">\(C_a\)</span> is <span class="arithmatex">\(CO_2\)</span> concentration at the leaf surface
+(<span class="arithmatex">\(\text{mol mol}^{-1}\)</span>). [Describe advantages of this formulation compared to
+original one.]{.mark}</p>
+<h2 id="respiration">Respiration</h2>
+<p>Plant (autotrophic) respiration is given as the sum of maintenance
+respiration (<span class="arithmatex">\(R_{m}\)</span>) and growth respiration (<span class="arithmatex">\(R_{g}\)</span>). <span class="arithmatex">\(R_{m}\)</span> is
+calculated individually for different plant pools and for a given pool x
+is given by:</p>
+<div class="arithmatex">\[
+R_{m,x} = k_{rm}\frac{C_{x}}{\chi_{x}^{C:N}}\ T\ \  \tag{10} 
+\]</div>
+<p>Where <span class="arithmatex">\(k_{rm}\)</span> is a respiration coefficient, <span class="arithmatex">\(C_{x}\)</span> is the carbon mass of
+plant pool x (<span class="arithmatex">\(\text{kg C m}^{-2}\)</span>), <span class="arithmatex">\(\chi_{x}^{C:N}\)</span> is the C:N ratio of pool x,
+and <span class="arithmatex">\(T\)</span> is the driving temperature for respiration (<span class="arithmatex">\(T_{air}\)</span> for the
+reproductive pool and <span class="arithmatex">\(T_{soil}\)</span> for all other pools). Note that
+<span class="arithmatex">\(R_{m,shoot}\)</span> is calculated as part of the photosynthesis routine (Eq.
+AX).</p>
+<p>Growth respiration (<span class="arithmatex">\(R_{g}\)</span>) is calculated on a whole-plant basis as
+([ref]{.mark}):</p>
+<div class="arithmatex">\[
+R_{g} = \left( GPP - {R_{m,shoot} - R}_{m,root} - R_{m,crown} - R_{m,repr} \right) \times 0.25 \tag{11} 
+\]</div>
+<p>Daily net primary production (NPP, <span class="arithmatex">\(\text{kg C m}^{-2} \text{d}^{-1}\)</span>) is given by:</p>
+<div class="arithmatex">\[
+NPP = GPP - R_{m} - R_{g} \tag{12} 
+\]</div>
+<h2 id="growth">Growth</h2>
+<h3 id="source-strength">Source strength</h3>
+<p>Source strength (<span class="arithmatex">\(\text{kg C m}^{-2} \text{d}^{-1}\)</span>) is here defined as the
+external C input (i.e. net primary productivity, NPP) plus the amount of C that
+can be provided internally from <span class="arithmatex">\(C_{storage}\)</span>:</p>
+<div class="arithmatex">\[
+G_{source} = NPP + r_{mobil,max} \times (C_{storage} - p_{reserve} \times \ C_{storage,max}) \tag{13} 
+\]</div>
+<p>where <span class="arithmatex">\(r_{mobil,max}\)</span> (d^-1^) represents the maximum mobilisation rate of
+the storage pool and <span class="arithmatex">\(p_{reserve}\)</span> represents the fraction of <span class="arithmatex">\(C_{storage}\)</span>
+that is unavailable for growth and kept as a reserve.</p>
+<h3 id="sink-strength">Sink strength</h3>
+<p>Sink strength is here defined as the demand for growth (<span class="arithmatex">\(\text{kg C m}^{-2}
+\text{d}^{-1}\)</span>) and is calculated as:</p>
+<div class="arithmatex">\[
+G_{sink} = {RGR}_{pot} \times {(C}_{storage} + {\ C}_{shoot}\  + \ C_{root}) \times f_{dev,growth} \times \ f_{temp,growth} \times \ f_{water,growth} \tag{14} 
+\]</div>
+<p>where <span class="arithmatex">\(RGR_{pot}\)</span> is the potential relative growth rate of the plant (<span class="arithmatex">\(\text{kg
+C kg}^{-1} \text{C d}^{-1}\)</span>), <span class="arithmatex">\(f_{dev,growth}\)</span> describes developmental effects
+on sink strength, <span class="arithmatex">\(f_{temp,growth}\)</span> describes the temperature dependence of
+processes related to growth, and <span class="arithmatex">\(f_{water,growth}\)</span> represents the inhibition of
+growth under water stress. The effects of photoperiod on developmental and
+growth processes (e.g. Hay, 1990) are not considered in the current model
+version but may be included in the future development of the model.</p>
+<p>The decreasing growth demand throughout the reproductive phase of the plant is
+here simulated depending on the fraction of reproductive biomass to shoot
+biomass:</p>
+<div class="arithmatex">\[
+f_{dev,growth} = \left( 1\  - \ d_{1} \times \frac{C_{repr}}{C_{shoot} \times \ a_{repr}} - d_{2}\  \right) \tag{15} 
+\]</div>
+<p>Where <span class="arithmatex">\(d_{1}\)</span> and <span class="arithmatex">\(d_{2}\)</span> are seasonality parameters determining the timing of
+growth demand in the reproductive period, and <span class="arithmatex">\(a_{repr}\)</span> is the
+allocation fraction to the reproductive pool.</p>
+<p>Sink strength is further affected by environmental conditions, foremost
+temperature and water stress. The temperature response of growth and
+other developmental processes (e.g. germination) follows the one
+presented in Parent &amp; Tardieu (2012):</p>
+<div class="arithmatex">\[
+f_{temp,growth}(T_{leaf}) = \ \frac{A\ T_{leaf}\ exp\left( \frac{{- H}_{a}}{R_{gas}\ T_{leaf}} \right)}{1.0 + \ \left( \exp\left( \frac{{- H}_{a}}{R_{gas}T_{leaf}} \right) \right)^{\propto \left( 1.0\  - \ \frac{T_{leaf}}{T_{0}} \right)}}\  \times \ k_{g} \tag{16} 
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is a scaling coefficient which is here further modified to scale
+<span class="arithmatex">\(f_{temp,growth}\)</span> between 0 and 1, with 1 being reached at the optimum
+temperature for growth (<span class="arithmatex">\(T_{opt}\)</span>). <span class="arithmatex">\(T_{leaf}\)</span> is the average daily leaf
+temperature (K), <span class="arithmatex">\(H_{a}\)</span> is the activation energy (<span class="arithmatex">\(\text{J mol}^{-1}\)</span>),
+<span class="arithmatex">\(R_{gas}\)</span> is the universal gas constant (8.314 <span class="arithmatex">\(\text{J mol}^{-1}
+\text{K}^{-1}\)</span>), α is a dimensionless parameter determining the sharpness of the
+decrease at high temperatures, and <span class="arithmatex">\(T_{0}\)</span> (K) is a parameter affecting the
+value of <span class="arithmatex">\(T_{opt}\)</span>. <span class="arithmatex">\(k_{g}\)</span> is a modifier that accounts for the fact that Eq.
+(16) does not hold under low temperatures close to or below <span class="arithmatex">\(T_{dorm}\)</span>. <span class="arithmatex">\(k_{g}\)</span>
+is defined as:</p>
+<p>$$
+k_g = \begin{cases}
+1 &amp; \text{if } T_{leaf} \geq T_{dorm} \
+1 - \min(1, (T_{dorm} - T_{leaf}) \times 0.5) &amp; \text{if } T_{leaf} &lt; T_{dorm}
+\end{cases}</p>
+<p>\tag{17}
+$$</p>
+<p>Eq. (17) represents a relatively sudden decrease of growth below
+<span class="arithmatex">\(T_{dorm}\)</span>. Such a threshold behaviour is [often]{.mark} observed in
+temperature response curves of growth (Körner, 2008).</p>
+<p>As noted in Parent &amp; Tardieu (2012), Eq. (16) integrates multiple
+processes rather than individual enzyme activities, resulting in
+parameters losing their biochemical interpretation. Therefore, Eq. (16)
+was preferred over a modified Arrhenius equation for the representation
+of temperature effects on growth and developmental processes.</p>
+<p>Growth demand is further modified by a water stress scalar which assumed
+to by a sigmoidal function of available soil water content:</p>
+<div class="arithmatex">\[
+f_{water,growth}\left( w_{scal} \right) = \ \frac{\left( 1 + exp\left( \frac{w_{scal0} - 1}{b_{1}} \right) \right)}{\left( 1 + exp\left( \frac{w_{scal0} - w_{scal}}{b_{1}} \right) \right)} \tag{18} 
+\]</div>
+<p>where <span class="arithmatex">\(w_{scal}\)</span> is a water availability scalar describing the available
+soil water content in the rooting zone (see Appendix B). <span class="arithmatex">\(w_{scal}\)</span>
+ranges from 0 to 1, where 0 represents the wilting point (i.e. maximum
+water stress) and 1 field capacity (absence of water stress).</p>
+<h3 id="growth-rate">Growth Rate</h3>
+<p>The actual growth rate <span class="arithmatex">\(G\)</span> (<span class="arithmatex">\(\text{kg C m}^{-2} \text{d}^{-1}\)</span>) is given by the
+minimum of the source strength and the sink strength:</p>
+<div class="arithmatex">\[
+G = \min(G_{source},G_{sink}) \tag{19} 
+\]</div>
+<p>If <span class="arithmatex">\(G = G_{source}\)</span> (i.e. <span class="arithmatex">\(G_{source} &lt; G_{sink}\)</span>), plants are
+considered source-limited, in which case C is actively drawn from
+storage to support growth. [Double check: only in this case?]{.mark} If
+<span class="arithmatex">\(G = G_{sink}\)</span> (i.e. <span class="arithmatex">\(G_{sink} &lt; G_{source}\)</span>), plants are considered
+sink limited and tend to replenish their carbon storage.</p>
+<h2 id="source-sink-feedbacks">Source-sink feedbacks</h2>
+<p>Various molecular feedback mechanisms exist in plants that ensure a
+balance between sink and source processes (A. C. White et al., 2016).
+The model represents two main feedback mechanisms between sink and
+source strength, which are both mediated by the size of the <span class="arithmatex">\(C_{storage}\)</span>
+pool.</p>
+<p>Under source-limited conditions, such as in the early vegetative phase,
+C is usually drawn from storage. The following negative feedback
+prevents <span class="arithmatex">\(C_{storage}\)</span> from a complete depletion which would put the plant
+at risk of carbon starvation:</p>
+<div class="arithmatex">\[
+f_{storage,feedback} = \ {p_{Cstorage}}^{q_{f1}} \tag{20} 
+\]</div>
+<p>Where <span class="arithmatex">\(p_{Cstorage}\)</span> represents the fraction of <span class="arithmatex">\(C_{storage}\)</span> that is
+available for growth relative to the capacity of the <span class="arithmatex">\(C_{storage}\)</span> pool
+(<span class="arithmatex">\(C_{storage,max}\)</span>) and <span class="arithmatex">\(q_{f}\)</span> is a parameter determining the strength of
+the feedback (Table X). <span class="arithmatex">\(p_{Cstorage}\)</span> is calculated as:</p>
+<div class="arithmatex">\[
+p_{Cstorage} = \ \left( \frac{C_{storage} - \ p_{reserve} \times \ C_{storage,max}\ }{C_{storage,max}\  - \ p_{reserve} \times \ C_{storage,max}} \right) \tag{21} 
+\]</div>
+<p><span class="arithmatex">\(f_{storage,feedback}\)</span> is directly applied to <span class="arithmatex">\(G_{sink}\)</span> (Eq. (14)) and
+serves to reduce growth demand when storage approaches depletion. The
+<span class="arithmatex">\(q_{f}\)</span> parameter is assumed to be higher in the reproductive compared to
+the vegetative phase, representing a more conservative behaviour with
+respect to storage utilisation in the late growing season (refs).</p>
+<p>Under sink-limited conditions, such as often observed in the
+reproductive phase, NSCs will accumulate in the plant until the physical
+capacity of the storage pool (<span class="arithmatex">\(C_{storage,max}\)</span>, Eq. (6)) is reached. If
+<span class="arithmatex">\(C_{storage}\)</span> approaches <span class="arithmatex">\(C_{storage,max}\)</span>, a negative feedback on
+photosynthetic capacity is invoked as follows:</p>
+<div class="arithmatex">\[
+q_{ps,lim} = \min\left( 1,\ \left( 1 + d_{ps,lim} - 2\ \left. \  \times {({f_{dorm}(T_{soil1},\ w_{scal}) \times p}_{Cstorage})}^{q_{f2}} - 1 \right.\  \right){\times q}_{{ps,lim}_{t - 1}} \right)\  \tag{22} 
+\]</div>
+<p>where <span class="arithmatex">\(q_{ps,lim}\)</span> is a downregulation factor applied to parameters of
+photosynthetic capacity, <span class="arithmatex">\(q_{ps,lim_{t-1}}\)</span> is its value at the previous
+time step, and <span class="arithmatex">\(d_{ps,lim}\)</span> is the maximum change of <span class="arithmatex">\(q_{ps,lim}\)</span> per time
+step. As apparent in Eq. (6), photosynthetic activity is upregulated
+again when <span class="arithmatex">\(p_{Cstorage}\)</span> falls below a certain value depending on
+<span class="arithmatex">\(q_{f2}\)</span>.</p>
+<h2 id="fate-of-excess-carbon">Fate of 'excess carbon'</h2>
+<p>Eq. (22) reduces photosynthetic capacity and thus <span class="arithmatex">\(G_{source}\)</span> in the
+following day but it does not always prevent <span class="arithmatex">\(C_{storage}\)</span> from exceeding
+<span class="arithmatex">\(C_{storage,max}\)</span>. In that case, the 'excess carbon' (<span class="arithmatex">\(C_{excess}\)</span>) that
+cannot be placed into <span class="arithmatex">\(C_{storage}\)</span> must be either allocated to structural
+plant pools or discarded through other pathways. In the current version
+of the model, a limited fraction of <span class="arithmatex">\(C_{excess}\)</span> is first allocated to
+<span class="arithmatex">\(C_{repr}\)</span> if the plant is in the reproductive phase in both annuals and
+perennials. In perennials, a limited fraction of the remaining <span class="arithmatex">\(C_{excess}\)</span>
+is additionally allocated to crowns. Any <span class="arithmatex">\(C_{excess}\)</span> that cannot be
+allocated to structural pools, either due to potential excessive growth
+or stoichiometric constraints, is respired. Other potential pathways of
+<span class="arithmatex">\(C_{excess}\)</span>, such as root exudation fluxes, may be accounted for in future
+model developments.</p>
+<h2 id="carbon-allocation">Carbon allocation</h2>
+<p>Carbon from growth is allocated to the four structural pools so that
+growth of pool x can be expressed as:</p>
+<div class="arithmatex">\[
+G_{x} = a_{x}\ G \tag{23} 
+\]</div>
+<p>where <span class="arithmatex">\(a_{x}\)</span> represents the C allocation fraction to pool x.</p>
+<p>A constant, PFT-specific fraction of <span class="arithmatex">\(G\)</span> (<span class="arithmatex">\(a_{crown}\)</span>) is first allocated
+to the crown. The rationale is that the crown as the interface between
+above- and belowground components supports growth of any other plant
+pool and thus needs to grow along with overall growth of the plant.</p>
+<p>The allocation fraction to reproductive tissues (<span class="arithmatex">\(a_{repr}\)</span>) is zero in
+the vegetative phase and a constant, PFT-specific fraction in the
+reproductive phase (Table XX). The remaining <span class="arithmatex">\(G\)</span> is then allocated to
+shoots and roots depending on water and nitrogen stress. We adopted a
+similar formulation as presented in Johnson (2016) to determine the
+allocation fraction to shoots:</p>
+<div class="arithmatex">\[
+a_{shoot} = \ a_{shoot,max}\  \times {{(n}_{scal}\  \times \ w_{scal})}^{0.5} \tag{24} 
+\]</div>
+<p>where <span class="arithmatex">\(a_{shoot,max}\)</span> is the maximum allocation fraction to shoots and
+<span class="arithmatex">\(n_{scal}\)</span> and <span class="arithmatex">\(w_{scal}\)</span> are scalars describing nitrogen and water
+stress, respectively. Both factors range from 0-1 where 0 indicates
+maximum stress and 1 represents unstressed conditions. Finally,
+<span class="arithmatex">\(a_{root}\)</span> is given by:</p>
+<div class="arithmatex">\[
+a_{root} = \ 1.0 - \ a_{crown} - \ a_{repr} - \ a_{shoot} \tag{25} 
+\]</div>
+<p>In annual plants*, <span class="arithmatex">\(a_{crown}\)</span> is set to 0 in the reproductive stage. In
+perennial plants younger than one year, <span class="arithmatex">\(a_{crown}\)</span> is multiplied by 2
+and <span class="arithmatex">\(a_{repr}\)</span> is reduced accordingly. These adjustments reflect the
+prioritisation of vegetative growth over reproductive growth in young
+perennials (Cheplick, 2021; Pitelka, 1977).</p>
+<h2 id="phenology">Phenology</h2>
+<p>DAVE-Grass distinguishes three phenological stages: vegetative,
+reproductive, and dormant. All three stages are reached in response to
+external or internal cues (Figure XX). The transition from one stage to
+another does not follow a prescribed (thermal) time and may vary
+depending on the conditions each year. For example, plants may remain
+dormant or stay in the vegetative phase if the conditions are
+unfavourable for plant growth. Dormancy may be absent completely in
+climates without significant seasonal temperature or water limitations.</p>
+<h3 id="dormancy">Dormancy</h3>
+<p>Dormancy is characterised by reduced metabolic activity in response to
+prolonged periods of unfavourable environmental conditions (e.g.
+Gillespie &amp; Volaire, 2017). In the model, dormancy is triggered by
+either low temperatures or low soil moisture contents in the rooting
+zone and represented as a metabolic downregulation function (<span class="arithmatex">\(f_{dorm}\)</span>):</p>
+<div class="arithmatex">\[
+f_{dorm}(T_{soil1},\ w_{scal}) = {min(1.0,\ max(p}_{dorm,min},\ d_{dorm,max} \cdot \ min(f_{temp,dorm}(T_{soil1}),f_{water,dorm}(w_{scal}))) \tag{26} 
+\]</div>
+<p>where <span class="arithmatex">\(p_{dorm,min}\)</span> represents a baseline level of metabolic activity at
+full dormancy (i.e. the minimum value of <span class="arithmatex">\(f_{dorm}\)</span>), which is assumed to
+be 0.1 here according to respiration rates in full dormancy relative to
+the vegetative phase in different plant tissues (Myking, 1998; Shane et
+al., 2009). <span class="arithmatex">\(d_{dorm,max}\)</span> is the maximum change of <span class="arithmatex">\(f_{dorm}\)</span> per day,
+and <span class="arithmatex">\(f_{temp,dorm}\)</span> and <span class="arithmatex">\(f_{water,dorm}\)</span> are functions (ranging from 0
+to 1) controlling dormancy based on temperature and water availability,
+respectively. Eq. (26) demonstrates that dormancy is represented as a
+continuum with varying levels of metabolic activities, rather than an
+'on -- off' switch. This representation allows for partial dormancy as
+often observed in grasses and other herbaceous plants (ref). For many
+subsequent applications, it is useful to rescale <span class="arithmatex">\(f_{dorm}\)</span> and express
+it as 'dormancy depth' (<span class="arithmatex">\(q_{dorm}\)</span>) ranging from 0 (non-dormant) to 1
+(fully dormant):</p>
+<div class="arithmatex">\[
+q_{dorm} = \ \frac{1\  - \ f_{dorm}\left( T_{soil1},\ w_{scal} \right)\ }{1\  - \ p_{dorm,min}} \tag{27} 
+\]</div>
+<p>In the model, plants change their dormancy depth according to the
+temperature of the first soil layer averaged over a certain preceding
+time window, here assumed to be 10 days
+(<span class="arithmatex">\(\overline{T_{soil1,t - 9:t}}\)</span>). Specifically, plants enter dormancy if
+the average <span class="arithmatex">\(T_{soil1}\)</span> falls below a critical dormancy temperature
+(<span class="arithmatex">\(T_{dorm}\)</span>) and release dormancy (or remain non-dormant) if the average
+<span class="arithmatex">\(T_{soil1}\)</span> is greater than <span class="arithmatex">\(T_{dorm}\)</span>:</p>
+<div class="arithmatex">\[
+f_{temp,dorm}(T_{soil1}) = \begin{cases}
+f_{temp,growth}(\overline{T_{soil1,t - 9:t}})^{q_{temp,dorm}} &amp; \text{if } \overline{T_{soil1,t - 9:t}} &gt; T_{dorm} \\
+\frac{f_temp,growth\left(\overline{T_{soil1,t - 9:t}}\right) - f_{temp,growth}(T_{dorm})}{f_{temp,growth}(T_{dorm})} &amp; \text{if } \overline{T_{soil1,t - 9:t}} \leq T_{dorm}
+\end{cases}
+\tag{28}
+\]</div>
+<p>where <span class="arithmatex">\(f_{temp,growth}(\overline{T_{soil1,t - 9:t}})\)</span> is the
+temperature response function for growth as given by Eq. (16) but with
+<span class="arithmatex">\(\overline{T_{soil1,t - 9:t}}\)</span> as the driving temperature.</p>
+<p>Similarly, plants change their dormancy status depending on the
+available soil water in the rooting zone (<span class="arithmatex">\(w_{scal}\)</span>, Eq. (B2)). We assume
+that plants fall dormant when <span class="arithmatex">\(w_{scal}\)</span> falls below a critical threshold
+for dormancy (<span class="arithmatex">\(w_{scal,dorm}\)</span>).</p>
+<div class="arithmatex">\[
+f_{water,dorm}(w_{scal}) = \begin{cases}
+\frac{(w_{scal} - w_{scal,dorm})^{q_{water,dorm}}}{1 - w_{scal,dorm}} &amp; \text{if } w_{scal} &gt; w_{scal,dorm} \\
+\frac{(w_{scal} - w_{scal,dorm})}{w_{scal,dorm}} &amp; \text{if } w_{scal} \leq w_{scal,dorm}
+\end{cases}
+\tag{29}
+\]</div>
+<p>where <span class="arithmatex">\(w_{scal,dorm}\)</span> is the fraction of available water content below
+which plants fall dormant. The exponent <span class="arithmatex">\(q_{water,dorm}\)</span> is here set to
+1.5. This behaviour mirrors a more cautious approach of plants of not
+resuming metabolic activities too quickly after a small rain event.</p>
+<p>The primary effects of dormancy are reduced metabolic activity, reduced
+or ceased growth, and increased senescence rates (Gillespie &amp; Volaire,
+2017; Volaire &amp; Norton, 2006). In the model, these effects are captured
+by applying <span class="arithmatex">\(f_{dorm}\)</span> as a scaling factor to photosynthetic and
+respiration parameters, and <span class="arithmatex">\(q_{dorm}\)</span> to senescence (Eq. XX), and growth
+(Eq. XX).</p>
+<h3 id="vegetative-and-reproductive-phase">Vegetative and Reproductive Phase</h3>
+<p>Plants transition from the dormant phase to the vegetative phase when
+conditions improve, i.e. when <span class="arithmatex">\(f_{dorm}\)</span> exceeds <span class="arithmatex">\(p_{dorm,min}\)</span> (Eq.
+(26)). The reproductive phase is reached when the following conditions
+are met: 1) a positive internal carbon balance (i.e. positive trend in
+<span class="arithmatex">\(C_{storage}\)</span>) over the preceding 15 days, 2) <span class="arithmatex">\(C_{storage}\)</span> at least 70% full.
+The transition from vegetative to reproductive growth is accompanied by
+a range of physiological changes in herbaceous plants characterised
+by 1) C allocation to reproductive tissues, 2) decreasing overall growth
+rates (Jungers et al., 2018; Koelewijn, 2004), and 3) increasing
+senescence rates (Noodén et al., 1997; Yang &amp; Udvardi, 2018). These
+effects are accounted for in the model as described in full detail in
+the sections below.</p>
+<p>The reproductive phase ends either when plants enter full dormancy (i.e.
+<span class="arithmatex">\(q_{dorm} = 1\)</span>) or when the relative daily increase in <span class="arithmatex">\(C_{repr}\)</span> approaches
+0. In the latter case, plants are assumed to re-enter the vegetative phase,
+starting with a reduced <span class="arithmatex">\(f_{dev,growth}\)</span> equal to XX. and is subsequently
+increased according to conditions (using Eq. XX). This reduction in growth
+demand is needed to avoid rapid growth right after the end of the reproductive
+period.</p>
+<h2 id="shoot-senescence">Shoot Senescence</h2>
+<p>The model tracks the flow of C from the green shoot pool (<span class="arithmatex">\(C_{shoot}\)</span>) to
+the brown shoot pool (<span class="arithmatex">\(C_{shoot,brown}\)</span>), a process known as senescence
+(<span class="arithmatex">\(k_{senesc}\)</span>):</p>
+<div class="arithmatex">\[
+\frac{dC_{shoot,brown}}{dt} = k_{senesc} \times C_{shoot} - k_{shoot,brown} \times \ C_{shoot,brown}\  \tag{30} 
+\]</div>
+<p>Where <span class="arithmatex">\(k_{shoot,brown}\)</span> is the turnover rate from the brown shoot pool to litter
+which is described in the next section. The senescence rate depends on the
+environmental conditions and the growth stage of the plant and is higher in the
+reproductive and dormant phases compared to the vegetative phase. The shoot
+senescence rate on any given day is calculated as:</p>
+<div class="arithmatex">\[
+k_{senesc} = \min\left( {1.0,\ \ k}_{senesc,base} \times \left( \left( {1 + max}\left( f_{dev,senesc},f_{dorm,senesc} \right) \right) + \left( 1 + f_{water,senesc} \right) \right) \times (1 + f_{temp,senesc}) \right)
+\tag{31}
+\]</div>
+<p>where <span class="arithmatex">\(k_{senesc,base}\)</span> is the base rate of senescence under unstressed
+conditions (Table 1), <span class="arithmatex">\(f_{dev,senesc}\)</span> describes plant developmental
+effects on senescence, <span class="arithmatex">\(f_{dorm,senesc}\)</span> represents the effects of
+dormancy and <span class="arithmatex">\(f_{water,senesc}\)</span> and <span class="arithmatex">\(f_{temp,senesc}\)</span> describe the effects
+of soil water stress and temperature on senescence, respectively. Other
+potential mechanisms explaining senescence, such as light and nutrient
+limitations (Yang &amp; Udvardi, 2018), are not considered in the current
+model version.</p>
+<p>We assume that shoot senescence is linked to the decrease in growth
+demand during the reproductive phase (Eq. (15) as follows:</p>
+<div class="arithmatex">\[
+f_{dev,senesc} = \begin{cases}
+s_{dev,senesc} \times \left( 1 - f_{dev,growth} \right)^{q_{dev,senesc}} &amp; \in \text{reproductive} \wedge \text{dormant phase} \\
+0 &amp; \in \text{vegetative phase}
+\end{cases}
+\tag{32}
+\]</div>
+<p>where <span class="arithmatex">\(s_{dev,senesc}\)</span> is a scaling factor determining the maximum
+senescence rate caused by developmental effects. The exponent
+<span class="arithmatex">\(q_{dev,senesc}\)</span> determines the rate of increase in senescence during the
+reproductive and dormant phase.</p>
+<p>Dormancy is another mechanism associated with increasing senescence
+rates (Gillespie &amp; Volaire, 2017; Volaire &amp; Norton, 2006). This
+phenomenon is represented here through the following formulation:</p>
+<div class="arithmatex">\[
+f_{dorm,senesc} = s_{dorm,senesc} \times q_{dorm} \tag{33} 
+\]</div>
+<p>where <span class="arithmatex">\(s_{dorm,senesc}\)</span> is a scaling factor representing the maximum
+increase in senescence rate under full dormancy, and <span class="arithmatex">\(q_{dorm}\)</span> is the
+degree of dormancy (0-1) as given by Eq. (XX). Thus, <span class="arithmatex">\(f_{dorm,senesc}\)</span>
+may take values &gt; 0 as soon as dormancy starts to develop, not just in
+the dormant phase.</p>
+<p>Water stress increases shoot senescence as follows:</p>
+<div class="arithmatex">\[
+f_{water,senesc}(w_{scal}) = s_{water,senesc}\  \times (1 - \ {w_{scal}}^{q_{water,senesc}}) \tag{34} 
+\]</div>
+<p>where <span class="arithmatex">\(s_{water,senesc}\)</span> is a scaling factor representing the maximum increase
+in senescence rate under soil water stress and <span class="arithmatex">\(q_{water,senesc}\)</span> is an exponent
+determining the shape of the response. Lastly, a linear temperature dependence
+is added similar to Johnson &amp; Thornley (1983), but additionally assuming
+increasing senescence rates under freezing temperatures (Jouven et al., 2006):</p>
+<div class="arithmatex">\[
+f_{temp,senesc} = \begin{cases}
+b_{senesc1} \times |T_{air}| &amp; \text{if } T_{air} \leq 0^\circ C \\
+0 &amp; \text{if } T_{air} &gt; 0^\circ C \text{ and } T_{air} &lt; T_{dorm} \\
+b_{senesc2} \times \left(T_{air} - T_{dorm}\right) &amp; \text{if } T_{air} \geq T_{dorm} \\
+\end{cases}
+\tag{35}
+\]</div>
+<p>where <span class="arithmatex">\(b_{senesc1}\)</span> and <span class="arithmatex">\(b_{senesc2}\)</span> are the sensitivities of the senescence
+rate to <span class="arithmatex">\(T_{air}\)</span> (°C) below 0°C and above <span class="arithmatex">\(T_{dorm}\)</span>, respectively.</p>
+<h2 id="plant-turnover">Plant turnover</h2>
+<p>The turnover rate of the brown shoot pool (<span class="arithmatex">\(C_{pool,brown}\)</span>) into the shoot
+litter pool is simulated as follows:</p>
+<div class="arithmatex">\[
+k_{shoot,brown} = k_{shoot,base}\  \times \ f_{temp,decomp}\  \times \ f_{water,decomp} \tag{36} 
+\]</div>
+<p>where <span class="arithmatex">\(k_{shoot,base}\)</span> is the baseline decomposition rate at 10 °C,
+<span class="arithmatex">\(f_{temp,decomp}\)</span> and <span class="arithmatex">\(f_{water,decomp}\)</span> describe the temperature and soil
+moisture dependence functions of litter decomposition. The temperature
+dependence is given by Lloyd &amp; Taylor (1994):</p>
+<div class="arithmatex">\[
+f_{temp,decomp}(T_{air})\  = \exp\left( 308.56\  \times \left( \frac{1}{56.02} - \frac{1}{T_{air} + 46.02} \right)\  \right) \tag{37} 
+\]</div>
+<p>We use <span class="arithmatex">\(T_{air}\)</span> as driving temperature in Eq. (37), but note that
+<span class="arithmatex">\(T_{soil1}\)</span> could also be a meaningful alternative for the decomposition
+of biomass close to the ground. The soil moisture response is given by
+the following logistic function (Parton et al., 2000):</p>
+<div class="arithmatex">\[
+f_{water,decomp}(w_{cont1})\  = \frac{1}{1 + 30 \times exp( - 8.5\ {\times w}_{cont1})} \tag{38} 
+\]</div>
+<p>where <span class="arithmatex">\(w_{cont1}\)</span> (Eq. (B1) is the relative soil moisture of the
+uppermost soil layer.</p>
+<p>Root turnover rate (<span class="arithmatex">\(k_{root}\)</span>) is assumed to be proportional to shoot
+base turnover rate (<span class="arithmatex">\(k_{senesc,base}\)</span>, Eq. (31) but follows different
+environmental dependencies:</p>
+<div class="arithmatex">\[
+k_{root} = {r_{k,root:shoot}\  \times k}_{senesc,base}\  \times f_{temp} \tag{39} 
+\]</div>
+<p>where <span class="arithmatex">\(r_{k,root:shoot}\)</span> is the ratio of root base turnover rate to shoot
+base turnover rate.</p>
+<p>Crown turnover (<span class="arithmatex">\(k_{crown}\)</span>) is assumed to be proportional to <span class="arithmatex">\(k_{root}\)</span>:</p>
+<div class="arithmatex">\[
+k_{crown} = {r_{k,crown:root}\  \times k}_{root} \tag{40} 
+\]</div>
+<p>where <span class="arithmatex">\(r_{k,crown:root}\)</span> is the ratio of crown base turnover rate to root
+base turnover rate.</p>
+<p>As in the LPJ-GUESS model, the C that is turned over is transferred to
+litter pools (<span class="arithmatex">\(C_{shoot,brown}\)</span> to <span class="arithmatex">\(C_{litter,shoot}\)</span>, and <span class="arithmatex">\(C_{root}\)</span> and
+<span class="arithmatex">\(C_{crown}\)</span> to <span class="arithmatex">\(C_{litter,root}\)</span>), which partly respire and partly turn over
+into various soil pools. For a detailed description on soil and litter C
+decomposition, see REF.</p>
+<h2 id="mortality">Mortality</h2>
+<p>In the current model version, carbon starvation is the sole mechanism of
+plant mortality. That means that an individual dies when its carbon
+storage (<span class="arithmatex">\(C_{storage}\)</span>) reaches zero. Carbon starvation is here considered
+as a representative mechanism for plant mortality as <span class="arithmatex">\(C_{storage}\)</span>
+integrates the effects of a range of external factors (climate, nutrient
+availability) along with plant characteristics (size, storage capacity,
+competitiveness, etc.). Thus, mortality caused by low <span class="arithmatex">\(C_{storage}\)</span> is
+assumed to integrate a range of causes linked to various stress factors.</p>
+<p>After mortality occurred, C and N from different plant pools are
+transferred to the respective litter pools. The PFT may persist through
+its seedbank and re-establish if conditions if conditions become
+favourable.</p>
+<h2 id="seedbank">Seedbank</h2>
+<p>At the end of the reproductive period, a fraction of <span class="arithmatex">\(C_{repr}\)</span> enters the
+reproductive litter pool (<span class="arithmatex">\(C_{litter,repr}\)</span>), which represents the seedbank
+of the PFT. <span class="arithmatex">\(C_{litter,repr}\)</span> is also continuously turned over according to
+the seed turnover rate <span class="arithmatex">\(k_{litter,repr}\)</span>. The change of C in the
+seedbank is thus given by:</p>
+<div class="arithmatex">\[
+\frac{dC_{litter,repr}}{dt} = \ {k_{repr}\  \times p}_{seed} \times C_{repr} - \ k_{litter,repr\ } \times C_{litter,repr} \tag{41} 
+\]</div>
+<p>where <span class="arithmatex">\(p_{seed}\)</span> represents the fraction of <span class="arithmatex">\(C_{repr}\)</span> that is composed of
+viable seeds and <span class="arithmatex">\(k_{repr}\)</span> represents the fraction of <span class="arithmatex">\(C_{repr}\)</span> being
+flushed to litter. For simplicity, <span class="arithmatex">\(k_{repr}\)</span> takes a value of 1 on the
+last day of the reproductive phase and 0 on all other days, which means
+that all seeds are shed on a single day.</p>
+<p>The seedbank turnover rate <span class="arithmatex">\(k_{litter,repr}\)</span> depends on the moisture and
+temperature of the first soil layer in the same way as <span class="arithmatex">\(k_{shoot,brown}\)</span>
+(Eq. (36), but with a different baseline turnover rate. The
+environmental dependencies of turnover (Eq. (36) allow seeds to stay
+viable for longer under dry and cool conditions. The remainder of
+<span class="arithmatex">\(C_{repr}\)</span>, (i.e. (1 -- <span class="arithmatex">\(p_{seed}\)</span>) * <span class="arithmatex">\(C_{repr}\)</span>) represents supporting
+structures such as shafts and bracts, which are added to the shoot
+litter pool (<span class="arithmatex">\(C_{litter,shoot}\)</span>) after seed shedding.</p>
+<h2 id="germination">Germination</h2>
+<p>Germination of PFTs present in the patch is simulated through a
+germination function which simulates a daily germination rate
+(<span class="arithmatex">\(p_{germ}\)</span>) depending on the environmental conditions:</p>
+<div class="arithmatex">\[
+p_{germ} = \ p_{germ,max} \times f_{temp,growth}(\overline{T_{soil1,t - 4:t}}) \times f_{water,growth}(\overline{w_{cont1,t - 4:t}})\ \  \tag{42} 
+\]</div>
+<p>where <span class="arithmatex">\(p_{germ,max}\)</span> is the maximum fraction of <span class="arithmatex">\(C_{litter,repr}\)</span> that can
+germinate on any single day (here set to 0.3), and <span class="arithmatex">\(f_{temp,germ}\)</span> and
+<span class="arithmatex">\(f_{water,germ}\)</span> are functions describing the effects of temperature and
+water on the germination rate, respectively. <span class="arithmatex">\(f_{temp,growth}\)</span> is given
+by Eq. (16) with <span class="arithmatex">\(T_{leaf}\)</span> replaced by <span class="arithmatex">\(\overline{T_{soil1,t - 4:t}}\)</span>,
+the temperature of the uppermost soil layer averaged over the preceding
+5 days. Eq. (16) was derived for developmental processes, including
+growth and germination (Parent &amp; Tardieu, 2012) and is therefore applied
+to both processes. <span class="arithmatex">\(f_{water,germ}\)</span> is given by Eq. (18) but with
+<span class="arithmatex">\(w_{scal}\)</span> replaced by the soil moisture of the uppermost soil layer
+averaged over the preceding 5 days (<span class="arithmatex">\(\overline{w_{cont1,t - 4:t}}\)</span>, Eq.
+(B1). <span class="arithmatex">\(T_{soil,1}\)</span> and <span class="arithmatex">\(w_{cont1}\)</span> are averaged over the preceding 5 days
+to represent the conditions experienced during the entire seed
+germination process.</p>
+<h2 id="establishment">Establishment</h2>
+<p>On the day of germination, the C in the germinated seed fraction (<span class="arithmatex">\(C_{init}\)</span>,
+<span class="arithmatex">\(\text{kg C m}^{-2}\)</span>) is distributed across different plant pools to meet the
+following conditions:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+C_{init} &amp;= \ p_{germ} \times C_{litter,repr} \\
+C_{storage,init} &amp;= C_{storage,max} \\
+C_{shoot,init} &amp;= {a_{shoot,max} \times C}_{init} \\
+C_{root,init} &amp;= C_{init} - \ C_{storage,init} - \ C_{shoot,init} \\
+C_{crown,init} &amp;= C_{repr,init} = 0
+\end{aligned}
+\tag{43}
+\]</div>
+<p>N in the germinated seed fraction is allocated so that the C:N ratio of
+the young plant matches that of the seedbank. A plant individual is
+considered established if LAI exceeds a minimum LAI value (<span class="arithmatex">\(LAI_{min}\)</span>) at
+the transition from the vegetative to the reproductive stage. If
+individuals do not reach <span class="arithmatex">\(LAI_{min}\)</span> by the reproductive switch,
+establishment is considered as failed, and C is converted to its
+respective litter components.</p>
+<p>[The above case is for newly germinated indivs. Describe what happens
+when there is already an indiv of that PFT and germination
+occurs.]{.mark} [This should be linked to a simple formulation of seed
+dormancy.]{.mark}</p>
+<h2 id="seed-dispersal">Seed dispersal</h2>
+<p>A simple seed dispersal routine is implemented that allows for the
+establishment of PFTs in areas where they did not occur previously. The
+model keeps track of a hypothetical external seedbank
+(<span class="arithmatex">\(C_{litter,repr,ext}\)</span>) for all non-established PFTs:</p>
+<div class="arithmatex">\[
+\frac{dC_{litter,repr,ext}}{dt} = \ d_{repr,ext} - \ k_{litter,repr\ } \times C_{litter,repr,ext} \tag{44} 
+\]</div>
+<p>where <span class="arithmatex">\(d_{repr,ext}\)</span> (<span class="arithmatex">\(\text{kg C m}^{-2} \text{d}^{-1}\)</span>) represents an external
+seed input that integrates all seed dispersal processes (anthropogenic and
+natural), and <span class="arithmatex">\(k_{litter,repr}\)</span> is the same seedbank turnover rate as in Eq.
+(41). <span class="arithmatex">\(C_{litter,repr,ext}\)</span> remains hypothetical (i.e. it does not interfere
+with the C and N cycles of the ecosystem) until an external PFT is successfully
+established (see previous section). In that case, the newly established
+individuals of the new PFT compete with existing PFTs and are fully coupled to
+biogeochemical cycling.</p>
+<p>[Describe special cases for establishment (seed dormancy, avoiding low
+relative and absolute germination rates).]{.mark}</p>
+<h2 id="n-cycling">N cycling</h2>
+<p>The model considers all relevant N processes and all plant, litter, and
+soil pools represent an N and C component, which are linked through
+stoichiometric ratios.</p>
+<h3 id="n-storage-capacity">N storage (capacity)</h3>
+<p>Based on C storage capacity but not checked for stoichiometry! I.e.
+plants can have empty C but full N in theory as the two are not
+necessarily co-located. Need to be careful that the overall plant C:N is
+not too awkward as a consequence of this assumption.</p>
+<p>Edge case: what happens if N storage overflows?</p>
+<h3 id="n-retranslocation">N retranslocation</h3>
+<p>During shoot senescence and turnover of roots and crowns, a fraction of
+the N in these pools is retranslocated to the N storage pool of the
+plant:</p>
+<h3 id="stoichiometry-and-growth">Stoichiometry and Growth</h3>
+<ul>
+<li>
+<p>Describe assumption on stoichiometry of different pools C:Nmin and
+    C:Nmax of leaves, roots, crown, repr. Assumption that repr is within
+    the range of all other pools to not cause problems during
+    germination/establishment.</p>
+</li>
+<li>
+<p>N demand: how much N would the plant like to take up given growth?</p>
+</li>
+<li>
+<p>Describe what happens if there is not enough N to support growth.
+    Link this to the growth equations above.</p>
+</li>
+<li>
+<p>N is allocated either to new growth or to existing pools to nudge
+    C:N towards their minimum value (i.e. maximum N:C). Describe how
+    this is done and to what extent new growth is prioritised over
+    existing biomass.</p>
+</li>
+<li>
+<p>Growth demand feedback with N storage.</p>
+</li>
+</ul>
+<h3 id="n-uptake">N uptake</h3>
+<ul>
+<li>N uptake of the plant as a function of N competition with other PFTs
+    and available soil N.</li>
+</ul>
+<h3 id="calculation-of-n-stress-factor">Calculation of N stress factor</h3>
+<ul>
+<li>
+<p>Used in allocation functions</p>
+</li>
+<li>
+<p>Could be used for senescence as well.</p>
+</li>
+</ul>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Equation</th>
+<th style="text-align: right;">C3P</th>
+<th style="text-align: right;">C3A</th>
+<th style="text-align: right;">C4P</th>
+<th style="text-align: right;">C4A</th>
+<th style="text-align: left;">References</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(a_{crown}\)</span></td>
+<td style="text-align: left;">C allocation fraction to crown pool</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(a_{repr}\)</span></td>
+<td style="text-align: left;">C allocation fraction to reproduction pool</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(a_{shoot,max}\)</span></td>
+<td style="text-align: left;">Maximum leaf allocation fraction</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(b_1\)</span></td>
+<td style="text-align: left;">Steepness parameter in water stress response of growth</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(b_{senesc1}\)</span></td>
+<td style="text-align: left;">Rate of senescence increase under freezing temperatures</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{deg C}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">Jouven et al. (2006)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(b_{senesc2}\)</span></td>
+<td style="text-align: left;">Rate of senescence increase above dormancy temperature</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{deg C}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: left;">Johnson &amp; Thornley (1983)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(d_{dorm,max}\)</span></td>
+<td style="text-align: left;">Maximum rate of metabolic up-/down regulation in and out of dormancy</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: left;">calibrated</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(k\)</span></td>
+<td style="text-align: left;">Canopy light extinction coefficient</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(k_n\)</span></td>
+<td style="text-align: left;">Canopy nitrogen extinction coefficient</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: left;">(Hikosaka et al., 2016)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(k_{senesc,base}\)</span></td>
+<td style="text-align: left;">Baseline shoot senescence rate</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.0002</td>
+<td style="text-align: right;">0.0002</td>
+<td style="text-align: right;">0.0002</td>
+<td style="text-align: right;">0.0002</td>
+<td style="text-align: left;">calibrated</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(k_{shoot,base}\)</span></td>
+<td style="text-align: left;">Baseline turnover rate for brown shoots</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;">calibrated</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(LAI_{min}\)</span></td>
+<td style="text-align: left;">Minimum LAI value</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{m}^{2} \text{m}^{-2}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{culm}\)</span></td>
+<td style="text-align: left;">Fraction of <span class="arithmatex">\(C_{shoot}\)</span> made up by culms</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{seed}\)</span></td>
+<td style="text-align: left;">Fraction of <span class="arithmatex">\(C_{repr}\)</span> composed of viable seeds</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{germ,max}\)</span></td>
+<td style="text-align: left;">Maximum fraction of seedbank available for germination</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{reserve}\)</span></td>
+<td style="text-align: left;">Fraction of <span class="arithmatex">\(C_{storage,max}\)</span> unavailable for growth</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{storage1}\)</span></td>
+<td style="text-align: left;">Maximum fraction of structural pool consisting of storage (crown)</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{storage2}\)</span></td>
+<td style="text-align: left;">Maximum fraction of structural pool consisting of storage (shoots and roots)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{dev,senesc}\)</span></td>
+<td style="text-align: left;">Exponent in developmental effects on senescence rate</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{temp,dorm}\)</span></td>
+<td style="text-align: left;">Exponent in temperature control of dormancy</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{water,dorm}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{water,senesc}\)</span></td>
+<td style="text-align: left;">Exponent in water stress response of senescence rate</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{f1}\)</span></td>
+<td style="text-align: left;">Feedback strength parameter for sink-source feedback</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">veg: 0.1; repr: f(fdevgrowth)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(q_{f2}\)</span></td>
+<td style="text-align: left;">Feedback strength parameter for source-sink feedback</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(p_{dorm,min}\)</span></td>
+<td style="text-align: left;">Minimum metabolic activity during dormancy</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(RGR_{pot}\)</span></td>
+<td style="text-align: left;">Potential relative growth rate</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{kg C kg C}^{-1} \text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(r_{mobil,max}\)</span></td>
+<td style="text-align: left;">Maximum mobilisation rate of C in and out of <span class="arithmatex">\(C_{storage}\)</span> pool</td>
+<td style="text-align: left;"><span class="arithmatex">\(\text{d}^{-1}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(r_{k,root:shoot}\)</span></td>
+<td style="text-align: left;">Ratio of root base turnover rate to shoot base turnover rate</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">calibrated</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(r_{k,crown:root}\)</span></td>
+<td style="text-align: left;">Ratio of crown turnover rate to root turnover rate</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: left;">calibrated</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(s_{dev,senesc}\)</span></td>
+<td style="text-align: left;">Scaling factor for developmental effects on shoot senescence</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(s_{dorm,senesc}\)</span></td>
+<td style="text-align: left;">Scaling factor for dormancy effects on shoot senescence</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(s_{water,senesc}\)</span></td>
+<td style="text-align: left;">Scaling factor for soil water effects on shoot senescence</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SLA</td>
+<td style="text-align: left;">Specific leaf area</td>
+<td style="text-align: left;">[check]{.mark}</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(T_{dorm}\)</span></td>
+<td style="text-align: left;">Dormancy temperature</td>
+<td style="text-align: left;">[deg C]{.mark}</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(w_{scal0}\)</span></td>
+<td style="text-align: left;">Inflection point water stress response of growth</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(w_{scal,dorm}\)</span></td>
+<td style="text-align: left;">Critical relative soil water content in the rooting zone for dormancy</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">: Table 1: Parameters and their description.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Split table in 2? One with global parameters, another with PFT-specific
+parameters?</p>
+<h1 id="references">References</h1>
+<p>Ahlström, A., Raupach, M. R., Schurgers, G., Smith, B., Arneth, A.,
+Jung, M., et al. (2015). The dominant role of semi-arid ecosystems in
+the trend and variability of the land CO2 sink. <em>Science</em>, <em>348</em>(6237),
+895--899. https://doi.org/10.1126/science.aaa1668</p>
+<p>Barrett, P. D., Laidlaw, A. S., &amp; Mayne, C. S. (2005). GrazeGro: a
+European herbage growth model to predict pasture production in perennial
+ryegrass swards for decision support. <em>European Journal of Agronomy</em>,
+<em>23</em>(1), 37--56. https://doi.org/10.1016/j.eja.2004.09.006</p>
+<p>von Caemmerer, S. (2000). <em>Biochemical models of leaf photosynthesis</em>.
+CSIRO Publishing.</p>
+<p>von Caemmerer, S. (2013). Steady-state models of photosynthesis. <em>Plant,
+Cell &amp; Environment</em>, <em>36</em>(9), 1617--1630.</p>
+<p>von Caemmerer, S. (2021). Updating the steady-state model of C4
+photosynthesis. <em>Journal of Experimental Botany</em>, <em>72</em>(17), 6003--6017.
+https://doi.org/10.1093/jxb/erab266</p>
+<p>von Caemmerer, S., &amp; Furbank, R. T. (1999). Modeling C4 photosynthesis.
+In R. F. Sage &amp; R. K. Monson (Eds.), <em>C4 Plant Biology</em> (pp. 173--211).
+Academic Press Toronto, ON, Canada.</p>
+<p>Cheplick, G. P. (2021). Fitness components and the determinants of
+fecundity in populations of a native perennial grass (). <em>Plant Species
+Biology</em>, <em>36</em>(2), 322--337. https://doi.org/10.1111/1442-1984.12318</p>
+<p>Collatz, G. J., Ball, J. T., Grivet, C., &amp; Berry, J. A. (1991).
+Physiological and environmental regulation of stomatal conductance,
+photosynthesis and transpiration: a model that includes a laminar
+boundary layer. <em>Agricultural and Forest Meteorology</em>, <em>54</em>(2),
+107--136.</p>
+<p>De Kauwe, M. G., Medlyn, B. E., Walker, A. P., Zaehle, S., Asao, S.,
+Guenet, B., et al. (2017). Challenging terrestrial biosphere models with
+data from the long-term multifactor Prairie Heating and CO₂ Enrichment
+experiment. <em>Global Change Biology</em>, <em>23</em>(9), 3623--3645.
+https://doi.org/10.1111/gcb.13643</p>
+<p>Duursma, R. A., Blackman, C. J., Lopéz, R., Martin-StPaul, N. K.,
+Cochard, H., &amp; Medlyn, B. E. (2019). On the minimum leaf conductance:
+its role in models of plant water use, and ecological and environmental
+controls. <em>New Phytologist</em>, <em>221</em>(2), 693--705.</p>
+<p>Ellsworth, D. S., Crous, K. Y., De Kauwe, M. G., Verryckt, L. T., Goll,
+D., Zaehle, S., et al. (2022). Convergence in phosphorus constraints to
+photosynthesis in forests around the world. <em>Nature Communications</em>,
+<em>13</em>(1), 5005. https://doi.org/10.1038/s41467-022-32545-0</p>
+<p>Farquhar, G. D., von Caemmerer, S. von, &amp; Berry, J. A. (1980). A
+biochemical model of photosynthetic <span class="arithmatex">\(CO_2\)</span> assimilation in leaves of C3
+species. <em>Planta</em>, <em>149</em>(1), 78--90.</p>
+<p>Gillespie, L. M., &amp; Volaire, F. A. (2017). Are winter and summer
+dormancy symmetrical seasonal adaptive strategies? The case of temperate
+herbaceous perennials. <em>Annals of Botany</em>, <em>119</em>(3), 311--323.
+https://doi.org/10.1093/aob/mcw264</p>
+<p>Harley, P. C., &amp; Sharkey, T. D. (1991). An improved model of C3
+photosynthesis at high CO₂: reversed O₂ sensitivity explained by lack of
+glycerate reentry into the chloroplast. <em>Photosynthesis Research</em>,
+<em>27</em>(3), 169--178.</p>
+<p>Hay, R. K. M. (1990). The influence of photoperiod on the dry matter
+production of grasses and cereals. <em>New Phytologist</em>, <em>116</em>(2),
+233--254. https://doi.org/10.1111/j.1469-8137.1990.tb04711.x</p>
+<p>Herrmann, A., &amp; Schachtel, G. A. (2001). OSYAQ, an organ-specific growth
+model for forage grasses. <em>Grass and Forage Science</em>, <em>56</em>(3), 268--284.
+https://doi.org/10.1046/j.1365-2494.2001.00274.x</p>
+<p>Heskel, M. A., O'Sullivan, O. S., Reich, P. B., Tjoelker, M. G.,
+Weerasinghe, L. K., Penillard, A., et al. (2016). Convergence in the
+temperature response of leaf respiration across biomes and plant
+functional types. <em>Proceedings of the National Academy of Sciences</em>,
+<em>113</em>(14), 3832--3837. https://doi.org/10.1073/pnas.1520282113</p>
+<p>Hikosaka, K., Anten, N. P. R., Borjigidai, A., Kamiyama, C., Sakai, H.,
+Hasegawa, T., et al. (2016). A meta-analysis of leaf nitrogen
+distribution within plant canopies. <em>Annals of Botany</em>, <em>118</em>(2),
+239--247. https://doi.org/10.1093/aob/mcw099</p>
+<p>Huntingford, C., Atkin, O. K., Martinez-de la Torre, A., Mercado, L. M.,
+Heskel, M. A., Harper, A. B., et al. (2017). Implications of improved
+representations of plant respiration in a changing climate. <em>Nature
+Communications</em>, <em>8</em>(1), 1602.
+https://doi.org/10.1038/s41467-017-01774-z</p>
+<p>Jackson, R. B., Canadell, J., Ehleringer, J. R., Mooney, H. A., Sala, O.
+E., &amp; Schulze, E. D. (1996). A global analysis of root distributions for
+terrestrial biomes. <em>Oecologia</em>, <em>108</em>(3), 389--411.
+https://doi.org/10.1007/BF00333714</p>
+<p>Johnson, F. H., Eyring, H., &amp; Williams, R. (1942). The nature of enzyme
+inhibitions in bacterial luminescence: sulfanilamide, urethane,
+temperature and pressure. <em>Journal of Cellular Physiology</em>, <em>20</em>(3),
+247--268.</p>
+<p>Johnson, I. R. (2016). <em>DairyMod and the SGS Pasture Model: a
+mathematical description of the biophysical model structure.</em> (IMJ
+Consultants). Dorrigo, NSW, Australia.</p>
+<p>Johnson, I. R., &amp; Thornley, J. H. M. (1983). Vegetative crop growth
+model incorporating leaf area expansion and senescence, and applied to
+grass. <em>Plant, Cell &amp; Environment</em>, <em>6</em>(9), 721--729.
+https://doi.org/10.1111/1365-3040.ep11588103_6_9</p>
+<p>Jouven, M., Carrère, P., &amp; Baumont, R. (2006). Model predicting dynamics
+of biomass, structure and digestibility of herbage in managed permanent
+pastures. 1. Model description. <em>Grass and Forage Science</em>, <em>61</em>(2),
+112--124. https://doi.org/10.1111/j.1365-2494.2006.00515.x</p>
+<p>Jungers, J. m., Frahm, C. s., Tautges, N. e., Ehlke, N. j., Wells, M.
+s., Wyse, D. l., &amp; Sheaffer, C. c. (2018). Growth, development, and
+biomass partitioning of the perennial grain crop Thinopyrum intermedium.
+<em>Annals of Applied Biology</em>, <em>172</em>(3), 346--354.
+https://doi.org/10.1111/aab.12425</p>
+<p>Knapp, A. K., &amp; Smith, M. D. (2001). Variation Among Biomes in Temporal
+Dynamics of Aboveground Primary Production. <em>Science</em>, <em>291</em>(5503),
+481--484. https://doi.org/10.1126/science.291.5503.481</p>
+<p>Koelewijn, H. P. (2004). Rapid change in relative growth rate between
+the vegetative and reproductive stage of the life cycle in Plantago
+coronopus. <em>New Phytologist</em>, <em>163</em>(1), 67--76.
+https://doi.org/10.1111/j.1469-8137.2004.01078.x</p>
+<p>Körner, C. (2008). Winter crop growth at low temperature may hold the
+answer for alpine treeline formation. <em>Plant Ecology &amp; Diversity</em>,
+<em>1</em>(1), 3--11. https://doi.org/10.1080/17550870802273411</p>
+<p>Lin, Y.-S., Medlyn, B. E., Duursma, R. A., Prentice, I. C., Wang, H.,
+Baig, S., et al. (2015). Optimal stomatal behaviour around the world.
+<em>Nature Climate Change</em>, <em>5</em>, 459--464.
+https://doi.org/10.1038/nclimate2550</p>
+<p>Lloyd, J., &amp; Taylor, J. (1994). On the temperature dependence of soil
+respiration. <em>Functional Ecology</em>, <em>8</em>, 315--323.</p>
+<p>Lombardozzi, D. L., Zeppel, M. J. B., Fisher, R. A., &amp; Tawfik, A.
+(2017). Representing nighttime and minimum conductance in CLM4. 5:
+global hydrology and carbon sensitivity analysis using observational
+constraints. <em>Geoscientific Model Development</em>, <em>10</em>(1), 321--321.</p>
+<p>Martín Belda, D., Anthoni, P., Wårlind, D., Olin, S., Schurgers, G.,
+Tang, J., et al. (2022). LPJ-GUESS/LSMv1.0: a next-generation land
+surface model with high ecological realism. <em>Geoscientific Model
+Development</em>, <em>15</em>(17), 6709--6745.
+https://doi.org/10.5194/gmd-15-6709-2022</p>
+<p>Medlyn, B. E., Duursma, R. A., Eamus, D., Ellsworth, D. S., Prentice, I.
+C., Barton, C. V. M., et al. (2011). Reconciling the optimal and
+empirical approaches to modelling stomatal conductance. <em>Global Change
+Biology</em>, <em>17</em>(6), 2134--2144.
+https://doi.org/10.1111/j.1365-2486.2010.02375.x</p>
+<p>Myking, T. (1998). Interrelations between respiration and dormancy in
+buds of three hardwood species with different chilling requirements for
+dormancy release. <em>Trees</em>, <em>12</em>(4), 224--229.
+https://doi.org/10.1007/s004680050144</p>
+<p>Noodén, L. D., Guiamét, J. J., &amp; John, I. (1997). Senescence mechanisms.
+<em>Physiologia Plantarum</em>, <em>101</em>(4), 746--753.
+https://doi.org/10.1111/j.1399-3054.1997.tb01059.x</p>
+<p>Parent, B., &amp; Tardieu, F. (2012). Temperature responses of developmental
+processes have not been affected by breeding in different ecological
+areas for 17 crop species. <em>New Phytologist</em>, <em>194</em>(3), 760--774.
+https://doi.org/10.1111/j.1469-8137.2012.04086.x</p>
+<p>Parton, W. J., Morgan, J. A., Kelly, R. H., &amp; Ojima, and D. (2000).
+Modeling Soil C Responses to Environmental Change in Grassland Systems.
+In <em>The Potential of U.S. Grazing Lands to Sequester Carbon and Mitigate
+the Greenhouse Effect</em>. CRC Press.</p>
+<p>Pitelka, L. F. (1977). Energy Allocations in Annual and Perennial
+Lupines (lupinus: Leguminosae). <em>Ecology</em>, <em>58</em>(5), 1055--1065.
+https://doi.org/10.2307/1936925</p>
+<p>Prentice, I. C., Cramer, W., Harrison, S. P., Leemans, R., Monserud, R.
+A., &amp; Solomon, A. M. (1992). Special Paper: A Global Biome Model Based
+on Plant Physiology and Dominance, Soil Properties and Climate. <em>Journal
+of Biogeography</em>, <em>19</em>(2), 117--134. https://doi.org/10.2307/2845499</p>
+<p>Prentice, I. C., Liang, X., Medlyn, B. E., &amp; Wang, Y.-P. (2015).
+Reliable, robust and realistic: the three R's of next-generation
+land-surface modelling. <em>Atmospheric Chemistry and Physics</em>, <em>15</em>(10),
+5987--6005.</p>
+<p>Schapendonk, A. H. C. M., Stol, W., van Kraalingen, D. W. G., &amp; Bouman,
+B. A. M. (1998). LINGRA, a sink/source model to simulate grassland
+productivity in Europe. <em>European Journal of Agronomy</em>, <em>9</em>(2), 87--100.
+https://doi.org/10.1016/S1161-0301(98)00027-6</p>
+<p>Shane, M. W., McCully, M. E., Canny, M. J., Pate, J. S., Ngo, H.,
+Mathesius, U., et al. (2009). Summer dormancy and winter growth: root
+survival strategy in a perennial monocotyledon. <em>New Phytologist</em>,
+<em>183</em>(4), 1085--1096. https://doi.org/10.1111/j.1469-8137.2009.02875.x</p>
+<p>Volaire, F., &amp; Norton, M. (2006). Summer Dormancy in Perennial Temperate
+Grasses. <em>Annals of Botany</em>, <em>98</em>(5), 927--933.
+https://doi.org/10.1093/aob/mcl195</p>
+<p>Wang, Y.-P., &amp; Leuning, R. (1998). A two-leaf model for canopy
+conductance, photosynthesis and partitioning of available energy I:
+Model description and comparison with a multi-layered model.
+<em>Agricultural and Forest Meteorology</em>, <em>91</em>(1), 89--111.</p>
+<p>White, A. C., Rogers, A., Rees, M., &amp; Osborne, C. P. (2016). How can we
+make plants grow faster? A source--sink perspective on growth rate.
+<em>Journal of Experimental Botany</em>, <em>67</em>(1), 31--45.
+https://doi.org/10.1093/jxb/erv447</p>
+<p>White, R., Murray, S., Rohweder, M., Prince, S. D., &amp; Thompson, K. M.
+(2000). <em>Pilot analysis of global ecosystems: Grassland ecosystems</em>.
+World Resources Institute. Retrieved from
+https://www.wri.org/research/pilot-analysis-global-ecosystems-grassland-ecosystems</p>
+<p>Yang, J., &amp; Udvardi, M. (2018). Senescence and nitrogen use efficiency
+in perennial grasses for forage and biofuel production. <em>Journal of
+Experimental Botany</em>, <em>69</em>(4), 855--865.
+https://doi.org/10.1093/jxb/erx241</p>
+<p>Yin, X., &amp; Struik, P. C. (2012). Mathematical review of the energy
+transduction stoichiometries of C4 leaf photosynthesis under limiting
+light. <em>Plant, Cell &amp; Environment</em>, <em>35</em>(7), 1299--1312.
+https://doi.org/10.1111/j.1365-3040.2012.02490.x</p>
+<p>Zhou, H., Tang, J., Olin, S., &amp; Miller, P. A. (2024). A comprehensive
+evaluation of hydrological processes in a second-generation dynamic
+vegetation model. <em>Hydrological Processes</em>, <em>38</em>(4), e15152.
+https://doi.org/10.1002/hyp.15152</p>
+<h1 id="appendix-a-photosynthesis">Appendix A: Photosynthesis</h1>
+<h2 id="c3-photosynthesis">C3 photosynthesis</h2>
+<p>Photosynthesis for <span class="arithmatex">\(C_3\)</span> plants was implemented following Farquhar et al.
+(1980):</p>
+<div class="arithmatex">\[
+A_{n} = \min\left( A_{c},A_{j},A_{p} \right)
+\tag{A1}
+\]</div>
+<p>where net photosynthesis (<span class="arithmatex">\(A_{n}\)</span>) is limited by either Rubisco-activity
+(<span class="arithmatex">\(A_{c}\)</span>), RuBP regeneration (<span class="arithmatex">\(A_{j}\)</span>), or triose phosphate utilisation
+(TPU) (<span class="arithmatex">\(A_{p}\)</span>). <span class="arithmatex">\(R_{d}\)</span> is leaf mitochondrial respiration (Eq. (A12)).
+<span class="arithmatex">\(A_{c}\)</span> is given by:</p>
+<div class="arithmatex">\[
+A_{c} = \frac{V_{cmax}\ (C_{i} - \ \Gamma_{*})}{C_{i} + K_{c}(1.0 + O_{i}/K_{o})} - R_{d}
+\tag{A2}
+\]</div>
+<p>where <span class="arithmatex">\(V_{cmax}\)</span> is the maximum carboxylation rate (mol <span class="arithmatex">\(\text{m}^{-2}
+\text{s}^{-1}\)</span>), <span class="arithmatex">\(C_{i}\)</span> is the intercellular <span class="arithmatex">\(CO_2\)</span> concentration (mol
+<span class="arithmatex">\(\text{mol}^{-1}\)</span>), <span class="arithmatex">\(\Gamma_{*}\)</span> is the chloroplastic <span class="arithmatex">\(CO_2\)</span> compensation point
+in the absence of mitochondrial respiration (mol <span class="arithmatex">\(\text{mol}^{-1}\)</span>), <span class="arithmatex">\(K_{c}\)</span> and
+<span class="arithmatex">\(K_{o}\)</span> are the Michaelis-Menten constants for <span class="arithmatex">\(CO_2\)</span> and <span class="arithmatex">\(O_2\)</span> (mol
+<span class="arithmatex">\(\text{mol}^{-1}\)</span>), respectively, and <span class="arithmatex">\(O_{i}\)</span> is the intercellular <span class="arithmatex">\(O_2\)</span>
+concentration (mol <span class="arithmatex">\(\text{mol}^{-1}\)</span>). RuBP regeneration-limited photosynthesis
+(<span class="arithmatex">\(A_{j}\)</span>) is given by:</p>
+<div class="arithmatex">\[
+A_{j} = \frac{J/4\ (C_{i} - \ \Gamma_{*})}{C_{i} + 2\Gamma_{*}} - R_{d}
+\tag{A3}
+\]</div>
+<p>where <span class="arithmatex">\(J\)</span> is the electron transport rate (<span class="arithmatex">\(\text{mol (electrons) m}^{-2}
+\text{s}^{-1}\)</span>). <span class="arithmatex">\(J\)</span> is assumed to follow a hyperbolic light response curve (von
+Caemmerer, 2013):</p>
+<div class="arithmatex">\[
+J = \ \frac{PPFD + \ J_{\max} - \ \sqrt{{(PPFD + \ J_{\max})}^{2}\  - \ 4\theta PPFDJ_{\max}}}{2\theta}
+\tag{A4}
+\]</div>
+<p>where <span class="arithmatex">\(J_{\max}\)</span> is the maximum electron transport rate (<span class="arithmatex">\(\text{mol (electrons)
+m}^{-2}\ \text{s}^{-1}\)</span>), <span class="arithmatex">\(\theta\)</span> is a curvature factor, and PPFD is
+photosynthetic photon flux density at leaf level (mol <span class="arithmatex">\(\text{(photons) m}^{-2}\
+\text{s}^{-1}\)</span>), which is calculated as:</p>
+<div class="arithmatex">\[
+PPFD = I_{inc} \times a_{l} \times \frac{1 - f_{l}}{2} \times J_{mol}
+\tag{A5}
+\]</div>
+<p>where <span class="arithmatex">\(I_{inc}\)</span> is incident photosynthetically active radiation (<span class="arithmatex">\(\text{W m}^{-2}\)</span>)
+as calculated by Eq. (7), <span class="arithmatex">\(a_{l}\)</span> is leaf absorptance, <span class="arithmatex">\(f_{l}\)</span> is a
+correction factor accounting for spectral quality of light, and <span class="arithmatex">\(J_{mol}\)</span>
+is a factor converting radiation from <span class="arithmatex">\(\text{W m}^{-2}\)</span> to <span class="arithmatex">\(\text{mol (photons) m}^{-2}\
+\text{s}^{-1}\)</span>. <span class="arithmatex">\(A_{p}\)</span> is related to TPU (<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>) as
+described in Harley &amp; Sharkey (1991). Following Collatz et al. (1991) TPU can be
+related to <span class="arithmatex">\(V_{cmax}\)</span> so that <span class="arithmatex">\(A_{p}\)</span> can be expressed as:</p>
+<div class="arithmatex">\[
+A_{p} = 3TPU - R_{d} = 0.5\ V_{cmax} - R_{d}
+\tag{A6}
+\]</div>
+<p>We solve equations (A2) and (A3) in combination with stomatal
+conductance Eq. (9) using the analytic solution presented in Wang &amp;
+Leuning (1998).</p>
+<h2 id="c4-photosynthesis">C4 photosynthesis</h2>
+<p>We implemented the <span class="arithmatex">\(C_4\)</span> photosynthesis model as described in von
+Caemmerer &amp; Furbank (1999) and von Caemmerer (2000, 2021). Net
+photosynthesis (<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>) is given by:</p>
+<div class="arithmatex">\[
+A_{n} = \min(A_{c},A_{j})
+\tag{A7}
+\]</div>
+<p>where <span class="arithmatex">\(A_{c}\)</span> represents enzyme-limited photosynthesis, and <span class="arithmatex">\(A_{j}\)</span>
+represents light- and electron-transport-limited photosynthesis. <span class="arithmatex">\(A_{c}\)</span>
+was calculated as:</p>
+<div class="arithmatex">\[
+A_{c} = \min\left( \left( V_{p}\  + \ g_{bs}\ C_{m} - \ R_{m} \right),(V_{cmax} - \ R_{d}) \right)
+\tag{A8}
+\]</div>
+<p>where <span class="arithmatex">\(V_{p}\)</span> is the phosphoenolpyruvate (PEP) carboxylation rate (<span class="arithmatex">\(\text{mol m}^{-2}
+\text{s}^{-1}\)</span>), <span class="arithmatex">\(g_{bs}\)</span> is the bundle sheath is conductance
+to <span class="arithmatex">\(\text{CO}_2\)</span> (<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>), <span class="arithmatex">\(C_{m}\)</span> is the
+<span class="arithmatex">\(\text{CO}_2\)</span> concentration in the mesophyll cell (<span class="arithmatex">\(\text{mol mol}^{-1}\)</span>),
+<span class="arithmatex">\(R_{m}\)</span> is leaf mitochondrial respiration in the mesophyll cell (
+<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>), <span class="arithmatex">\(V_{cmax}\)</span> is the maximum rubisco
+carboxylation rate (<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>), and <span class="arithmatex">\(R_{d}\)</span> is leaf
+mitochondrial respiration ((<span class="arithmatex">\(\text{mol m}^{-2} \text{s}^{-1}\)</span>), see Eq. (A12).
+An explanation of the parameters as well as their units and default values can
+be found in Table A1.</p>
+<p><span class="arithmatex">\(V_p\)</span> is calculated as:</p>
+<div class="arithmatex">\[
+V_{p} = \min\left( \frac{C_{m}\ V_{pmax}}{C_{m} + K_{p}},V_{pr} \right)
+\tag{A9}
+\]</div>
+<p>Where <span class="arithmatex">\(V_{pmax}\)</span> is the maximum PEP carboxylation rate (<span class="arithmatex">\(\text{mol m}^{-2}
+\text{s}^{-1}\)</span>), <span class="arithmatex">\(K_{p}\)</span> is the Michaelis-Menten constant of PEP carboxylase for
+<span class="arithmatex">\(\text{CO}_2\)</span> (<span class="arithmatex">\(\text{mol mol}^{-1}\)</span>), and <span class="arithmatex">\(V_{pr}\)</span> is the PEP regeneration rate
+(<span class="arithmatex">\(\text{mol m}^{-2} \
+\text{s}^{-1}\)</span>).</p>
+<p><span class="arithmatex">\(A_j\)</span> is calculated as:</p>
+<div class="arithmatex">\[
+A_{j} = \min\left( \left( \frac{z}{2}x\ J - R_{m} + g_{bs}{\ C}_{m} \right),\frac{z}{3}(1 - x)\ J - R_{d} \right)
+\tag{A10}
+\]</div>
+<p>Where <span class="arithmatex">\(z\)</span> is the ratio of the rate of ATP production to linear electron
+transport, <span class="arithmatex">\(x\)</span> is a partitioning factor of the electron transport rate
+<span class="arithmatex">\(J\)</span> between mesophyll and bundle-sheath cells. <span class="arithmatex">\(J\)</span> is calculated in
+dependence of PPFD as for <span class="arithmatex">\(C_3\)</span> photosynthesis (Eq. (A5) (von Caemmerer,
+2021). <span class="arithmatex">\(z\)</span> is given by (Yin &amp; Struik, 2012):</p>
+<div class="arithmatex">\[
+z = \frac{3 - f_{cyc}}{4(1 - f_{cyc})}
+\tag{A11}
+\]</div>
+<p>Where <span class="arithmatex">\(f_{cyc}\)</span> is the fraction of cyclic electron transport.</p>
+<p>We note that we used approximations for both <span class="arithmatex">\(A_c\)</span> and <span class="arithmatex">\(A_j\)</span> (Eqs.
+(A8) and (A10)) rather than the full equations presented in von
+Caemmerer (2021) as we consider the latter as too complex for
+large-scale applications. The equations for <span class="arithmatex">\(C_4\)</span> photosynthesis and
+<span class="arithmatex">\(g_{sw}\)</span> were solved iteratively.</p>
+<p>TODO: relationship leaf N and parameters in C4 plants 🡪 Yuzhen's data.</p>
+<h2 id="leaf-maintenance-respiration">Leaf maintenance respiration</h2>
+<p>For both <span class="arithmatex">\(C_3\)</span> and <span class="arithmatex">\(C_4\)</span> photosynthesis, leaf mitochondrial respiration is
+calculated as:</p>
+<div class="arithmatex">\[
+R_{d,25} = b_{c}\ V_{cmax,25} \ \text{fPAR}
+\tag{A12}
+\]</div>
+<p>where <span class="arithmatex">\(b_c\)</span> differs between <span class="arithmatex">\(C_3\)</span> and <span class="arithmatex">\(C_4\)</span> plants (Tables A X and AX) and fPAR
+describes the inhibition of <span class="arithmatex">\(R_d\)</span> under light. As in Huntingford et al. (2017),
+fPAR was assumed to equal 0.7 if incident radiation (<span class="arithmatex">\(I_{inc}\)</span>) &gt; 2 <span class="arithmatex">\(\text{W m}^{-2}\)</span>
+and 1 otherwise.</p>
+<p>TODO: acclimation</p>
+<p><span class="arithmatex">\(R_d\)</span> aggregated over the canopy and over the day equals leaf maintenance
+respiration (<span class="arithmatex">\(R_{m,leaf}\)</span>) as used in the calculation of daily whole-plant
+maintenance respiration (Eq. XX).</p>
+<h2 id="temperature-responses-of-photosynthetic-parameters">Temperature responses of photosynthetic parameters</h2>
+<p>Most photosynthetic parameters in the model vary with temperature. The
+temperature dependence of many processes can be expressed using an
+Arrhenius equation:</p>
+<div class="arithmatex">\[
+k(T_{leaf}) = k_{25}\ \exp\left( \frac{H_{a}\left( T_{leaf} - \ T_{\text{ref}} \right)}{T_{\text{ref}}{\ R}_{gas}\ T_{leaf}} \right)
+\tag{A13}
+\]</div>
+<p>where <span class="arithmatex">\(k(T_{leaf})\)</span> is the rate at leaf temperature <span class="arithmatex">\(T_{leaf}\)</span> (K), <span class="arithmatex">\(k_{25}\)</span> is
+the rate at the reference temperature <span class="arithmatex">\(T_{ref}\)</span> (298.15 K = 25 °C), <span class="arithmatex">\(H_a\)</span> is the
+activation energy (<span class="arithmatex">\(\text{J mol}^{-1}\)</span>), and <span class="arithmatex">\(R_{gas}\)</span> is the universal gas
+constant (8.314 <span class="arithmatex">\(\text{J mol}^{-1} \text{K}^{-1}\)</span>). Eq. (A13) is applied to
+parameters <span class="arithmatex">\(K_c\)</span>, <span class="arithmatex">\(K_o\)</span>, <span class="arithmatex">\(\Gamma^*\)</span>, and <span class="arithmatex">\(K_p\)</span>, but with different values of
+<span class="arithmatex">\(H_a\)</span> (see Table A1).</p>
+<p>Eq. (A13) predicts an indefinite increase in rates with temperature.
+However, many biochemical rates show a temperature optimum and a
+decreasing rate at temperatures above the optimum. In that case,
+temperature dependence is better expressed as a modified Arrhenius
+equation (F. H. Johnson et al., 1942):</p>
+<div class="arithmatex">\[
+k(T_{leaf}) = k_{25}\ \exp\left( \frac{H_{a}\left( T_{leaf} - \ T_{\text{ref}} \right)}{T_{\text{ref}}{\ R}_{gas}\ T_{leaf}} \right)\frac{1 + \exp\left( \frac{T_{\text{ref}}\ \mathrm{\Delta}S - \ H_{d}}{T_{\text{ref}}{\ R}_{gas}} \right)}{1 + \exp\left( \frac{T_{leaf}\ \mathrm{\Delta}S - \ H_{d}}{T_{leaf}{\ R}_{gas}} \right)}
+\tag{A14}
+\]</div>
+<p>where <span class="arithmatex">\(\Delta S\)</span> is the entropy term (<span class="arithmatex">\(\text{J}\ \text{mol}^{−1}\
+\text{K}^{−1}\)</span>), and <span class="arithmatex">\(H_d\)</span> is the deactivation energy (<span class="arithmatex">\(\text{J}\
+\text{mol}^{−1}\)</span>). Both parameters determine the shape of the response at high
+temperatures.</p>
+<p>The temperature response of <span class="arithmatex">\(R_d\)</span> was modelled according to Heskel et
+al. (2016), who found that the following relationship provided the best
+fit to <span class="arithmatex">\(R_d\)</span> data across PFTs:</p>
+<div class="arithmatex">\[
+R_{d}(T_{leaf}) = \ R_{d,25}\ \exp(a + 0.1012\ T_{leaf} - 0.0005\ {T_{leaf}}^{2})
+\tag{A15}
+\]</div>
+<p>In this case parameter <span class="arithmatex">\(a\)</span> was set to -2.2175 so that the second term of
+Eq. (A15) gives a value of 1 for <span class="arithmatex">\(T_{leaf}\)</span> = 25 °C. Eq. (A15) was
+applied to both <span class="arithmatex">\(C_3\)</span> and <span class="arithmatex">\(C_4\)</span> plants.</p>
+<h2 id="relationship-between-photosynthetic-parameters-and-leaf-nitrogen">Relationship between photosynthetic parameters and leaf nitrogen</h2>
+<p>Key photosynthetic parameters are related to leaf N content in the
+model. For <span class="arithmatex">\(C_3\)</span> plants we implemented the following relationship
+(Ellsworth et al., 2022):</p>
+<div class="arithmatex">\[
+V_{cmax,25} = \exp(4.308 + 0.298\log\left( P_{leaf} \right) + 0.197\log(N_{leaf}))
+\tag{A16}
+\]</div>
+<div class="arithmatex">\[
+J_{max,25} = \exp(5.139 + 0.325\log\left( P_{leaf} \right) + 0.112\ \log(N_{leaf}))
+\tag{A17}
+\]</div>
+<p>where <span class="arithmatex">\(P_{leaf}\)</span> is the leaf P content (<span class="arithmatex">\(\text{g m}^{-2}\)</span>), which is set here to
+an average value of XX. <span class="arithmatex">\(N_{leaf}\)</span> is the leaf N content (<span class="arithmatex">\(\text{g m}^{-2}\)</span>).</p>
+<p>[For <span class="arithmatex">\(C_4\)</span> plants,]{.mark}</p>
+<h2 id="transpiration">Transpiration</h2>
+<p>gs to transpiration</p>
+<h3 id="common-parameters">Common parameters</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Reference</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f_l\)</span></td>
+<td>Correction factor for spectral quality of light</td>
+<td>-</td>
+<td>0.15</td>
+<td>von Caemmerer (2013)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(g_0\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Lombardozzi et al. (2017)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(g_1\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Lin et al. (2015)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(g_{min}\)</span></td>
+<td>Minimum stomatal conductance</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(J_{mol}\)</span></td>
+<td>Conversion of PAR from <span class="arithmatex">\(\text{W m}^{-2}\)</span> to <span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td>2.3</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\theta\)</span></td>
+<td>Curvature factor in light response curve</td>
+<td>-</td>
+<td>0.7</td>
+<td>von Caemmerer (2013)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c_3-photosynthesis-parameters"><span class="arithmatex">\(C_3\)</span> photosynthesis parameters</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Reference</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(a_l\)</span></td>
+<td>Leaf absorptance</td>
+<td>-</td>
+<td>0.85</td>
+<td>von Caemmerer (2013)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(b_c\)</span></td>
+<td>Leaf respiration coefficient</td>
+<td>-</td>
+<td>0.015</td>
+<td>Collatz et al. (1991); Huntingford et al. (2017)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K_c\)</span></td>
+<td>Michaelis-Menten constant for <span class="arithmatex">\(\text{CO}_2\)</span></td>
+<td><span class="arithmatex">\(\text{mol mol}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K_o\)</span></td>
+<td>Michaelis-Menten constant for <span class="arithmatex">\(\text{O}_2\)</span></td>
+<td><span class="arithmatex">\(\text{mol mol}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(J_{max}\)</span></td>
+<td>Maximum electron transport rate</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{cmax}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\Gamma_*\)</span></td>
+<td>Chloroplastic <span class="arithmatex">\(\text{CO}_2\)</span> compensation point in the absence of mitochondrial respiration</td>
+<td><span class="arithmatex">\(\text{mol mol}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c_4-photosynthesis-parameters"><span class="arithmatex">\(C_4\)</span> photosynthesis parameters</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Unit</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Reference</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(b_c\)</span></td>
+<td>Leaf respiration coefficient</td>
+<td>-</td>
+<td>0.025</td>
+<td>Huntingford et al. (2017)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f_{cyc}\)</span></td>
+<td>Fraction of cyclic electron transport</td>
+<td>-</td>
+<td>0.3</td>
+<td>Yin and Struik (2012)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(g_{bs}\)</span></td>
+<td>Bundle sheath conductance to <span class="arithmatex">\(\text{CO}_2\)</span></td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td>0.003</td>
+<td>von Caemmerer (2021)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K_p\)</span></td>
+<td>Michaelis-Menten constant of PEP carboxylase for <span class="arithmatex">\(\text{CO}_2\)</span></td>
+<td><span class="arithmatex">\(\text{mol mol}^{-1}\)</span></td>
+<td><span class="arithmatex">\(115 \times 10^{-6}\)</span></td>
+<td>von Caemmerer (2021)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_d\)</span></td>
+<td>Leaf mitochondrial respiration</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_m\)</span></td>
+<td>Leaf mitochondrial respiration in the mesophyll cell</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td><span class="arithmatex">\(0.5 \times R_d\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{cmax}\)</span></td>
+<td>Maximum rubisco carboxylation rate</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{pmax}\)</span></td>
+<td>Maximum PEP carboxylation rate</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{pr}\)</span></td>
+<td>PEP regeneration rate</td>
+<td><span class="arithmatex">\(\text{mol m}^{-2}\ \text{s}^{-1}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x\)</span></td>
+<td>Partitioning factor of electron transport rate</td>
+<td>-</td>
+<td><span class="arithmatex">\(0.4\)</span></td>
+<td>von Caemmerer (2021)</td>
+</tr>
+</tbody>
+</table>
+<p>: Table A1: Parameters in the photosynthesis and stomatal conductance
+  model.</p>
+<h1 id="appendix-b-soil-water-and-root-distribution">Appendix B: Soil water and root distribution</h1>
+<p>The model is coupled to the soil hydrology routine of the LPJ-GUESS
+model, which represents 15 soil layers, each with a depth of 10 cm.
+Further details on soil hydrological processes can be found in Zhou et
+al. (2024).</p>
+<p>The available soil water content (<span class="arithmatex">\(w_{cont}\)</span>) for any soil layer <em>l</em> is
+given by:</p>
+<div class="arithmatex">\[
+w_{cont,l} = \frac{\theta_{l} - \ \theta_{wilt,l}}{\theta_{fc,l}\  - \ \theta_{wilt,l}}
+\tag{B1}
+\]</div>
+<p>where <span class="arithmatex">\(\theta_{l}\)</span> is the soil water content of layer <em>l</em> (<span class="arithmatex">\(\text{kg m}^{-2}\)</span>),
+<span class="arithmatex">\(\theta_{wilt,l}\)</span> is the permanent wilting point of layer <em>l</em> (<span class="arithmatex">\(\text{kg m}^{-2}\)</span>), and
+<span class="arithmatex">\(\theta_{fc,l}\)</span> is the field capacity of layer <em>l</em> (<span class="arithmatex">\(\text{kg m}^{-2}\)</span>). <span class="arithmatex">\(\theta_{wilt}\)</span> and
+<span class="arithmatex">\(\theta_{fc}\)</span> are calculated for different soil texture classes as described
+in Prentice et al. (1992).</p>
+<p>In the current version of the model, the effects of soil water stress on
+plant physiology and functioning are expressed as a 'soil water scalar',
+which is a function of available water content in the layers weighted by
+the fraction of roots in the layers:</p>
+<div class="arithmatex">\[
+w_{scal} = \sum_{l = 1}^{15}\frac{\theta_{l} - \ \theta_{wilt,l}}{\theta_{crit,l}\  - \ \theta_{wilt,l}}\  \times p_{root,l}
+\tag{B2}
+\]</div>
+<p>where <span class="arithmatex">\(\theta_{crit,l}\)</span> is the critical soil water content of layer <em>l</em> (<span class="arithmatex">\(\text{kg
+m}^{-2}\)</span>), here defined as 0.7 <span class="arithmatex">\(\times\)</span> <span class="arithmatex">\(\theta_{fc,l}\)</span>, below which plant
+physiology is assumed to be not water stressed, and <span class="arithmatex">\(p_{root,l}\)</span> is the
+fraction of roots in layer <em>l.</em> The root distribution in the soil
+profile is assumed to follow an asymptotic function (Jackson et al.,
+1996):</p>
+<div class="arithmatex">\[
+p_{root,d} = \ 1 - \ {\beta_{root}}^{d}
+\tag{B3}
+\]</div>
+<p>where <span class="arithmatex">\(p_{root,d}\)</span> is the fraction of roots above depth <span class="arithmatex">\(d\)</span> (cm) and
+<span class="arithmatex">\(\beta_{root}\)</span> is the root distribution coefficient. <span class="arithmatex">\(p_{root,l}\)</span> in Eq. (B2)
+is then calculated from Eq. (B3) using the upper and lower boundaries of
+soil layer <em>l</em>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

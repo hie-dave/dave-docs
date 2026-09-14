@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Writing Equations - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../contributing-docs/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../sourcetree/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#writing-equations-in-markdown" class="nav-link">Writing Equations in Markdown</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#inline-vs-display-equations" class="nav-link">Inline vs Display Equations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#subscripts-and-superscripts" class="nav-link">Subscripts and Superscripts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#greek-letters" class="nav-link">Greek Letters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fractions" class="nav-link">Fractions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#square-roots-and-nth-roots" class="nav-link">Square Roots and nth Roots</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sums-products-and-integrals" class="nav-link">Sums, Products, and Integrals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-functions" class="nav-link">Common Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#operators-and-relations" class="nav-link">Operators and Relations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#spacing" class="nav-link">Spacing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#brackets-and-delimiters" class="nav-link">Brackets and Delimiters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#multi-line-equations-with-align" class="nav-link">Multi-line Equations with align</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#equation-numbering" class="nav-link">Equation Numbering</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#matrices" class="nav-link">Matrices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#text-inside-equations" class="nav-link">Text Inside Equations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quick-reference" class="nav-link">Quick Reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#further-reading" class="nav-link">Further Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="writing-equations-in-markdown">Writing Equations in Markdown</h1>
+<p>This page is a practical reference for writing mathematical equations on this
+documentation site. If you are familiar with Word's equation editor but new to
+LaTeX, start here.</p>
+<p>Equations are written in <strong>LaTeX</strong> syntax, which is the standard for
+typesetting mathematics in scientific publishing. The site renders them
+automatically wherever you write them.</p>
+<h2 id="inline-vs-display-equations">Inline vs Display Equations</h2>
+<p>There are two ways to include an equation:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Syntax</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inline</strong></td>
+<td><code>$...$</code></td>
+<td>Part of a sentence, e.g. "where <span class="arithmatex">\(x\)</span> is…"</td>
+</tr>
+<tr>
+<td><strong>Display</strong></td>
+<td><code>$$...$$</code></td>
+<td>Standalone, centred equation on its own line</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inline example</strong> — the source:</p>
+<pre><code class="language-markdown">The leaf area index $L$ is the one-sided area of leaf tissue per unit
+ground area (m² m⁻²).
+</code></pre>
+<p>renders as:</p>
+<p>The leaf area index <span class="arithmatex">\(L\)</span> is the one-sided area of leaf tissue per unit
+ground area (m² m⁻²).</p>
+<p><strong>Display example</strong> — the source:</p>
+<pre><code class="language-markdown">$$
+E = mc^2
+$$
+</code></pre>
+<p>renders as:</p>
+<div class="arithmatex">\[
+E = mc^2
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use display equations for anything that has multiple terms, fractions, or
+needs to be easy to refer to. Use inline for short symbols and simple
+expressions that flow naturally in a sentence.</p>
+</div>
+<h2 id="subscripts-and-superscripts">Subscripts and Superscripts</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscript</td>
+<td><code>x_i</code></td>
+<td><span class="arithmatex">\(x_i\)</span></td>
+</tr>
+<tr>
+<td>Superscript</td>
+<td><code>x^2</code></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+</tr>
+<tr>
+<td>Both</td>
+<td><code>x_i^2</code></td>
+<td><span class="arithmatex">\(x_i^2\)</span></td>
+</tr>
+<tr>
+<td>Multi-character subscript</td>
+<td><code>x_{ij}</code></td>
+<td><span class="arithmatex">\(x_{ij}\)</span></td>
+</tr>
+<tr>
+<td>Multi-character superscript</td>
+<td><code>x^{n+1}</code></td>
+<td><span class="arithmatex">\(x^{n+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Use curly braces <code>{}</code> whenever the subscript or superscript is more than one
+character.</p>
+<pre><code class="language-markdown">$$
+A_{ij} = \sum_{k=1}^{n} B_{ik} \, C_{kj}
+$$
+</code></pre>
+<div class="arithmatex">\[
+A_{ij} = \sum_{k=1}^{n} B_{ik} \, C_{kj}
+\]</div>
+<h2 id="greek-letters">Greek Letters</h2>
+<p>Write <code>\</code> followed by the letter name. Capitalise the first letter for the
+uppercase version.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Syntax</th>
+<th>Symbol</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\alpha\)</span></td>
+<td><code>\alpha</code></td>
+<td><span class="arithmatex">\(\Alpha\)</span> / A</td>
+<td>(use <code>A</code>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\beta\)</span></td>
+<td><code>\beta</code></td>
+<td><span class="arithmatex">\(\Beta\)</span> / B</td>
+<td>(use <code>B</code>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\gamma\)</span></td>
+<td><code>\gamma</code></td>
+<td><span class="arithmatex">\(\Gamma\)</span></td>
+<td><code>\Gamma</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\delta\)</span></td>
+<td><code>\delta</code></td>
+<td><span class="arithmatex">\(\Delta\)</span></td>
+<td><code>\Delta</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\epsilon\)</span></td>
+<td><code>\epsilon</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\varepsilon\)</span></td>
+<td><code>\varepsilon</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\zeta\)</span></td>
+<td><code>\zeta</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\eta\)</span></td>
+<td><code>\eta</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\theta\)</span></td>
+<td><code>\theta</code></td>
+<td><span class="arithmatex">\(\Theta\)</span></td>
+<td><code>\Theta</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\kappa\)</span></td>
+<td><code>\kappa</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\lambda\)</span></td>
+<td><code>\lambda</code></td>
+<td><span class="arithmatex">\(\Lambda\)</span></td>
+<td><code>\Lambda</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mu\)</span></td>
+<td><code>\mu</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\nu\)</span></td>
+<td><code>\nu</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\xi\)</span></td>
+<td><code>\xi</code></td>
+<td><span class="arithmatex">\(\Xi\)</span></td>
+<td><code>\Xi</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\pi\)</span></td>
+<td><code>\pi</code></td>
+<td><span class="arithmatex">\(\Pi\)</span></td>
+<td><code>\Pi</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\rho\)</span></td>
+<td><code>\rho</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sigma\)</span></td>
+<td><code>\sigma</code></td>
+<td><span class="arithmatex">\(\Sigma\)</span></td>
+<td><code>\Sigma</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tau\)</span></td>
+<td><code>\tau</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\phi\)</span></td>
+<td><code>\phi</code></td>
+<td><span class="arithmatex">\(\Phi\)</span></td>
+<td><code>\Phi</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\varphi\)</span></td>
+<td><code>\varphi</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\chi\)</span></td>
+<td><code>\chi</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\psi\)</span></td>
+<td><code>\psi</code></td>
+<td><span class="arithmatex">\(\Psi\)</span></td>
+<td><code>\Psi</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\omega\)</span></td>
+<td><code>\omega</code></td>
+<td><span class="arithmatex">\(\Omega\)</span></td>
+<td><code>\Omega</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fractions">Fractions</h2>
+<pre><code class="language-markdown">$\frac{numerator}{denominator}$
+</code></pre>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\frac{a}{b}</code></td>
+<td><span class="arithmatex">\(\frac{a}{b}\)</span></td>
+</tr>
+<tr>
+<td><code>\frac{dA}{dt}</code></td>
+<td><span class="arithmatex">\(\frac{dA}{dt}\)</span></td>
+</tr>
+<tr>
+<td><code>\frac{1}{2}</code></td>
+<td><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>In display math, fractions are larger and easier to read:</p>
+<pre><code class="language-markdown">$$
+R_n = \frac{G_s \, I_{dir}}{1 + k_x \cdot L}
+$$
+</code></pre>
+<div class="arithmatex">\[
+R_n = \frac{G_s \, I_{dir}}{1 + k_x \cdot L}
+\]</div>
+<h2 id="square-roots-and-nth-roots">Square Roots and nth Roots</h2>
+<pre><code class="language-markdown">$\sqrt{x}$          % square root
+$\sqrt[n]{x}$       % nth root
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\sqrt{2}</code></td>
+<td><span class="arithmatex">\(\sqrt{2}\)</span></td>
+</tr>
+<tr>
+<td><code>\sqrt{x^2 + y^2}</code></td>
+<td><span class="arithmatex">\(\sqrt{x^2 + y^2}\)</span></td>
+</tr>
+<tr>
+<td><code>\sqrt[3]{x}</code></td>
+<td><span class="arithmatex">\(\sqrt[3]{x}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sums-products-and-integrals">Sums, Products, and Integrals</h2>
+<p>These are written with limits using <code>_</code> (lower) and <code>^</code> (upper):</p>
+<pre><code class="language-markdown">$$
+\sum_{i=1}^{n} x_i
+$$
+
+$$
+\prod_{i=1}^{n} x_i
+$$
+
+$$
+\int_{0}^{\infty} f(x) \, dx
+$$
+</code></pre>
+<div class="arithmatex">\[
+\sum_{i=1}^{n} x_i
+\qquad
+\prod_{i=1}^{n} x_i
+\qquad
+\int_{0}^{\infty} f(x) \, dx
+\]</div>
+<p>For double integrals: <code>\iint</code>, triple: <code>\iiint</code>, and surface/contour:
+<code>\oint</code>.</p>
+<h2 id="common-functions">Common Functions</h2>
+<p>Use <code>\</code> before function names so they are typeset upright (not italic):</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Result</th>
+<th>Syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\sin x</code></td>
+<td><span class="arithmatex">\(\sin x\)</span></td>
+<td><code>\cos x</code></td>
+<td><span class="arithmatex">\(\cos x\)</span></td>
+</tr>
+<tr>
+<td><code>\tan x</code></td>
+<td><span class="arithmatex">\(\tan x\)</span></td>
+<td><code>\exp(x)</code></td>
+<td><span class="arithmatex">\(\exp(x)\)</span></td>
+</tr>
+<tr>
+<td><code>\ln x</code></td>
+<td><span class="arithmatex">\(\ln x\)</span></td>
+<td><code>\log x</code></td>
+<td><span class="arithmatex">\(\log x\)</span></td>
+</tr>
+<tr>
+<td><code>\log_{10} x</code></td>
+<td><span class="arithmatex">\(\log_{10} x\)</span></td>
+<td><code>\max</code></td>
+<td><span class="arithmatex">\(\max\)</span></td>
+</tr>
+<tr>
+<td><code>\min</code></td>
+<td><span class="arithmatex">\(\min\)</span></td>
+<td><code>\lim_{x \to 0}</code></td>
+<td><span class="arithmatex">\(\lim_{x \to 0}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operators-and-relations">Operators and Relations</h2>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Syntax</th>
+<th>Symbol</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\times\)</span></td>
+<td><code>\times</code></td>
+<td><span class="arithmatex">\(\cdot\)</span></td>
+<td><code>\cdot</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\div\)</span></td>
+<td><code>\div</code></td>
+<td><span class="arithmatex">\(\pm\)</span></td>
+<td><code>\pm</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\leq\)</span></td>
+<td><code>\leq</code></td>
+<td><span class="arithmatex">\(\geq\)</span></td>
+<td><code>\geq</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\neq\)</span></td>
+<td><code>\neq</code></td>
+<td><span class="arithmatex">\(\approx\)</span></td>
+<td><code>\approx</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\propto\)</span></td>
+<td><code>\propto</code></td>
+<td><span class="arithmatex">\(\equiv\)</span></td>
+<td><code>\equiv</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\in\)</span></td>
+<td><code>\in</code></td>
+<td><span class="arithmatex">\(\notin\)</span></td>
+<td><code>\notin</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\rightarrow\)</span></td>
+<td><code>\rightarrow</code></td>
+<td><span class="arithmatex">\(\leftarrow\)</span></td>
+<td><code>\leftarrow</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\infty\)</span></td>
+<td><code>\infty</code></td>
+<td><span class="arithmatex">\(\partial\)</span></td>
+<td><code>\partial</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\nabla\)</span></td>
+<td><code>\nabla</code></td>
+<td><span class="arithmatex">\(\forall\)</span></td>
+<td><code>\forall</code></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\exists\)</span></td>
+<td><code>\exists</code></td>
+<td><span class="arithmatex">\(\therefore\)</span></td>
+<td><code>\therefore</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spacing">Spacing</h2>
+<p>LaTeX removes whitespace inside math mode. Use these commands to add space:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\,</code></td>
+<td>thin space (most common)</td>
+</tr>
+<tr>
+<td><code>\;</code></td>
+<td>medium space</td>
+</tr>
+<tr>
+<td><code>\quad</code></td>
+<td>large space</td>
+</tr>
+<tr>
+<td><code>\qquad</code></td>
+<td>double large space</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-markdown">$f(x) \, dx$       % thin space before dx — conventional
+$A \quad B$        % gap between terms
+</code></pre>
+<h2 id="brackets-and-delimiters">Brackets and Delimiters</h2>
+<p>Plain brackets <code>( )</code> and <code>[ ]</code> work directly. For tall expressions, use
+<code>\left</code> and <code>\right</code> to scale them automatically:</p>
+<pre><code class="language-markdown">$$
+\left( \frac{a}{b} \right)^2
+$$
+</code></pre>
+<div class="arithmatex">\[
+\left( \frac{a}{b} \right)^2
+\]</div>
+<p>Other delimiters: <code>\left[ \right]</code>, <code>\left\{ \right\}</code>,
+<code>\left| \right|</code> (absolute value), <code>\left\| \right\|</code> (norm).</p>
+<h2 id="multi-line-equations-with-align">Multi-line Equations with <code>align</code></h2>
+<p>To align a derivation or a system of equations at the <code>=</code> sign, use the
+<code>align</code> environment. Use <code>&amp;</code> to mark the alignment point and <code>\\</code> to end
+each line:</p>
+<pre><code class="language-markdown">$$
+\begin{align}
+A &amp;= \pi r^2 \\
+C &amp;= 2 \pi r
+\end{align}
+$$
+</code></pre>
+<div class="arithmatex">\[
+\begin{align}
+A &amp;= \pi r^2 \\
+C &amp;= 2 \pi r
+\end{align}
+\]</div>
+<p>A multi-step derivation:</p>
+<pre><code class="language-markdown">$$
+\begin{align}
+E_a &amp;= E_{a,0} \cdot f(T) \\
+    &amp;= E_{a,0} \cdot \exp\!\left( \frac{T - T_0}{10} \right)
+\end{align}
+$$
+</code></pre>
+<div class="arithmatex">\[
+\begin{align}
+E_a &amp;= E_{a,0} \cdot f(T) \\
+    &amp;= E_{a,0} \cdot \exp\!\left( \frac{T - T_0}{10} \right)
+\end{align}
+\]</div>
+<h2 id="equation-numbering">Equation Numbering</h2>
+<p>Display equations in the <code>equation</code> environment are numbered automatically:</p>
+<pre><code class="language-markdown">$$
+\begin{equation}
+GPP = A_{canopy} \cdot \Delta t
+\end{equation}
+$$
+</code></pre>
+<p>To add a manual tag to any display equation, use <code>\tag{}</code>:</p>
+<pre><code class="language-markdown">$$
+NPP = GPP - R_a \tag{1}
+$$
+</code></pre>
+<div class="arithmatex">\[
+NPP = GPP - R_a \tag{1}
+\]</div>
+<h2 id="matrices">Matrices</h2>
+<p>Use the <code>pmatrix</code> (parentheses), <code>bmatrix</code> (square brackets), or <code>matrix</code>
+(no brackets) environments:</p>
+<pre><code class="language-markdown">$$
+\mathbf{A} =
+\begin{pmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22}
+\end{pmatrix}
+$$
+</code></pre>
+<div class="arithmatex">\[
+\mathbf{A} =
+\begin{pmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22}
+\end{pmatrix}
+\]</div>
+<p>Bold upright symbols for vectors and matrices: <code>\mathbf{A}</code> → <span class="arithmatex">\(\mathbf{A}\)</span>,
+<code>\mathbf{v}</code> → <span class="arithmatex">\(\mathbf{v}\)</span>.</p>
+<h2 id="text-inside-equations">Text Inside Equations</h2>
+<p>Use <code>\text{...}</code> to include upright text inside an equation (units,
+conditions, labels):</p>
+<pre><code class="language-markdown">$$
+R_s \quad [\text{W m}^{-2}]
+$$
+
+$$
+f(x) = \begin{cases}
+1 &amp; \text{if } x &gt; 0 \\
+0 &amp; \text{otherwise}
+\end{cases}
+$$
+</code></pre>
+<div class="arithmatex">\[
+f(x) = \begin{cases}
+1 &amp; \text{if } x &gt; 0 \\
+0 &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Syntax</th>
+<th>Example result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inline math</td>
+<td><code>$x$</code></td>
+<td><span class="arithmatex">\(x\)</span></td>
+</tr>
+<tr>
+<td>Display math</td>
+<td><code>$$...$$</code></td>
+<td>centred block</td>
+</tr>
+<tr>
+<td>Subscript</td>
+<td><code>x_i</code></td>
+<td><span class="arithmatex">\(x_i\)</span></td>
+</tr>
+<tr>
+<td>Superscript</td>
+<td><code>x^2</code></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td><code>\frac{a}{b}</code></td>
+<td><span class="arithmatex">\(\frac{a}{b}\)</span></td>
+</tr>
+<tr>
+<td>Square root</td>
+<td><code>\sqrt{x}</code></td>
+<td><span class="arithmatex">\(\sqrt{x}\)</span></td>
+</tr>
+<tr>
+<td>Sum</td>
+<td><code>\sum_{i=1}^{n}</code></td>
+<td><span class="arithmatex">\(\sum_{i=1}^{n}\)</span></td>
+</tr>
+<tr>
+<td>Integral</td>
+<td><code>\int_0^\infty</code></td>
+<td><span class="arithmatex">\(\int_0^\infty\)</span></td>
+</tr>
+<tr>
+<td>Greek</td>
+<td><code>\alpha</code>, <code>\beta</code>, <code>\Gamma</code></td>
+<td><span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\Gamma\)</span></td>
+</tr>
+<tr>
+<td>Multiply dot</td>
+<td><code>\cdot</code></td>
+<td><span class="arithmatex">\(\cdot\)</span></td>
+</tr>
+<tr>
+<td>Multiply cross</td>
+<td><code>\times</code></td>
+<td><span class="arithmatex">\(\times\)</span></td>
+</tr>
+<tr>
+<td>Approx</td>
+<td><code>\approx</code></td>
+<td><span class="arithmatex">\(\approx\)</span></td>
+</tr>
+<tr>
+<td>Infinity</td>
+<td><code>\infty</code></td>
+<td><span class="arithmatex">\(\infty\)</span></td>
+</tr>
+<tr>
+<td>Partial deriv.</td>
+<td><code>\partial</code></td>
+<td><span class="arithmatex">\(\partial\)</span></td>
+</tr>
+<tr>
+<td>Auto-scaling brackets</td>
+<td><code>\left( \right)</code></td>
+<td>scales to content</td>
+</tr>
+<tr>
+<td>Multi-line aligned</td>
+<td><code>\begin{align} ... \end{align}</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Manual tag</td>
+<td><code>\tag{3}</code></td>
+<td>equation label (3)</td>
+</tr>
+<tr>
+<td>Bold (matrix/vector)</td>
+<td><code>\mathbf{A}</code></td>
+<td><span class="arithmatex">\(\mathbf{A}\)</span></td>
+</tr>
+<tr>
+<td>Upright text</td>
+<td><code>\text{units}</code></td>
+<td>upright</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-reading">Further Reading</h2>
+<p>A complete reference for LaTeX math commands is available at
+<a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">LaTeX Math Symbols</a>
+or the
+<a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">Wikibooks LaTeX Mathematics</a>
+page. MathJax supports essentially the full AMS-LaTeX math command set.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

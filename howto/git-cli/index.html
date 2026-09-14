@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Version Control via CLI - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sourcetree/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../development/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#version-control-via-the-command-line" class="nav-link">Version Control via the Command Line</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#clone-the-repository" class="nav-link">Clone the Repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#create-a-branch" class="nav-link">Create a Branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#check-status-and-review-changes" class="nav-link">Check Status and Review Changes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stage-and-commit" class="nav-link">Stage and Commit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#push-the-branch" class="nav-link">Push the Branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bring-a-branch-up-to-date" class="nav-link">Bring a Branch Up to Date</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#open-a-merge-request" class="nav-link">Open a Merge Request</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#update-local-lpjguess_dave" class="nav-link">Update Local lpjguess_dave</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quick-reference" class="nav-link">Quick Reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="version-control-via-the-command-line">Version Control via the Command Line</h1>
+<p>This page covers the Git workflow for contributing to LPJ-GUESS DAVE using
+the terminal. It assumes familiarity with basic Git concepts (commits,
+branches, remotes). For a gentler introduction, see
+<a href="../sourcetree/">Version Control via SourceTree</a>.</p>
+<hr />
+<h2 id="clone-the-repository">Clone the Repository</h2>
+<pre><code class="language-bash">git clone git@stormbringer4.nateko.lu.se:dave/lpj-guess-dave.git lpj-guess-dave
+cd lpj-guess-dave
+</code></pre>
+<p>The default branch after cloning is <code>lpjguess_dave</code>.</p>
+<hr />
+<h2 id="create-a-branch">Create a Branch</h2>
+<p>Always work on a dedicated branch, not directly on <code>lpjguess_dave</code>:</p>
+<pre><code class="language-bash">git switch -c my-feature-branch
+</code></pre>
+<p>Use a short, descriptive name with hyphens (e.g. <code>fix-canopy-conductance</code>,
+<code>add-thome-docs</code>).</p>
+<hr />
+<h2 id="check-status-and-review-changes">Check Status and Review Changes</h2>
+<pre><code class="language-bash">git status          # which files have changed
+git diff            # unstaged changes (line-by-line)
+git diff --staged   # changes already staged for commit
+</code></pre>
+<hr />
+<h2 id="stage-and-commit">Stage and Commit</h2>
+<p>Stage specific files you want to include in the next commit:</p>
+<pre><code class="language-bash">git add path/to/changed/file.cpp path/to/file2.h
+git add docs/howto/my-page.md
+</code></pre>
+<p>Or stage everything in the working tree (use with care):</p>
+<pre><code class="language-bash">git add -A   # stage all changes in the repository, including deletions
+git add .    # stage all changes in the current directory and subdirectories
+git add -p   # interactive patch staging — recommended over git add .
+</code></pre>
+<p>Then commit with a message that describes what changed and why:</p>
+<pre><code class="language-bash">git commit -m &quot;Fix negative VPD crash when RH input is 1.0&quot;
+</code></pre>
+<p>Good commit messages use the imperative present tense and explain why the
+change was made, not just which files were touched.</p>
+<hr />
+<h2 id="push-the-branch">Push the Branch</h2>
+<pre><code class="language-bash">git push -u origin my-feature-branch
+</code></pre>
+<p>The <code>-u</code> flag sets the upstream tracking reference so that subsequent
+<code>git push</code> and <code>git pull</code> calls on this branch need no arguments.</p>
+<hr />
+<h2 id="bring-a-branch-up-to-date">Bring a Branch Up to Date</h2>
+<p>Two common workflows are covered below:</p>
+<ol>
+<li>Bring a long-lived development branch up to date with
+    <code>origin/lpjguess_dave</code>.</li>
+<li>Pull commits you made to the same branch from another machine.</li>
+</ol>
+<p>In both workflows, commit or stash local uncommitted changes first.</p>
+<h3 id="workflow-a-update-from-lpjguess_dave-rebase-recommended">Workflow A: Update from <code>lpjguess_dave</code> (Rebase Recommended)</h3>
+<p>From your development branch:</p>
+<pre><code class="language-bash">git fetch origin
+git rebase origin/lpjguess_dave
+</code></pre>
+<p>If conflicts occur, resolve them and continue:</p>
+<pre><code class="language-bash">git add &lt;resolved-file&gt;
+git rebase --continue
+</code></pre>
+<p>If you already pushed the branch earlier, rebase rewrites commit hashes, so
+you may need:</p>
+<pre><code class="language-bash">git push --force-with-lease
+</code></pre>
+<h3 id="workflow-a-alternative-update-from-lpjguess_dave-with-merge">Workflow A (Alternative): Update from <code>lpjguess_dave</code> with Merge</h3>
+<p>If you do not want to rewrite branch history:</p>
+<pre><code class="language-bash">git fetch origin
+git merge origin/lpjguess_dave
+</code></pre>
+<p>If conflicts occur, resolve them and continue:</p>
+<pre><code class="language-bash">git add &lt;resolved-file&gt;
+git merge --continue
+</code></pre>
+<p>If your Git version does not support <code>git merge --continue</code>, complete the
+merge with:</p>
+<pre><code class="language-bash">git commit
+</code></pre>
+<h3 id="workflow-b-pull-your-own-branch-changes-from-another-machine">Workflow B: Pull Your Own Branch Changes from Another Machine</h3>
+<p>If you pushed commits from machine A and now want them on machine B:</p>
+<pre><code class="language-bash">git switch my-feature-branch
+git pull
+</code></pre>
+<p>This works because the branch tracks <code>origin/my-feature-branch</code> (set when you
+first used <code>git push -u origin my-feature-branch</code>).</p>
+<h3 id="rebase-vs-merge-whats-the-difference">Rebase vs Merge (What’s the Difference?)</h3>
+<ul>
+<li><code>rebase</code> replays your branch commits on top of the latest
+    <code>origin/lpjguess_dave</code>, producing a linear history.</li>
+<li><code>merge</code> creates a merge commit that ties both histories together, preserving
+    the exact original branch timeline.</li>
+</ul>
+<p>Practical guidance:</p>
+<ul>
+<li>Prefer <code>rebase</code> for a clean, linear feature branch history before opening an
+    MR.</li>
+<li>Prefer <code>merge</code> when you want to avoid history rewriting, especially on
+    shared branches.</li>
+<li>Avoid rebasing commits that others have already based work on.</li>
+</ul>
+<hr />
+<h2 id="open-a-merge-request">Open a Merge Request</h2>
+<p>After pushing, open the repository in your browser on GitLab. GitLab will
+show a banner prompting you to create a Merge Request for the branch you
+just pushed. Set <strong>Target branch</strong> to <code>lpjguess_dave</code>.</p>
+<p>Alternatively, GitLab prints a direct MR creation link in the output of
+<code>git push</code>:</p>
+<pre><code>remote: To create a merge request for my-feature-branch, visit:
+remote:   https://gitlab.com/.../merge_requests/new?merge_request[source_branch]=my-feature-branch
+</code></pre>
+<p>The CI pipeline runs automatically. The MR can be merged once the pipeline
+passes and a reviewer has approved it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Subsequent pushes to the same branch update the open MR automatically —
+no need to open a new one.</p>
+</div>
+<hr />
+<h2 id="update-local-lpjguess_dave">Update Local <code>lpjguess_dave</code></h2>
+<p>To refresh your local copy of the primary branch itself:</p>
+<pre><code class="language-bash">git switch lpjguess_dave
+git pull
+</code></pre>
+<hr />
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clone</td>
+<td><code>git clone &lt;url&gt;</code></td>
+</tr>
+<tr>
+<td>New branch</td>
+<td><code>git switch -c &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>Switch branch</td>
+<td><code>git switch &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>Stage file</td>
+<td><code>git add &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Interactive staging</td>
+<td><code>git add -p</code></td>
+</tr>
+<tr>
+<td>Commit</td>
+<td><code>git commit -m "&lt;message&gt;"</code></td>
+</tr>
+<tr>
+<td>Push (first time)</td>
+<td><code>git push -u origin &lt;branch&gt;</code></td>
+</tr>
+<tr>
+<td>Push (subsequent)</td>
+<td><code>git push</code></td>
+</tr>
+<tr>
+<td>Fetch + rebase</td>
+<td><code>git fetch origin &amp;&amp; git rebase origin/lpjguess_dave</code></td>
+</tr>
+<tr>
+<td>Fetch + merge</td>
+<td><code>git fetch origin &amp;&amp; git merge origin/lpjguess_dave</code></td>
+</tr>
+<tr>
+<td>Pull your branch from remote</td>
+<td><code>git switch &lt;branch&gt; &amp;&amp; git pull</code></td>
+</tr>
+<tr>
+<td>Pull main branch</td>
+<td><code>git switch lpjguess_dave &amp;&amp; git pull</code></td>
+</tr>
+<tr>
+<td>Check status</td>
+<td><code>git status</code></td>
+</tr>
+<tr>
+<td>View diff</td>
+<td><code>git diff</code> / <code>git diff --staged</code></td>
+</tr>
+<tr>
+<td>View log</td>
+<td><code>git log --oneline</code></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Running Jobs - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../run-parallel/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../gadi-setup/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#running-on-gadi" class="nav-link">Running on Gadi</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#before-you-start" class="nav-link">Before You Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#build-lpj-guess" class="nav-link">Build LPJ-GUESS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#create-a-submission-configuration" class="nav-link">Create a Submission Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prepare-a-dry-run" class="nav-link">Prepare a Dry Run</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#submit-the-jobs" class="nav-link">Submit the Jobs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#check-the-result" class="nav-link">Check the Result</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="running-on-gadi">Running on Gadi</h1>
+<p>This page is the practical workflow for building and submitting an LPJ-GUESS
+DAVE job on the <a href="https://nci.org.au/our-systems/hpc-systems">Gadi HPC system</a>.
+If this is your first time using Gadi, complete
+<a href="../gadi-setup/">Setting Up Gadi</a> before continuing.</p>
+<p>Related guides provide more detail when you need it:</p>
+<ul>
+<li><a href="../gadi-setup/">Setting Up Gadi</a>—accounts, SSH, PBS, modules, and storage</li>
+<li><a href="../gadi-troubleshooting/">Checking and Troubleshooting Gadi Runs</a>—logs,
+  output collation, and common errors</li>
+<li><a href="../gadi-resources/">Choosing Gadi Resources and Estimating Costs</a>—CPU,
+  memory, walltime, and SU estimates</li>
+</ul>
+<h2 id="before-you-start">Before You Start</h2>
+<p>You should have:</p>
+<ul>
+<li>access to Gadi and an NCI project such as <code>pt17</code></li>
+<li>the LPJ-GUESS-DAVE repository and your input files on Gadi</li>
+<li>the <a href="../gadi-setup/#dave-shared-environment">DAVE shared environment</a> enabled</li>
+<li>a run output location under <code>/scratch</code>, not <code>$HOME</code></li>
+</ul>
+<p>Connect to Gadi:</p>
+<pre><code class="language-bash">ssh &lt;nci_username&gt;@gadi.nci.org.au
+</code></pre>
+<h2 id="build-lpj-guess">Build LPJ-GUESS</h2>
+<p>The repository includes a <code>build_gadi</code> script that loads the correct modules
+and compiles the model. From the repository root:</p>
+<pre><code class="language-bash">./build_gadi
+</code></pre>
+<p>The script clears previously loaded modules, loads OpenMPI, GCC, CMake, and
+NetCDF, and creates a Release build in <code>build/</code>. Use this script to avoid
+mismatches between the modules used to build and run LPJ-GUESS.</p>
+<h2 id="create-a-submission-configuration">Create a Submission Configuration</h2>
+<p>Copy <a href="https://github.com/hie-dave/lpj-scripts/blob/master/example.conf"><code>example.conf</code></a>
+from the <code>hie-dave/lpj-scripts</code> repository as a starting point.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OUT_DIR</code></td>
+<td>Root output directory. Use <code>/scratch</code>, not <code>$HOME</code></td>
+<td><code>/scratch/pt17/some/directory</code></td>
+</tr>
+<tr>
+<td><code>BINARY</code></td>
+<td>Path to the compiled <code>guess</code> binary</td>
+<td><code>${HOME}/lpj-guess-dave/build/guess</code></td>
+</tr>
+<tr>
+<td><code>EXPERIMENT</code></td>
+<td>Subdirectory name within <code>OUT_DIR</code> for this run</td>
+<td><code>barra2-dave</code></td>
+</tr>
+<tr>
+<td><code>NPROCESS</code></td>
+<td>Number of parallel workers (CPUs)</td>
+<td><code>48</code></td>
+</tr>
+<tr>
+<td><code>WALLTIME</code></td>
+<td>Maximum job duration (<code>hh:mm:ss</code>); no more than 48 hours</td>
+<td><code>02:00:00</code></td>
+</tr>
+<tr>
+<td><code>MEMORY</code></td>
+<td>Total memory allocation; use 4 GiB per CPU on <code>normal</code></td>
+<td><code>192GB</code></td>
+</tr>
+<tr>
+<td><code>QUEUE</code></td>
+<td>PBS queue</td>
+<td><code>normal</code></td>
+</tr>
+<tr>
+<td><code>PROJECT</code></td>
+<td>NCI project to charge SUs to</td>
+<td><code>pt17</code></td>
+</tr>
+<tr>
+<td><code>EMAIL</code></td>
+<td>Address for PBS job-status notifications</td>
+<td><code>you@uni.edu.au</code></td>
+</tr>
+<tr>
+<td><code>EMAIL_NOTIFICATIONS</code></td>
+<td><code>1</code> to receive email, <code>0</code> to suppress</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>INSFILE</code></td>
+<td>Path to the instruction file</td>
+<td><code>/scratch/pt17/my/simulation.ins</code></td>
+</tr>
+<tr>
+<td><code>INPUT_MODULE</code></td>
+<td>LPJ-GUESS input module; use <code>nc</code> for DAVE</td>
+<td><code>nc</code></td>
+</tr>
+</tbody>
+</table>
+<p>Do not use <code>~</code> for home-directory expansion in this file. Use <code>${HOME}</code> or an
+absolute path instead. See
+<a href="../gadi-resources/">Choosing Gadi Resources and Estimating Costs</a> before
+selecting <code>NPROCESS</code>, <code>MEMORY</code>, and <code>WALLTIME</code> for a large run.</p>
+<h3 id="use-a-relative-gridlist-path">Use a Relative Gridlist Path</h3>
+<div class="admonition warning">
+<p class="admonition-title">The gridlist is the exception to the absolute-path rule</p>
+<p>In the instruction file, the gridlist must use a relative path such as
+<code>./gridlist.txt</code>. An absolute gridlist path can cause every worker to run
+every gridcell, making the job take much longer and cost far more than
+expected.</p>
+</div>
+<p>The parameter may be named <code>file_gridlist</code>, <code>file_gridlist_cf</code>, or something
+else depending on the input module. Its value must be
+<code>./&lt;gridlist-basename&gt;</code>—for example:</p>
+<pre><code class="language-text">file_gridlist &quot;./gridlist.txt&quot;
+</code></pre>
+<p>All other input files should generally use absolute paths. See
+<a href="../gadi-troubleshooting/#job-takes-much-longer-than-expected">Job Takes Much Longer Than Expected</a>
+for an explanation of this special case.</p>
+<h2 id="prepare-a-dry-run">Prepare a Dry Run</h2>
+<p>For parallel production runs, use <code>submit_to_gadi.sh</code> from the
+<a href="https://github.com/hie-dave/lpj-scripts/blob/master/submit_to_gadi.sh"><code>hie-dave/lpj-scripts</code></a>
+repository. Start with the <code>-d</code> option:</p>
+<pre><code class="language-bash">submit_to_gadi.sh -d -s my_run.conf
+</code></pre>
+<p>The required <code>-s</code> option identifies the configuration file. The <code>-d</code> option
+performs all preparation but does not submit jobs to PBS. The script:</p>
+<ol>
+<li>Creates the <code>runs/run1/</code>…<code>runs/runN/</code> working directories required by the
+   parallel launcher (see <a href="../run-parallel/">Running in Parallel</a>).</li>
+<li>Splits the gridlist into approximately equal chunks, one per worker.</li>
+<li>Generates the MPI execution command file, which loads the build-time
+   modules and launches LPJ-GUESS with <code>mpirun</code>.</li>
+<li>Generates <code>append.cmd</code>, which will combine the workers' output files.</li>
+</ol>
+<p>Inspect the generated files and, if needed, manually test a single gridcell on
+the login node. Keep login-node tests short and limited to one gridcell;
+production runs must use PBS. A brief test will usually expose invalid paths,
+missing instruction-file parameters, and similar startup errors immediately.</p>
+<h2 id="submit-the-jobs">Submit the Jobs</h2>
+<p>Once the dry run and any single-gridcell checks succeed, submit normally:</p>
+<pre><code class="language-bash">submit_to_gadi.sh -s my_run.conf
+</code></pre>
+<p>The script submits two PBS jobs:</p>
+<ol>
+<li>The main job runs LPJ-GUESS in parallel.</li>
+<li>The append job is scheduled to run only if the main job succeeds. It
+   combines the workers' individual output files into <code>output/</code>.</li>
+</ol>
+<p>You can monitor or cancel the main job with standard PBS commands:</p>
+<pre><code class="language-bash">qstat -u $USER
+qstat -f &lt;jobid&gt;
+qdel &lt;jobid&gt;
+</code></pre>
+<h2 id="check-the-result">Check the Result</h2>
+<p>After the jobs finish, check these files:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;job name&gt;.log</code></td>
+<td>Top-level job log; its final lines report requested and used PBS resources and total SU cost</td>
+</tr>
+<tr>
+<td><code>runs/runX/guess.log</code></td>
+<td>Per-worker logs showing which gridcells ran, their timing, warnings, and errors</td>
+</tr>
+<tr>
+<td><code>runs/runX/out/</code></td>
+<td>Individual worker outputs</td>
+</tr>
+<tr>
+<td><code>output/</code></td>
+<td>Combined outputs created by <code>append.cmd</code> after a successful main job</td>
+</tr>
+</tbody>
+</table>
+<p>For example, the append job combines:</p>
+<pre><code class="language-text">runs/run1/out/lai.out ┐
+runs/run2/out/lai.out ├──&gt; output/lai.out
+runs/run3/out/lai.out ┘
+</code></pre>
+<p>Check the top-level job log after every run. LPJ-GUESS jobs typically cost
+around <strong>0.005–0.01 SU per patch</strong>, where the total number of patches is
+<code>npatch × number of gridcells</code>. A substantially higher or lower cost should be
+investigated.</p>
+<p>See <a href="../gadi-troubleshooting/">Checking and Troubleshooting Gadi Runs</a> for a
+diagnostic workflow and <a href="../gadi-resources/#estimating-lpj-guess-run-cost">Estimating LPJ-GUESS Run Cost</a>
+for the full cost calculation.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

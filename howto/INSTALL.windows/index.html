@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Windows - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../common-failures/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../INSTALL.macos/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#lpj-guess-dave-windows-setup-guide" class="nav-link">LPJ-GUESS DAVE Windows Setup Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#preamble" class="nav-link">Preamble</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#software-installation" class="nav-link">Software Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#software-configurationsetup" class="nav-link">Software Configuration/Setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#obtaining-source-code" class="nav-link">Obtaining Source Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#obtaining-climate-data" class="nav-link">Obtaining Climate Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#next-step-run-the-model" class="nav-link">Next Step: Run the Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuring-the-model" class="nav-link">Configuring the Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="lpj-guess-dave-windows-setup-guide">LPJ-GUESS DAVE Windows Setup Guide</h1>
+<h2 id="preamble">Preamble</h2>
+<p>This guide explains how to compile, run, and debug LPJ-GUESS DAVE on windows,
+using the msys2 toolchain + vscode. It's possible to instead use Microsoft
+compilers (MSVC) and visual studio, and while that will work, it's beyond the
+scope of this guide (ie: you're on your own).</p>
+<h2 id="software-installation">Software Installation</h2>
+<ul>
+<li>Download and install filezilla</li>
+<li>Download and install sourcetree (skip bitbucket config, disable mercurial)</li>
+<li>Download and install visual studio code (not visual studio)</li>
+<li>Download and install msys2 (I recommend using the default installation path)</li>
+</ul>
+<h2 id="software-configurationsetup">Software Configuration/Setup</h2>
+<h3 id="msys2">MSYS2</h3>
+<p>Run the following command from inside msys2:</p>
+<pre><code class="language-bash">pacman -S mingw-w64-x86_64-{gcc,cmake,netcdf,gdb,make,ninja}
+</code></pre>
+<h3 id="update-path-to-include-mingw64">Update PATH to include MinGW64</h3>
+<p>Go to the start menu and search for "environment", and click on "Edit
+environment variables for the current user". Double click on "Path", then click
+"New". Here you will need to use the path into which you installed msys2. By
+default this was <code>C:\msys64</code>, but if you installed it in a different location,
+use that location instead.</p>
+<p>Add the following path: <code>C:\path\to\msys64\mingw64\bin</code>.</p>
+<p>E.g. for the default installation options: <code>C:\msys64\mingw64\bin</code>.</p>
+<p>Click OK to save the changes, and click OK on the environment variables window
+as well.</p>
+<p>To make sure this worked, open a <strong>new</strong> command prompt and run <code>gcc</code>. If you
+get a "command not found" error, then something has gone wrong - talk to Drew.
+If you get something like "fatal error: no input files", then you're all set.</p>
+<p>If Visual Studio Code is installed and running, close it and reopen it.</p>
+<h3 id="ssh-key-generation">SSH Key Generation</h3>
+<p><strong>DO NOT do this if you already have a key.</strong></p>
+<p>To check if you have a key, navigate to <code>C:\Users\username\.ssh</code>. If this
+directory doesn't exist, you don't have a key. If you have a file in here called
+something like <code>id_ed25519</code>, <code>id_rsa</code>, etc, then you already have an SSH key.</p>
+<p><strong>Never</strong> overwrite this key unless you know what you're doing.</p>
+<p>If you don't have an SSH key, open a command prompt and run the following
+command:</p>
+<pre><code class="language-bash">ssh-keygen -t ed25519
+</code></pre>
+<p>Just click "enter" at each prompt to generate a key with the default name and
+without a passphrase.</p>
+<p>Your key file comes in two parts, stored as two separate files in the
+<code>C:\Users\username\.ssh</code> directory:</p>
+<ul>
+<li><code>id_ed25519</code>                       (<em>Private key</em>)</li>
+<li><code>id_ed25519.pub</code>                   (<em>Public key</em>)</li>
+</ul>
+<p>In windows, it can be difficult to distinguish between the two files, so it can
+be useful to enable the display of file path extensions in windows explorer.</p>
+<h3 id="gitlab-account">GitLab Account</h3>
+<p>If you don't already have a gitlab account, navigate to the
+<a href="https://stormbringer4.nateko.lu.se/">Lund Gitlab</a> in a browser and create one.</p>
+<h3 id="gitlab-ssh-key">GitLab SSH Key</h3>
+<p>Go to your
+<a href="https://stormbringer4.nateko.lu.se/-/profile/preferences">preferences page</a> in
+gitlab, and click "SSH Keys" on the left, click "Add new key".</p>
+<p>Copy the contents of your public key (<code>C:\Users\username\.ssh\id_ed25519.pub</code>)
+and add it to your GitLab account. Make sure you copy the file ending with .pub,
+which is your public key, as opposed to the file with the same name but no file
+extension, which is your private key and should be treated like a password (ie
+not shared with anyone).</p>
+<p>To get the contents of your public key, you can open it in a text editor such as
+notepad, or print it from a command prompt (e.g.
+<code>type C:\Users\username\.ssh\id_ed25519.pub</code>)</p>
+<h3 id="filezilla">FileZilla</h3>
+<p>Go to the site manager (top-left, beneath the "file" button). Click "New site"
+to register a new server with the following details:</p>
+<ul>
+<li>Protocol: SFTP - SSH File Transfer Protocol</li>
+<li>Host: hie-storage.sstars.ws</li>
+<li>Port: leave empty</li>
+<li>Logon Type: Key file</li>
+<li>User: Your hie-storage username (e.g. u90123456)</li>
+<li>Key file: Your <strong>private</strong> key (e.g. <code>C:\Users\username\.ssh\id_ed25519</code>)</li>
+</ul>
+<p>Click OK to save this server configuration. To later connect to hie-storage,
+select this server from the drop-down list to the right of the "site manager"
+button.</p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p>Open Visual Studio Code, hit ctrl+shift+x to open the extension manager, and
+install the following extensions:</p>
+<ul>
+<li>C++</li>
+<li>Native Debug</li>
+</ul>
+<h2 id="obtaining-source-code">Obtaining Source Code</h2>
+<p>Open SourceTree and click "clone". Use the following details:</p>
+<p>Remote URL: <code>git@stormbringer4.nateko.lu.se:DAVE/LPJ-GUESS-DAVE.git</code></p>
+<p>Destination Path: <code>C:\some\path\on\your\computer</code></p>
+<p>The code will be downloaded into the destination path, so choose wherever works
+best for you.</p>
+<h2 id="obtaining-climate-data">Obtaining Climate Data</h2>
+<p>Climate data must be downloaded from hie-storage. If you don't have an account,
+talk to Drew.</p>
+<p>On hie-storage, the following directory must be downloaded:</p>
+<pre><code>/data/hiestorage/WorkingData/MEDLYN_GROUP/PROJECTS/dynamics_simulations/lpj-guess/forcing/ozflux/processed
+</code></pre>
+<p>This directory must be downloaded into your source code directory, inside
+<code>&lt;source code directory&gt;\benchmarks\ozflux</code>, and it must be renamed to
+forcing. So you should end up with a directory named
+<code>&lt;source code directory&gt;\benchmarks\ozflux\forcing\met</code>.</p>
+<h2 id="next-step-run-the-model">Next Step: Run the Model</h2>
+<p>After completing the Windows setup, follow <a href="../debugging-vscode/">Running and Debugging via
+VSCode</a> to run the <code>CumberlandPlain</code> site and check that
+outputs are being produced.</p>
+<h2 id="configuring-the-model">Configuring the Model</h2>
+<p>This section could be arbitrarily long, so here I will briefly describe the
+input file tree and list the main areas of interest.</p>
+<p>For navigating these files, I recommend using the Visual Studio Code builtin
+file explorer (top button in the left-hand sidebar, above run and debug, or use
+the keyboard shortcut "ctrl+shift+e"). Alternatively, if you want to go to a
+specific file, use the keyboard shortcut "ctrl+p", type the file name, and hit
+enter.</p>
+<p>All of the input files related to the ozflux sites are in the
+<code>benchmarks\ozflux</code> directory. In here is one directory for each site. Each
+site-level directory contains its own instruction file, named <code>&lt;site&gt;.ins</code>.
+These site-level .ins files are very short but import other instruction files
+from the ozflux directory, which contain the parameters common to all sites:</p>
+<p><code>settings.ins</code>: Contains most top-level switches, and, near the bottom of the
+file, controls at a high level which kinds of PFTs are included in the
+simulation.</p>
+<p><code>outputs.ins</code>: Contains all available output files which can be generated by the
+model, most of which are disabled by default. To enable or disable an output,
+simply comment/uncomment it. The comment character is an exclamation mark (!).</p>
+<p><code>trees.ins</code>: Contains parameters for all tree PFTs, as well as fine-grained
+control over which specific trees are included in the simulation.</p>
+<p><code>c3g.ins</code>: Contains parameters for all C3 grass PFTs.</p>
+<p><code>c4g.ins</code>: Contains parameters for all C4 grass PFTs.</p>
+<p><code>pft_common.ins</code>: Contains parameters common to all PFTs.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

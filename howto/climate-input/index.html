@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Climate Input - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ozflux-simulations/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../debugging-vscode/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#climate-input" class="nav-link">Climate Input</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#background" class="nav-link">Background</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#input-architecture" class="nav-link">Input Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#selecting-the-module" class="nav-link">Selecting the Module</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#instruction-file-parameters" class="nav-link">Instruction File Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#netcdf-variable-discovery-and-metadata-requirements" class="nav-link">NetCDF Variable Discovery and Metadata Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#spinup-climate-cycling" class="nav-link">Spinup Climate Cycling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#multi-file-input-paths" class="nav-link">Multi-file Input Paths</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#netcdf-input-format" class="nav-link">NetCDF Input Format</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="climate-input">Climate Input</h1>
+<p>The DAVE input module is the standard input module for DAVE simulations. It
+reads subdaily, CF-compliant NetCDF forcing data into LPJ-GUESS.</p>
+<h2 id="background">Background</h2>
+<p>The DAVE climate input stack is loosely based on the <code>cf</code> input module used by
+upstream LPJ-GUESS, but adds support for <strong>subdaily meteorological inputs</strong>.
+Subdaily inputs are required by the <a href="../../science/daily-growth-grass/#appendix-a-photosynthesis">DAVE photosynthesis
+module</a>, which
+operates at sub-daily time resolution.</p>
+<h2 id="input-architecture">Input Architecture</h2>
+<p>At a high level:</p>
+<ul>
+<li><code>DAVEInput</code> is the top-level input module selected by <code>-input nc</code>.</li>
+<li><code>NCInput</code> is the climate-specific submodule used by <code>DAVEInput</code>.</li>
+<li><code>NCInput</code> discovers required variables from NetCDF metadata (<code>standard_name</code></li>
+<li><code>units</code>) and reads the corresponding timeseries.</li>
+</ul>
+<h2 id="selecting-the-module">Selecting the Module</h2>
+<p>Pass <code>-input nc</code> on the command line:</p>
+<pre><code class="language-bash">./build/guess -input nc myfile.ins
+</code></pre>
+<p>Or in the context of a parallel run:</p>
+<pre><code class="language-bash">mpirun -np 8 ./build/guess -parallel -input nc &lt;insfile&gt;
+</code></pre>
+<p><code>nc</code> is the current CLI key for DAVE climate input. A future breaking release
+may introduce <code>dave</code> as the module key.</p>
+<h2 id="instruction-file-parameters">Instruction File Parameters</h2>
+<p>All parameters are declared in <code>modules/daveinput.cpp</code>. Parameters with no
+default listed are required and must be set explicitly.</p>
+<h3 id="simulation-resolution">Simulation resolution</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Range</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nsteps_day</code></td>
+<td>int</td>
+<td>1–86400</td>
+<td>—</td>
+<td>Number of subdaily timesteps per day (e.g. 48 for half-hourly)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-file-paths">Input file paths</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_met_forcing</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path or shell-glob pattern for CF-compliant NetCDF met forcing files</td>
+</tr>
+<tr>
+<td><code>file_met_spinup</code></td>
+<td>string</td>
+<td><em>(same as forcing)</em></td>
+<td>Path or shell-glob pattern for NetCDF met data used during spinup. If omitted, <code>file_met_forcing</code> is used for both spinup and simulation.</td>
+</tr>
+<tr>
+<td><code>file_gridlist</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path to gridlist file (one <code>lon lat</code> pair per line)</td>
+</tr>
+<tr>
+<td><code>file_soildata</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path to soil input file</td>
+</tr>
+<tr>
+<td><code>file_ndep</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path to nitrogen deposition archive file (used when N deposition is not read from NetCDF variables)</td>
+</tr>
+<tr>
+<td><code>file_co2</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path to annual CO₂ text file (format: <code>year ppm</code>, one row per year). Used when CO₂ is not read from NetCDF</td>
+</tr>
+<tr>
+<td><code>file_thome</code></td>
+<td>string</td>
+<td>—</td>
+<td>Path to mean maximum temperature (<span class="arithmatex">\(T_{home}\)</span>) input file. Required when <code>iftempacclimation</code> is enabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="humidity-method">Humidity method</h3>
+<p>If humidity is provided as relative humidity (rather than direct VPD), specify
+the saturation vapour pressure method:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>esat_method</code></td>
+<td>string</td>
+<td><code>sonntag_1990</code>, <code>alduchov_1996</code>, <code>allen_1998</code></td>
+<td>Method for computing saturation vapour pressure from temperature</td>
+</tr>
+</tbody>
+</table>
+<h3 id="atmospheric-pressure">Atmospheric pressure</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fixed_pressure</code></td>
+<td>float</td>
+<td>0–200000</td>
+<td>Fixed constant atmospheric pressure to use (Pa). Default: 0 (disabled).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="co2-concentration">CO₂ concentration</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_co2</code></td>
+<td>string</td>
+<td>Path to a text file of annual CO₂ values (see above). If omitted, CO₂ may be read from NetCDF where present.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>use_mean_annual_co2</code></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td>If true, each timestep uses the annual mean CO₂; otherwise the subdaily values from the file are averaged per day</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nitrogen-deposition">Nitrogen deposition</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ndep_scenario</code></td>
+<td>string</td>
+<td><code>HISTORIC</code>, <code>RCP26</code>, <code>RCP45</code>, <code>RCP60</code>, <code>RCP85</code></td>
+<td>Scenario for the nitrogen deposition archive (<code>file_ndep</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spinup">Spinup</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Range</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>spinup_met_cycle_length</code></td>
+<td>int</td>
+<td>0–1000000</td>
+<td>0</td>
+<td>Number of years of met data to draw from during spinup. 0 means all available years are used.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="perturbations">Perturbations</h3>
+<p>These add a constant offset to the corresponding variable at every timestep.
+Useful for sensitivity experiments.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Range</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>temperature_delta</code></td>
+<td>float</td>
+<td>0–1×10⁶</td>
+<td>0</td>
+<td>Offset added to temperature at every timestep (°C)</td>
+</tr>
+<tr>
+<td><code>co2_delta</code></td>
+<td>float</td>
+<td>0–1×10⁶</td>
+<td>0</td>
+<td>Offset added to CO₂ at every timestep (ppm)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-and-diagnostics">Performance and diagnostics</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cache_strategy</code></td>
+<td>int (0–2)</td>
+<td>—</td>
+<td>Caching strategy: <code>0</code> = cache entire file (fastest, highest memory), <code>1</code> = cache one year at a time (recommended for large files), <code>2</code> = no caching (slowest)</td>
+</tr>
+<tr>
+<td><code>nc_check_inputs</code></td>
+<td>bool</td>
+<td>—</td>
+<td>If enabled, performs sanity checks on met values at each timestep</td>
+</tr>
+<tr>
+<td><code>progress_interval</code></td>
+<td>int</td>
+<td>-1</td>
+<td>Interval in seconds between progress log lines. <code>0</code> = yearly; <code>-1</code> = daily</td>
+</tr>
+<tr>
+<td><code>progress_newline</code></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td>Terminate progress messages with a newline (recommended for MPI runs)</td>
+</tr>
+<tr>
+<td><code>strict_math</code></td>
+<td>bool</td>
+<td>—</td>
+<td>Treat invalid floating-point operations (e.g. division by zero) as fatal errors</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="netcdf-variable-discovery-and-metadata-requirements">NetCDF Variable Discovery and Metadata Requirements</h2>
+<p><code>NCInput</code> discovers variables from NetCDF metadata. For each variable it uses,
+the NetCDF variable must include:</p>
+<ul>
+<li><code>standard_name</code></li>
+<li><code>units</code></li>
+</ul>
+<p>Variables without both attributes are ignored by the resolver.</p>
+<h3 id="required-coordinate-metadata">Required coordinate metadata</h3>
+<p>Coordinate variables must be discoverable with these <code>standard_name</code> values:</p>
+<ul>
+<li><code>longitude</code></li>
+<li><code>latitude</code></li>
+<li><code>time</code></li>
+</ul>
+<p>The <code>time</code> coordinate must also include CF-compatible <code>units</code> (for example
+<code>days since 1850-01-01</code>) and <code>calendar</code>.</p>
+<h3 id="climate-variables-and-accepted-standard_name-values">Climate variables and accepted <code>standard_name</code> values</h3>
+<p>The table below lists the names currently recognised by DAVE climate input.</p>
+<table>
+<thead>
+<tr>
+<th>Input quantity</th>
+<th><code>standard_name</code> values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Air temperature (required)</td>
+<td><code>air_temperature</code></td>
+</tr>
+<tr>
+<td>Shortwave radiation (required)</td>
+<td><code>surface_downwelling_shortwave_flux_in_air</code>, <code>surface_downwelling_shortwave_flux</code></td>
+</tr>
+<tr>
+<td>Precipitation (required)</td>
+<td><code>thickness_of_rainfall_amount</code>, <code>precipitation_amount</code>, <code>precipitation_flux</code></td>
+</tr>
+<tr>
+<td>Humidity (one required source)</td>
+<td>VPD: <code>water_vapor_saturation_deficit_in_air</code> or <code>water_vapor_saturation_deficit</code>; OR relative humidity: <code>relative_humidity</code>; OR specific humidity: <code>specific_humidity</code></td>
+</tr>
+<tr>
+<td>Surface pressure (required unless <code>fixed_pressure</code> &gt; 0)</td>
+<td><code>surface_air_pressure</code></td>
+</tr>
+<tr>
+<td>CO₂ (required if <code>file_co2</code> not provided)</td>
+<td><code>mole_fraction_of_carbon_dioxide_in_air</code></td>
+</tr>
+<tr>
+<td>Wind speed (required when BLAZE is enabled)</td>
+<td><code>wind_speed</code></td>
+</tr>
+<tr>
+<td>Daily Tmax/Tmin (required for daily forcing with BLAZE)</td>
+<td><code>maximum_air_temperature</code>, <code>minimum_air_temperature</code></td>
+</tr>
+<tr>
+<td>NetCDF N deposition (optional alternative to archive input)</td>
+<td><code>ndep_nhx</code>, <code>ndep_noy</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="units">Units</h3>
+<p>Units are validated when climate variables are opened. In practice, datasets
+should use these units:</p>
+<ul>
+<li>Temperature: <code>degC</code> / <code>°C</code> / <code>℃</code></li>
+<li>Shortwave radiation: <code>W/m2</code> or <code>W m-2</code></li>
+<li>Precipitation: <code>mm</code>, <code>kg m-2</code>, or <code>kg/m2</code></li>
+<li>VPD: <code>kPa</code></li>
+<li>Relative humidity: <code>1</code></li>
+<li>Specific humidity: <code>1</code> or <code>kg/kg</code></li>
+<li>Pressure: <code>Pa</code></li>
+<li>CO₂: <code>ppm</code></li>
+<li>Wind speed: <code>m/s</code> or <code>m s-1</code></li>
+<li>NetCDF N deposition: <code>kgN/m2/day</code></li>
+</ul>
+<h3 id="uniqueness-rule">Uniqueness rule</h3>
+<p>Within a resolved input set, each required <code>standard_name</code> must map to a
+single variable. Ambiguous duplicates for the same <code>standard_name</code> are treated
+as an error.</p>
+<h2 id="spinup-climate-cycling">Spinup Climate Cycling</h2>
+<p>During spinup (the first <code>nyear_spinup</code> years), the module maps each spinup year
+to a calendar year of met data by cycling deterministically through the
+available years. Only complete calendar years are used for simulation. If a
+NetCDF file starts partway through a year, that first partial year is skipped;
+if it ends partway through a year, that final partial year is skipped.</p>
+<p>The goal is for the met years used in spinup to align with the transition
+into the main simulation period. When a separate spinup file is used, the
+usable spinup period ends at the earlier of:</p>
+<ul>
+<li>the last complete year in <code>file_met_spinup</code>, and</li>
+<li>the year immediately before the first complete year in <code>file_met_forcing</code>.</li>
+</ul>
+<p>Any overlap in <code>file_met_spinup</code> after the main forcing begins is ignored for
+the final spinup cycle and for the main simulation.</p>
+<h3 id="how-years-are-selected">How years are selected</h3>
+<p>The module cycles through the spinup dataset in order, wrapping back to the
+start when it reaches the end. The cycling is deterministic — the same run
+configuration always produces the same sequence.</p>
+<p>The wrap-around point is chosen so that the sequence ends at the transition
+into the main forcing. Once the calendar year falls within the usable spinup
+range, actual data years are used directly with no cycling.</p>
+<p><strong>Example</strong> — suppose the spinup dataset covers 1990–1999 (10 years), the
+spinup runs for 30 years, and the main simulation begins in 2000:</p>
+<table>
+<thead>
+<tr>
+<th>Spinup year</th>
+<th>Calendar year</th>
+<th>Met data year</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1970</td>
+<td>1990</td>
+<td>cycling begins</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1971</td>
+<td>1991</td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>1978</td>
+<td>1998</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>1979</td>
+<td>1999</td>
+<td>end of cycle 1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1980</td>
+<td>1990</td>
+<td>cycle 2 begins</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1981</td>
+<td>1991</td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>1989</td>
+<td>1999</td>
+<td>end of cycle 2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1990</td>
+<td>1990</td>
+<td>within data range — direct</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>1998</td>
+<td>1998</td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>1999</td>
+<td>1999</td>
+<td>last spinup year</td>
+</tr>
+<tr>
+<td>—</td>
+<td>2000</td>
+<td>2000</td>
+<td>simulation begins</td>
+</tr>
+</tbody>
+</table>
+<p>The data cycles twice, and the transition into the simulation data at year
+2000 occurs naturally at the end of the final cycle year.</p>
+<p>If the spinup file overlaps the main forcing, the transition still occurs at
+the first complete year in <code>file_met_forcing</code>. For example, if
+<code>file_met_spinup</code> contains complete years 1900-2010 and <code>file_met_forcing</code>
+contains complete years 2001-2100, the final spinup cycle uses 1900-2000 from
+the spinup file, and the main forcing is used from 2001 onward. The overlapping
+spinup years 2001-2010 are not used.</p>
+<p>If <code>spinup_met_cycle_length</code> is set to a value greater than zero, only the
+<strong>first N years</strong> of the spinup dataset are used for cycling. This is useful
+when only a short pre-industrial baseline period should be repeated during
+spinup, even if a longer dataset is available.</p>
+<h3 id="co2-is-not-cycled">CO₂ is not cycled</h3>
+<p>CO₂ concentration is always taken from the actual calendar year being
+simulated. It is not cycled with the meteorology, even during spinup.</p>
+<h3 id="separate-spinup-file">Separate spinup file</h3>
+<p>A separate NetCDF file can be specified via <code>file_met_spinup</code> for the spinup
+period. This is useful when a longer historical baseline record exists
+(e.g. a reanalysis product covering a pre-industrial period) that differs
+from the main simulation forcing. If <code>file_met_spinup</code> is not set, or is
+identical to <code>file_met_forcing</code>, the same file is used for both periods.</p>
+<p>When a separate spinup file is used, the module opens the spinup file first,
+determines the available years and timestep, and then switches to the main
+forcing file at the first complete year available in the main forcing data.
+The spinup file must contain at least one complete year before that first main
+forcing year. A spinup file that starts in or after the main forcing period is
+not supported.</p>
+<hr />
+<h2 id="multi-file-input-paths">Multi-file Input Paths</h2>
+<p><code>file_met_forcing</code> and <code>file_met_spinup</code> accept either:</p>
+<ul>
+<li>a single NetCDF path, or</li>
+<li>a shell-glob pattern (<code>*</code> and <code>?</code>) that resolves to multiple NetCDF files.</li>
+</ul>
+<p>Examples:</p>
+<pre><code>file_met_forcing &quot;/data/barra2/forcing_*.nc&quot;
+file_met_spinup  &quot;/data/barra2/spinup_19??.nc&quot;
+</code></pre>
+<p>Matched files are sorted and then scanned for variables using metadata
+resolution (<code>standard_name</code> + <code>units</code>).</p>
+<hr />
+<h2 id="netcdf-input-format">NetCDF Input Format</h2>
+<p>Input files must follow <strong>CF Conventions 1.6</strong>:</p>
+<ul>
+<li>A <code>time</code> coordinate variable with <code>units</code> (e.g. <code>"days since 1850-01-01"</code>)
+  and <code>calendar</code> attributes.</li>
+<li>Coordinate variables with <code>standard_name</code> values <code>longitude</code>, <code>latitude</code>,
+  and <code>time</code>.</li>
+<li><code>scale_factor</code> / <code>add_offset</code> and <code>missing_value</code> attributes are not
+  supported.</li>
+</ul>
+<p>The input timestep (steps/day in the forcing files) must be greater than or
+equal to <code>nsteps_day</code> and must be an integer multiple of <code>nsteps_day</code>. For
+example, 48 input steps/day can be aggregated to 24 requested steps/day.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

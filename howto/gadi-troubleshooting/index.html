@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Troubleshooting Runs - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../gadi-setup/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../gadi-resources/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#checking-and-troubleshooting-gadi-runs" class="nav-link">Checking and Troubleshooting Gadi Runs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#start-with-the-top-level-job-log" class="nav-link">Start with the Top-level Job Log</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#inspect-individual-worker-logs" class="nav-link">Inspect Individual Worker Logs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#final-output-files-and-appendcmd" class="nav-link">Final Output Files and append.cmd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-errors" class="nav-link">Common Errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="checking-and-troubleshooting-gadi-runs">Checking and Troubleshooting Gadi Runs</h1>
+<p>This page explains how to check a completed LPJ-GUESS DAVE job on Gadi and
+diagnose common failures. For building and submitting a job, see
+<a href="../run-gadi/">Running on Gadi</a>.</p>
+<h2 id="start-with-the-top-level-job-log">Start with the Top-level Job Log</h2>
+<p>The main job writes <code>&lt;job name&gt;.log</code> in the run directory. The bottom of this
+file contains the PBS resource summary, including the resources requested and
+used and the total job cost in service units (SU). Check this summary after
+each run, especially if the job took substantially more or less time than
+expected.</p>
+<p>As a rough guide, LPJ-GUESS jobs should cost approximately <strong>0.005–0.01 SU per
+patch</strong>, where:</p>
+<pre><code class="language-text">total patches = npatch × number of gridcells
+
+lower cost estimate = total patches × 0.005 SU
+upper cost estimate = total patches × 0.01 SU
+</code></pre>
+<p>A cost significantly outside this range should be investigated. An unusually
+high cost may mean that work was duplicated between workers; an unusually low
+cost may indicate that the run did not process everything expected. See
+<a href="../gadi-resources/#estimating-lpj-guess-run-cost">Estimating LPJ-GUESS Run Cost</a>
+for more detail.</p>
+<h2 id="inspect-individual-worker-logs">Inspect Individual Worker Logs</h2>
+<p>Each worker writes its own log at <code>runs/runX/guess.log</code>, for example
+<code>runs/run1/guess.log</code>. These logs show which gridcells that worker processed,
+how long they took, and any warnings or errors encountered. When a run is
+unexpectedly slow, incomplete, or unusually expensive, compare several worker
+logs to determine how the work was divided and where time was spent.</p>
+<p>In particular, if every <code>guess.log</code> lists every gridcell, check for the
+<a href="#job-takes-much-longer-than-expected">absolute gridlist path problem</a>.</p>
+<h2 id="final-output-files-and-appendcmd">Final Output Files and <code>append.cmd</code></h2>
+<p>The submission script creates a second PBS job from <code>append.cmd</code>. PBS schedules
+this job to run after the main job, but only if the main job succeeds. It
+combines each worker's output files into the final <code>output/</code> directory. For
+example:</p>
+<pre><code class="language-text">runs/run1/out/lai.out ┐
+runs/run2/out/lai.out ├──&gt; output/lai.out
+runs/run3/out/lai.out ┘
+</code></pre>
+<p>The same process is applied to every output file. If the main job fails, the
+append job does not run and the individual files remain under
+<code>runs/runX/out/</code> for diagnosis or manual recovery.</p>
+<h2 id="common-errors">Common Errors</h2>
+<h3 id="job-takes-much-longer-than-expected">Job Takes Much Longer Than Expected</h3>
+<p>One possible cause is that every worker has processed the complete gridlist
+instead of only its assigned gridcells. The run may otherwise appear to work,
+so this is easy to miss without checking the job cost and worker logs.</p>
+<div class="admonition warning">
+<p class="admonition-title">The gridlist path must be relative</p>
+<p>When using <code>submit_to_gadi.sh</code>, never give the gridlist an absolute path in
+the instruction file. Use <code>./&lt;gridlist-basename&gt;</code> instead. This is an
+exception to the general recommendation to use absolute paths for input
+files.</p>
+</div>
+<p>For example, if the gridlist is named <code>gridlist.txt</code>:</p>
+<pre><code class="language-text"># Wrong: every worker reads the complete, original gridlist
+file_gridlist &quot;/scratch/pt17/my/input/gridlist.txt&quot;
+
+# Correct: every worker reads its assigned part of the gridlist
+file_gridlist &quot;./gridlist.txt&quot;
+</code></pre>
+<p>The parameter name depends on the input module; for example, it may be
+<code>file_gridlist</code> or <code>file_gridlist_cf</code>. The same rule applies in either case,
+and the relative filename must match the basename of the original gridlist.</p>
+<p>The submission script splits the gridlist between the
+<code>runs/run1/</code>...<code>runs/runN/</code> directories. During a parallel run, each worker
+changes into its own directory and should read the split gridlist stored there.
+An absolute path bypasses that file, causing every worker to process the
+complete original gridlist. This can multiply the job's cost and cause it to
+exceed its requested walltime. See
+<a href="../run-parallel/#path-considerations">Path Considerations</a> for more detail.</p>
+<h3 id="libnetcdfso15-cannot-open-shared-object-file"><code>libnetcdf.so.15: cannot open shared object file</code></h3>
+<p>Example:</p>
+<pre><code class="language-text">/home/590/am8995/code/lpjg_aaron/build/guess: error while loading shared libraries: libnetcdf.so.15: cannot open shared object file: No such file or directory
+</code></pre>
+<p>This means the executable was compiled against a NetCDF library that is not
+available in the environment where the model is being run. The most common
+cause is forgetting to load the <code>netcdf</code> module before running. It can also
+happen if the model was compiled with one NetCDF module version but run with a
+different one.</p>
+<p>Fix:</p>
+<ol>
+<li>Use <code>./build_gadi</code> to compile the model. It loads the required Gadi modules,
+   including the default <code>netcdf</code> module.</li>
+<li>Submit runs with <code>submit_to_gadi.sh</code>, which generates a PBS script that
+   loads the same kind of runtime environment before launching <code>guess</code>.</li>
+<li>If running manually for a quick test, load NetCDF first:</li>
+</ol>
+<p><code>bash
+   module purge
+   module load openmpi gcc cmake netcdf
+   ./build/guess -input nc /path/to/simulation.ins</code></p>
+<p>If the error persists, check which modules are loaded in the job output:</p>
+<pre><code class="language-bash">module list
+</code></pre>
+<p>Then rebuild and rerun in a clean, consistent environment:</p>
+<pre><code class="language-bash">module purge
+./build_gadi
+</code></pre>
+<h3 id="submit_to_gadish-command-not-found"><code>submit_to_gadi.sh: command not found</code></h3>
+<p>The DAVE helper scripts are probably not on your <code>PATH</code>. Add the shared DAVE
+startup file to <code>~/.bashrc</code> as described in
+<a href="../gadi-setup/#dave-shared-environment">DAVE Shared Environment</a>, then log out
+and back in or run:</p>
+<pre><code class="language-bash">source ~/.bashrc
+</code></pre>
+<h3 id="paths-containing-do-not-work-in-the-configuration-file">Paths Containing <code>~</code> Do Not Work in the Configuration File</h3>
+<p>The submission script reads paths from the configuration file literally. Use
+<code>${HOME}</code> or a full path instead of <code>~</code>:</p>
+<pre><code class="language-bash">BINARY=${HOME}/lpj-guess-dave/build/guess
+</code></pre>
+<h3 id="job-starts-but-cannot-read-or-write-files">Job Starts but Cannot Read or Write Files</h3>
+<p>First check that input and output paths exist and are on a filesystem available
+to the PBS job. Use <code>/scratch/&lt;project&gt;/$USER</code> for run outputs, not <code>$HOME</code>.</p>
+<p>If you wrote your own PBS script, make sure it declares the filesystems it
+uses, for example:</p>
+<pre><code class="language-bash">#PBS -l storage=scratch/pt17
+</code></pre>
+<p>The <code>submit_to_gadi.sh</code> script handles this for standard runs. See
+<a href="../gadi-setup/#storage">Storage</a> for more detail.</p>
+<h3 id="job-stops-near-the-requested-walltime">Job Stops Near the Requested Walltime</h3>
+<p>PBS kills jobs that exceed their walltime request. Gadi also has a maximum
+48-hour walltime for a single job. Increase <code>NPROCESS</code> so the run finishes
+sooner, increase <code>WALLTIME</code> if it was set too low, or split the simulation into
+smaller jobs. See
+<a href="../gadi-resources/#choosing-cpu-count-and-walltime">Choosing CPU Count and Walltime</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
