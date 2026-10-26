@@ -287,7 +287,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#committing-and-raising-a-merge-request" class="nav-link">Committing and Raising a Merge Request</a>
+            <li class="nav-item" data-bs-level="2"><a href="#committing-and-raising-a-pull-request" class="nav-link">Committing and Raising a Pull Request</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -303,8 +303,8 @@
 <h2 id="background">Background</h2>
 <p>The documentation source files are part of the main LPJ-GUESS-DAVE repository
 (the same repository as the model code), not a separate documentation repo.
-All documentation changes should therefore be made and reviewed through normal
-branch + Merge Request workflows in this repository.</p>
+All documentation changes should therefore be made and reviewed through a
+branch and Pull Request in the GitHub mirror while GitLab is unavailable.</p>
 <p>The docs are organised under <code>docs/</code> and rendered with MkDocs using
 <code>mkdocs.yml</code> at the repository root:</p>
 <ul>
@@ -319,8 +319,8 @@ branch + Merge Request workflows in this repository.</p>
 <li>Write or edit a Markdown file under <code>docs/</code></li>
 <li>Preview it locally (in VSCode or with <code>mkdocs serve</code>)</li>
 <li>Commit and push to a branch</li>
-<li>Open a Merge Request on GitLab</li>
-<li>Once the MR is merged, the site rebuilds automatically</li>
+<li>Open a Pull Request on GitHub</li>
+<li>Once the PR is merged, the site rebuilds automatically</li>
 </ol>
 <h2 id="writing-in-markdown">Writing in Markdown</h2>
 <p>Documentation pages are plain-text files with a <code>.md</code> extension. Markdown is a
@@ -424,17 +424,17 @@ converting from Word.</p>
 </ol>
 <p>Pages not listed under <code>nav:</code> are still built but will not appear in the
 sidebar navigation.</p>
-<h2 id="committing-and-raising-a-merge-request">Committing and Raising a Merge Request</h2>
+<h2 id="committing-and-raising-a-pull-request">Committing and Raising a Pull Request</h2>
 <p>Once you are happy with your changes:</p>
 <ol>
 <li>Commit the changed files to a branch (see
    <a href="../sourcetree/">Version Control via SourceTree</a> or
    <a href="../git-cli/">Version Control via CLI</a>)</li>
-<li>Push the branch to GitLab</li>
-<li>Open a Merge Request targeting the <code>lpjguess_dave</code> branch</li>
-<li>The CI pipeline runs a compile check; the MR can be merged once checks pass</li>
-<li>Merging to <code>lpjguess_dave</code> triggers the Pages deployment pipeline, which
-   rebuilds and publishes the site automatically within a few minutes</li>
+<li>Push the branch to the GitHub mirror</li>
+<li>Open a Pull Request targeting the <code>lpjguess_dave</code> branch</li>
+<li>The CI pipeline runs a compile check; the PR can be merged once checks pass</li>
+<li>Merging to <code>lpjguess_dave</code> triggers the GitHub Actions pipeline, which
+   rebuilds and publishes the site to the GitHub Pages mirror automatically</li>
 </ol>
 <p>No manual deployment step is needed.</p></div>
             </div>

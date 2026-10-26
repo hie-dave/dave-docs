@@ -317,7 +317,11 @@ configuration changes without first learning the whole codebase.</p>
 </tr>
 <tr>
 <td><code>.gitlab-ci.yml</code></td>
-<td>GitLab pipeline: compile checks and documentation deployment.</td>
+<td>GitLab pipeline: compile checks; documentation deployment jobs are temporarily disabled.</td>
+</tr>
+<tr>
+<td><code>.github/workflows/ci.yml</code></td>
+<td>GitHub Actions pipeline: compile checks and GitHub Pages mirror deployment.</td>
 </tr>
 <tr>
 <td><code>CMakeLists.txt</code></td>
@@ -365,7 +369,7 @@ configuration changes without first learning the whole codebase.</p>
 </tbody>
 </table>
 <p>Documentation pages are Markdown files (<code>.md</code>). After a documentation change is
-merged into <code>lpjguess_dave</code>, GitLab Pages rebuilds the published site
+merged into <code>lpjguess_dave</code>, GitHub Actions rebuilds the published site
 automatically. See <a href="../contributing-docs/">Contributing to the Documentation</a>
 for the documentation workflow.</p>
 <h2 id="ozflux-simulations">OzFlux Simulations</h2>
