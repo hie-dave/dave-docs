@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Plain Text Input - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../../howto/common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../../howto/ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../../howto/climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../../howto/text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../../howto/debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../../howto/migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../../howto/contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../../howto/markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../../howto/sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../../howto/git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../toolchains/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#plain-text-input" class="nav-link">Plain text input</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#configuration" class="nav-link">Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#domain-and-timestep-expectations" class="nav-link">Domain and timestep expectations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#row-layouts" class="nav-link">Row layouts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#inference-and-validation" class="nav-link">Inference and validation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#using-the-api" class="nav-link">Using the API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="plain-text-input">Plain text input</h1>
+<p><code>PlainTextInput</code> in <code>framework/textinput.{h,cpp}</code> is a C++17 plaintext input
+file reader. It reads and validates the entire file during <code>open()</code>, then
+provides typed values for a selected coordinate and timestep. This is intended
+as a replacement to <code>TimeDataD</code>.</p>
+<p>For instruction-file examples and the complete user option reference, see
+<a href="../../howto/text-input/">Plain Text Input Files</a>. For remaining readers and
+migration decisions, see <a href="plaintext-readers.md">Plaintext Reader Migration</a>.</p>
+<h2 id="configuration">Configuration</h2>
+<p>The instruction file parser accepts named file blocks:</p>
+<pre><code class="language-text">file &quot;soildata&quot; (
+    path &quot;soil.dat&quot;
+    delimiter &quot;infer&quot;
+    header &quot;infer&quot;
+    max_distance 0
+    column &quot;sand&quot; (source &quot;snd&quot;)
+    column &quot;silt&quot; (source &quot;slt&quot;)
+)
+</code></pre>
+<p>Only <code>path</code> is mandatory. Paths may be absolute, or relative to the model's
+current working directory. A later block with the same name replaces the entire
+previous block; omitted options return to their defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Accepted values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delimiter</code></td>
+<td><code>"infer"</code></td>
+<td><code>"infer"</code>, <code>","</code>, <code>";"</code>, <code>"\|"</code>, <code>" "</code>, <code>"\t"</code></td>
+</tr>
+<tr>
+<td><code>sample_rows</code></td>
+<td><code>64</code></td>
+<td>Nonblank delimiter-sampling rows; <code>0</code> uses all rows</td>
+</tr>
+<tr>
+<td><code>header</code></td>
+<td><code>"infer"</code></td>
+<td><code>"infer"</code>, <code>"present"</code>, <code>"absent"</code></td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td><code>"infer"</code></td>
+<td><code>"infer"</code>, <code>"global"</code>, <code>"local"</code></td>
+</tr>
+<tr>
+<td><code>timestep</code></td>
+<td><code>"infer"</code></td>
+<td><code>"infer"</code>, <code>"none"</code>, <code>"annual"</code>, <code>"daily"</code></td>
+</tr>
+<tr>
+<td><code>calendar</code></td>
+<td><code>"noleap"</code></td>
+<td><code>"noleap"</code>, <code>"gregorian"</code></td>
+</tr>
+<tr>
+<td><code>quote</code></td>
+<td>Double quote</td>
+<td>A single character, or <code>""</code> to disable</td>
+</tr>
+<tr>
+<td><code>trim_whitespace</code></td>
+<td><code>1</code></td>
+<td><code>0</code>, <code>1</code></td>
+</tr>
+<tr>
+<td><code>max_distance</code></td>
+<td><code>0</code></td>
+<td>Euclidean coordinate distance in degrees, 0..360</td>
+</tr>
+</tbody>
+</table>
+<p>PLIB does not interpret backslash escapes. The delimiter converter accepts
+the literal two-character string <code>"\t"</code> as a tab. To specify a double quote
+explicitly, use <code>quote '"'</code>.</p>
+<p>Optional <code>column "name" (source "header")</code> blocks associate a documented
+model variable with a source data column. For example, the soil component
+can require <code>sand</code> and <code>silt</code>, while the file uses <code>snd</code> and <code>slt</code>. The model
+continues to request <code>sand</code> and <code>silt</code>; users do not need to rename the file's
+headers. Without a mapping, the model name must match a source name exactly.</p>
+<h2 id="domain-and-timestep-expectations">Domain and timestep expectations</h2>
+<p>Input data may be global (no coordinates; all gridcells use the same values) or
+local (with longitude and latitude columns). Additionally, it may be static (one
+value), annual (one value per year) or daily (one value per day). Data may be
+any combination of local/global and static/annual/daily.</p>
+<p>Instruction files can set <code>TextInputOptions::timestep</code> and <code>domain</code>
+independently. Both default to <code>Infer</code>. The consuming component may impose
+further requirements before constructing the reader; soil requires static data
+and rejects explicit temporal options. With a header, each
+explicit requirement is validated against the actual columns during <code>open()</code>.
+For example, <code>Timestep::Daily</code> requires year and day columns, while
+<code>SpatialDomain::Local</code> requires longitude and latitude columns.
+<code>SpatialDomain::Global</code> requires their absence. <code>Timestep::None</code> means static.</p>
+<p>A component accepting multiple shapes can leave either expectation as <code>Infer</code>
+and inspect <code>get_timestep()</code> and <code>is_spatial()</code> after opening. It must handle
+the resulting shape, or reject unsupported shapes during initialisation.
+Value access still checks the actual shape: daily access to an annual file,
+for example, throws <code>std::runtime_error</code>. Inference does not resample data.</p>
+<h2 id="row-layouts">Row layouts</h2>
+<p>With a header, reserved structural names determine the format. These are
+case insensitive: <code>lon</code>/<code>longitude</code>, <code>lat</code>/<code>latitude</code>, <code>year</code>, and <code>day</code>/<code>doy</code>.
+If either coordinate column is present, both are required. A day column
+requires a year column.
+Structural columns can occur in any order. Data column names retain their
+case and are accessed by exact name; duplicate names, including names
+differing only in case, are rejected.</p>
+<p>For ordinary headerless rows, the component must specify both axes because
+numeric values cannot reliably identify coordinate/time columns. The source column order is:</p>
+<table>
+<thead>
+<tr>
+<th>Model domain</th>
+<th>Model timestep</th>
+<th>Headerless row layout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Global</code></td>
+<td><code>None</code></td>
+<td>Data values</td>
+</tr>
+<tr>
+<td><code>Global</code></td>
+<td><code>Annual</code></td>
+<td>Year, then data values</td>
+</tr>
+<tr>
+<td><code>Local</code></td>
+<td><code>None</code></td>
+<td>Longitude, latitude, then data values</td>
+</tr>
+<tr>
+<td><code>Local</code></td>
+<td><code>Annual</code></td>
+<td>Longitude, latitude, year, then data values</td>
+</tr>
+<tr>
+<td><code>Global</code></td>
+<td><code>Daily</code></td>
+<td>Year, day-of-year, then data values</td>
+</tr>
+<tr>
+<td><code>Local</code></td>
+<td><code>Daily</code></td>
+<td>Longitude, latitude, year, day-of-year, then data values</td>
+</tr>
+</tbody>
+</table>
+<p>One headerless row with both axes set to <code>Infer</code> is interpreted as global
+static data. Otherwise, leaving either axis unspecified without a header is
+an error. Headerless data columns have names <code>"0"</code>, <code>"1"</code>, etc., excluding
+structural columns. With headers, structural columns can occur in any order.
+For files whose shape the component cannot establish without headers, set
+<code>domain</code> and <code>timestep</code> in the instruction file, or add structural headers.
+Headerless data can be mapped using
+<code>source "0"</code>, <code>source "1"</code>, etc.; these numbers exclude structural columns.</p>
+<p>Headed legacy global static files remain supported:</p>
+<pre><code class="language-text">static A B
+0 1.5 2.75
+</code></pre>
+<p>The <code>static</code> column is a validated numeric dummy and is not exposed as data.
+A headerless global static file treats every field as data; it does not
+guess whether the first number is a dummy.</p>
+<h2 id="inference-and-validation">Inference and validation</h2>
+<p>Delimiter inference considers comma, tab, whitespace, semicolon and pipe.
+It samples up to <code>sample_rows</code> nonblank rows, favouring the most rows with
+consistent field counts, then the greatest width. Equivalent tab and whitespace
+parses prefer tab to preserve missing fields. Other equally ranked
+candidates require an explicit delimiter. The selected delimiter is used
+to validate every row, including those outside the sample.</p>
+<p>The default sample is 64 rows; <code>sample_rows 0</code> examines all rows. A larger
+sample can resolve an unrepresentative prefix, but does not make inconsistent
+field counts valid. Setting the delimiter explicitly avoids inference work.
+If no candidate produces multiple fields, the reader accepts single-column
+input using comma as a fallback. This supports global scalar data. Required
+column declarations still reject files missing expected columns.</p>
+<p>Header inference treats an all-text first row as a header. Numeric or boolean
+first rows remain data. For ambiguous all-text data or numeric column names,
+set <code>header</code> explicitly.</p>
+<p>Column type inference considers every data row. Integers promote to doubles
+if any value requires it. Boolean text is <code>true</code>/<code>false</code>, case insensitive.
+Numeric parsing always uses a period (<code>.</code>) as the decimal point, independently
+of the system locale, and supports decimal exponent notation (<code>1.5e-3</code>).
+Thousands separators are not supported: neither <code>1,000,000</code> nor <code>1 000</code> is a
+number. Commas outside quotes are field separators in CSV, not digit grouping.
+Partial numbers, hex, non-finite values, overflow and underflow to zero
+are rejected.</p>
+<p>Mixed numeric/text or boolean/text columns fail unless the component declares
+them as strings. Numeric-looking malformed tokens and missing-value markers
+(<code>NA</code>, <code>NaN</code>, <code>Inf</code>, <code>Infinity</code>, <code>null</code>) also require an explicit string type.
+Unquoted empty fields fail. Quoted empty strings are valid text but fail in
+numeric and boolean columns. These rules deliberately favour detecting bad
+simulation input over silently converting it to a different type.</p>
+<p>Quoted fields can contain delimiters and doubled quote escapes. Quoted
+whitespace is preserved. Unterminated quotes, text following a closing quote,
+quotes in unquoted fields, and multiline fields are rejected. Whitespace
+separation collapses spaces and tabs; the other delimiters preserve empty
+fields. LF, CRLF, CR, a final row without a newline, a UTF-8 BOM, and blank
+lines are accepted. Binary control characters, including NUL, are rejected.</p>
+<p>Input uses ASCII-compatible bytes; strings are preserved without transcoding
+or UTF-8 validation. UTF-8 is recommended, and its BOM is stripped. Other
+ASCII-compatible encodings can carry text unchanged, but the caller must know
+how to interpret those bytes. UTF-16 and UTF-32 BOMs cause an immediate error
+asking the user to convert to UTF-8; their encodings are not supported. Without
+a BOM, such input normally fails the NUL/control-character checks.</p>
+<p>Longitude must be finite and in -180..180, and latitude in -90..90. When the
+model requests data for a particular gridcell, data for the nearest gridcell
+within the specified distance will be used. A search radius of zero requires an
+exact match; equal-distance ties choose the lexicographically smaller
+coordinate. There is no longitude wrapping. <code>coordinates()</code> returns the matched
+file coordinate, not the query.</p>
+<p>Rows may be unordered or interleaved among cells. Static coordinates and
+coordinate/time pairs must be unique. Annual years must be consecutive.
+Daily years must be complete and consecutive, with days numbered from 1;
+<code>noleap</code> has 365 days, and <code>gregorian</code> applies the Gregorian leap-year rule.
+Every cell must have the same year range. There is no interpolation or
+clamping outside the available years. Diagnostics identify the input path,
+physical line number and relevant column/value or coordinate/time conflict.</p>
+<h2 id="using-the-api">Using the API</h2>
+<pre><code class="language-cpp">#include &quot;parameters.h&quot;
+#include &quot;textinput.h&quot;
+
+auto soil_options = text_input_options(&quot;soildata&quot;);
+soil_options.timestep = Timestep::None;
+soil_options.domain = SpatialDomain::Local;
+soil_options.required_columns = {{&quot;sand&quot;, ColumnType::Double},
+                                 {&quot;silt&quot;, ColumnType::Double}};
+PlainTextInput soil(soil_options);
+soil.open();
+soil.load(lon, lat);
+double sand = soil.get&lt;double&gt;(&quot;sand&quot;);
+
+auto forcing_options = text_input_options(&quot;forcing&quot;);
+forcing_options.timestep = Timestep::Daily;
+forcing_options.domain = SpatialDomain::Infer; // Global and local supported.
+forcing_options.required_columns[&quot;value&quot;] = ColumnType::Double;
+PlainTextInput forcing(forcing_options);
+forcing.open();
+forcing.validate_years(first_simulation_year, last_simulation_year);
+forcing.validate_gridcells(required_gridcells); // (longitude, latitude) pairs
+forcing.load(lon, lat);
+double value = forcing.get_day&lt;double&gt;(&quot;value&quot;, year, day_of_year); // 1-based
+// get_auto() accepts the model's 0-based day, unlike get_day().
+double current = forcing.get_auto&lt;double&gt;(&quot;value&quot;, date.get_calendar_year(), date.day);
+</code></pre>
+<p>Call <code>open()</code> and coverage/type checks during model initialisation, before
+starting a simulation. <code>validate_years()</code> checks every cell because the reader
+has already validated identical coverage. A file alone cannot know the
+simulation's requested years, required columns or required gridlist. Pass the
+complete requested gridlist to <code>validate_gridcells()</code> at startup. It uses the
+same nearest-cell/radius rules as <code>load()</code>, accepts global data for every valid
+coordinate, and preserves any current selection. <code>is_spatial()</code> and
+<code>get_timestep()</code> remain available for inspecting the inferred structure.</p>
+<p><code>get&lt;double&gt;()</code> accepts both integer and double columns. Other type
+conversions require an explicit column type. <code>load()</code> may be called
+repeatedly; failed selection clears the previous selection. Failed <code>open()</code>
+leaves the reader unopened and can be retried after fixing the file.</p>
+<p>The reader owns all parsed columns and records in memory. During <code>open()</code>
+it also owns the raw file buffer and physical line index. Borrowed field
+ranges never outlive that buffer; the raw text is released after validation.
+Two passes infer types and fill reserved typed columns, without stream
+construction per number. The initial implementation is entirely in-memory;
+memory mapping, selective gridlist storage and multithreaded parsing are on the
+TODO list.</p>
+<p>The private <code>Impl</code> class keeps column storage, indexes, tokenisation helpers and
+their dependencies out of the public header.</p>
+<p>The reproducible million-row benchmark, fixture generator, JSON reporting and
+baseline comparison live in <code>performance/</code>; see <code>performance/README.md</code> in the
+repository for build and run commands.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

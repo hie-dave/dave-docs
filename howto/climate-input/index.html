@@ -138,6 +138,10 @@
 </li>
             
 <li>
+    <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
     <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
 </li>
             
@@ -223,6 +227,10 @@
 <li>
     <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
 </li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
@@ -239,7 +247,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../debugging-vscode/" class="nav-link">
+                                <a rel="next" href="../text-input/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -382,10 +390,10 @@ default listed are required and must be set explicitly.</p>
 <td>Path to gridlist file (one <code>lon lat</code> pair per line)</td>
 </tr>
 <tr>
-<td><code>file_soildata</code></td>
-<td>string</td>
+<td><code>file "soildata" (...)</code></td>
+<td>block</td>
 <td>—</td>
-<td>Path to soil input file</td>
+<td>Soil properties; see <a href="../text-input/#soil-input">Plain Text Input</a> for formats and alternatives</td>
 </tr>
 <tr>
 <td><code>file_ndep</code></td>

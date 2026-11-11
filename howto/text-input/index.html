@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Plain Text Input Files - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../climate-input/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../debugging-vscode/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#plain-text-input-files" class="nav-link">Plain text input files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#a-first-example" class="nav-link">A first example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parsing-options" class="nav-link">Parsing options</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#columns-and-table-layouts" class="nav-link">Columns and table layouts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#numbers-text-and-quoting" class="nav-link">Numbers, text and quoting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#matching-locations-and-dates" class="nav-link">Matching locations and dates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#soil-input" class="nav-link">Soil input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#diagnosing-errors" class="nav-link">Diagnosing errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="plain-text-input-files">Plain text input files</h1>
+<p>Use named <code>file</code> blocks in your instruction file to configure plaintext input
+files. Currently, these are only supported by soil inputs, but other existing
+plaintext inputs will be gradually migrated to this form. The plain text file
+reader supports static (time-invariant), annual and daily tables, but each model
+component decides which of those formats it can use. Soil inputs are static.
+Other inputs, including CO₂, grazing and land cover, still use their existing
+settings and readers; adding a <code>file</code> block does not switch those readers.</p>
+<h2 id="a-first-example">A first example</h2>
+<p>Given this file, <code>soil.csv</code>:</p>
+<pre><code class="language-text">lon,lat,sand,clay,orgC,pH
+150.75,-33.5,0.4,0.2,0.05,6.5
+</code></pre>
+<p>configure it with:</p>
+<pre><code class="language-text">file &quot;soildata&quot; (
+    path &quot;soil.csv&quot;
+    column &quot;orgc&quot; (source &quot;orgC&quot;)
+    column &quot;ph&quot; (source &quot;pH&quot;)
+    max_distance 0.1
+)
+slope 0
+depth_soil 1500
+</code></pre>
+<p>This supplies soil properties for locations within 0.1 degrees of the table
+coordinate, with a fixed slope of zero degrees and soil depth of 1500 mm.
+The reader detects the comma separator and header. Column mappings connect
+the model's names, <code>orgc</code> and <code>ph</code>, to the file's names, <code>orgC</code> and <code>pH</code>.</p>
+<p><code>path</code> is the only mandatory option inside a <code>file</code> block. Relative paths
+start at the simulation's working directory, including when the block is in
+an imported instruction file. Absolute paths are also accepted. A later block
+with the same name replaces the <strong>whole</strong> earlier block.</p>
+<h2 id="parsing-options">Parsing options</h2>
+<p>Option values and file block names are case sensitive.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Meaning and accepted values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>Required</td>
+<td>Path to the data file.</td>
+</tr>
+<tr>
+<td><code>delimiter</code></td>
+<td><code>"infer"</code></td>
+<td>Detect the separator, or choose <code>","</code>, <code>";"</code>, <code>"\|"</code>, <code>" "</code> or <code>"\t"</code>.</td>
+</tr>
+<tr>
+<td><code>sample_rows</code></td>
+<td><code>64</code></td>
+<td>Number of nonblank rows inspected when detecting the delimiter, including the header. <code>0</code> examines all rows; accepted range is 0–1000000000. All data rows are validated regardless of this setting.</td>
+</tr>
+<tr>
+<td><code>header</code></td>
+<td><code>"infer"</code></td>
+<td><code>"present"</code> treats the first nonblank row as column names; <code>"absent"</code> treats it as data. Inference recognises an all-text first row as a header.</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td><code>"infer"</code></td>
+<td><code>"local"</code> requires longitude and latitude; <code>"global"</code> applies one table to every gridcell. Inference uses coordinate headers. Specify this for headerless files.</td>
+</tr>
+<tr>
+<td><code>timestep</code></td>
+<td><code>"infer"</code></td>
+<td><code>"none"</code> for static values, <code>"annual"</code> for yearly values, <code>"daily"</code> for daily values. Inference uses year/day headers. Soil files must be static.</td>
+</tr>
+<tr>
+<td><code>calendar</code></td>
+<td><code>"noleap"</code></td>
+<td>Daily files: <code>"noleap"</code> has 365 days every year; <code>"gregorian"</code> includes leap days. This does not change the model's simulation calendar.</td>
+</tr>
+<tr>
+<td><code>quote</code></td>
+<td>Double quote</td>
+<td>A single quote character, or <code>""</code> to disable quoting. Write <code>quote '"'</code> to explicitly select double quotes.</td>
+</tr>
+<tr>
+<td><code>trim_whitespace</code></td>
+<td><code>1</code></td>
+<td>Strip surrounding spaces and tabs from unquoted fields; <code>0</code> preserves them. Quoted content is preserved.</td>
+</tr>
+<tr>
+<td><code>max_distance</code></td>
+<td><code>0</code></td>
+<td>Maximum distance to a matching file coordinate, in degrees; accepted range 0–360. Zero requires exact coordinates.</td>
+</tr>
+<tr>
+<td><code>column "name" (source "source_name")</code></td>
+<td>No mappings</td>
+<td>Associate a supported model column with a source data column. Repeat for each mapping.</td>
+</tr>
+</tbody>
+</table>
+<p>Instruction files do not interpret backslash escapes: write the literal
+two-character string <code>"\t"</code> to select tabs. With <code>delimiter " "</code>, runs of
+spaces and tabs count as one separator. Other separators preserve empty
+fields, so a missing CSV or TSV value produces an error instead of shifting
+later columns.</p>
+<p>Delimiter detection samples comma, tab, whitespace, semicolon and pipe
+separators. If a file is ambiguous, set <code>delimiter</code> explicitly. Increasing
+<code>sample_rows</code> can help when the beginning is not representative of the entire
+file.</p>
+<p>Set <code>header</code> explicitly if a row of text is actually data, or your column names
+are numeric..</p>
+<h2 id="columns-and-table-layouts">Columns and table layouts</h2>
+<p>Structural headers are case insensitive:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Recognised names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Longitude</td>
+<td><code>lon</code>, <code>longitude</code></td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td><code>lat</code>, <code>latitude</code></td>
+</tr>
+<tr>
+<td>Calendar year</td>
+<td><code>year</code></td>
+</tr>
+<tr>
+<td>Day of year</td>
+<td><code>day</code>, <code>doy</code></td>
+</tr>
+</tbody>
+</table>
+<p>Both coordinates must be present together. Day requires year. Structural
+columns may appear anywhere in a headed file. Use longitude in −180..180 and
+latitude in −90..90. All other headers name data columns. Duplicate headers,
+including names differing only in case, are rejected.</p>
+<p>Data column names and mappings match exactly, including case. Only columns
+supported by the consuming component can be mapped. Each source may be mapped
+once; mappings cannot create duplicate exposed names. Coordinate/time columns
+cannot be mapped: rename those headers to a recognised structural name instead.
+Extra columns are accepted, but still parsed and validated.</p>
+<p>For headerless tables, set <code>header "absent"</code> and specify <code>domain</code> and
+<code>timestep</code>. Soil sets the static timestep automatically. Column order for such
+files is:</p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Timestep</th>
+<th>Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>global</code></td>
+<td><code>none</code></td>
+<td>Data columns</td>
+</tr>
+<tr>
+<td><code>local</code></td>
+<td><code>none</code></td>
+<td>Longitude, latitude, data columns</td>
+</tr>
+<tr>
+<td><code>global</code></td>
+<td><code>annual</code></td>
+<td>Year, data columns</td>
+</tr>
+<tr>
+<td><code>local</code></td>
+<td><code>annual</code></td>
+<td>Longitude, latitude, year, data columns</td>
+</tr>
+<tr>
+<td><code>global</code></td>
+<td><code>daily</code></td>
+<td>Year, day, data columns</td>
+</tr>
+<tr>
+<td><code>local</code></td>
+<td><code>daily</code></td>
+<td>Longitude, latitude, year, day, data columns</td>
+</tr>
+</tbody>
+</table>
+<p>Headerless <strong>data</strong> columns are numbered <code>"0"</code>, <code>"1"</code>, etc., excluding
+coordinates and dates. For example, a headerless depth map with rows
+<code>150.75 -33.5 1.5</code> uses:</p>
+<pre><code class="language-text">file &quot;soildepth&quot; (
+    path &quot;depth.dat&quot;
+    domain &quot;local&quot;
+    timestep &quot;none&quot;
+    header &quot;absent&quot;
+    column &quot;depth&quot; (source &quot;0&quot;)
+)
+</code></pre>
+<p>A reader with both shape settings left as <code>infer</code> can also recognise one
+headerless row as global static data. Downstream components may impose a shape,
+so explicit settings are preferable for headerless input.</p>
+<p>A global static file has one data row. For example, omit coordinates from the
+first example to apply its properties everywhere. Legacy headed global files
+with a <code>static</code> dummy column, such as <code>static sand clay ...</code>, are accepted;
+the dummy value must be numeric. Headerless files have no implicit dummy.</p>
+<h2 id="numbers-text-and-quoting">Numbers, text and quoting</h2>
+<p>Numbers use a period as the decimal point, independent of the computer's
+locale. Signed values and scientific notation, such as <code>-1.5e-3</code>, are accepted.
+Thousands separators, partially numeric values, hexadecimal numbers, infinity,
+NaN, overflow and underflow to zero are rejected. Booleans use <code>true</code>/<code>false</code>,
+case insensitive. The component chooses required column types; there is no
+instruction-file <code>type</code> setting. Other columns have their types inferred from
+the complete file, and may contain integers, real numbers, booleans or text.</p>
+<p>Missing numeric values are not supported: empty fields, <code>NA</code>, <code>NaN</code>, <code>Inf</code>,
+<code>Infinity</code> and <code>null</code> cause errors. Mixed text/numeric columns require the
+component to declare them as text. Quoting a number or missing-value marker
+does not force a numeric column to become text. An empty quoted string is
+valid only for a text column.</p>
+<p>Quotes allow separators within a field. Double the quote character to include
+it, for example <code>"a ""quoted"" label"</code>. Quoted fields must stay on one physical
+line. Unclosed quotes, quotes within unquoted fields, and text after a closing
+quote are errors. Blank lines are ignored. Comment lines and inline comments
+are <strong>not</strong> supported in data files; <code>!</code> comments belong in instruction files.
+The quote character must differ from the selected delimiter and whitespace.</p>
+<p>UTF-8 is recommended; a UTF-8 BOM is accepted. LF, CRLF and CR line endings,
+and files without a final newline, are accepted. UTF-16/UTF-32 files must be
+converted first. Binary control characters are rejected.</p>
+<h2 id="matching-locations-and-dates">Matching locations and dates</h2>
+<p>For local input, each simulation cell uses the nearest file coordinate within
+<code>max_distance</code>. Distance is straight-line distance in longitude/latitude
+degrees, not kilometres. Longitude does not wrap at the date line. Equal
+distances choose the smaller longitude, then the smaller latitude. Each file
+has its own radius and matching grid; global input needs no spatial match.
+The legacy <code>searchstep_soil</code> setting does not control this matching; set each
+file block's <code>max_distance</code> instead.</p>
+<p>Static input must have one row per coordinate. Annual input must have one row
+for every consecutive year. Daily input must have complete consecutive years,
+with day numbers starting at 1. All coordinates must have the same year range.
+Rows may be out of order or interleaved between locations; duplicate
+coordinate/date records are errors. The reader does not fill gaps,
+interpolate, recycle years or extend values beyond the available year range.</p>
+<h2 id="soil-input">Soil input</h2>
+<p>Choose exactly one soil description: <code>soildata</code>, <code>soilcode</code>, or the pair
+<code>soilclay</code> and <code>soilsand</code>. File block names below are literal, case sensitive
+names. The old <code>file_soildata</code> path and <code>param "file_soil..."</code> settings do not
+configure this reader. Replace them with named <code>file</code> blocks.</p>
+<h3 id="uniform-texture-with-depth">Uniform texture with depth</h3>
+<p><code>file "soildata"</code> requires <code>sand</code>, <code>clay</code>, <code>orgc</code> and <code>ph</code>. Sand, clay and
+organic content are fractions, not percentages. Optional <code>soilc</code> is carbon
+content in kg C/m² and defaults to zero. Columns <code>silt</code>, <code>cn</code> and <code>bulkdensity</code>
+may also be supplied and mapped; they are checked as numeric but currently do
+not feed the soil calculations. In particular, bulk density is not applied to
+the soil profile. Use mappings for legacy headers such as <code>orgC</code>, <code>pH</code>, <code>CN</code>
+and <code>soilC</code>. An explicitly mapped optional column must exist.</p>
+<h3 id="lpj-soil-codes">LPJ soil codes</h3>
+<p><code>file "soilcode"</code> has exactly one integer data column, with codes 0–9. Its
+header may have any name. A headerless coordinate/code file can be used directly:</p>
+<pre><code class="language-text">file &quot;soilcode&quot; (
+    path &quot;soils_lpj.dat&quot;
+    domain &quot;local&quot;
+    timestep &quot;none&quot;
+    header &quot;absent&quot;
+    max_distance 0.5
+)
+</code></pre>
+<p>You can explicitly map <code>column "soilcode" (source "class")</code> when the source
+column is named <code>class</code>.</p>
+<h3 id="texture-varying-with-depth">Texture varying with depth</h3>
+<p>Supply both <code>soilclay</code> and <code>soilsand</code>; optionally add <code>soilcoarse</code> and
+<code>soilph</code>. Each file needs a header whose data columns name contiguous depth
+intervals in centimetres, starting at the surface:</p>
+<pre><code class="language-text">lon lat 0-20 20-60 60-100
+150.75 -33.5 20 30 35
+</code></pre>
+<p>All files must use the same intervals in the same order. Sand, clay and coarse
+fragments are <strong>percentages</strong> in these files. pH uses ordinary pH units.
+Without optional files, coarse fragments default to zero and pH to 6.5.
+Organic fraction defaults to 0.05 and soil carbon to zero. Use interval names
+directly; do not add <code>column "clay"</code> or <code>column "sand"</code> mappings.</p>
+<pre><code class="language-text">file &quot;soilclay&quot; (path &quot;clay.txt&quot;)
+file &quot;soilsand&quot; (path &quot;sand.txt&quot;)
+file &quot;soilcoarse&quot; (path &quot;coarse.txt&quot;)
+file &quot;soilph&quot; (path &quot;ph.txt&quot;)
+</code></pre>
+<h3 id="soil-depth-and-slope">Soil depth and slope</h3>
+<p>Set <code>slope</code> to a nonnegative fixed value in degrees, or to <code>-1</code> to select
+<code>file "soilslope"</code>, which requires a <code>slope</code> column. A source column named
+<code>median</code> can be selected with <code>column "slope" (source "median")</code>. Each cell
+gets its own slope. Values are limited to 0–90 degrees.</p>
+<p>With Richards hydrology, positive <code>depth_soil</code> specifies a fixed depth in
+<strong>millimetres</strong>. Set <code>depth_soil 0</code> to use <code>file "soildepth"</code>, whose <code>depth</code>
+column is in <strong>metres</strong>. Depth maps work with all three soil descriptions.
+The resulting depth is limited to 0.2–50 m and rounded to 100 mm intervals.
+Other hydrology schemes use the model's fixed upper plus lower soil depth.
+Depth and slope files are opened only when the corresponding map is selected.</p>
+<h2 id="diagnosing-errors">Diagnosing errors</h2>
+<p>Files are parsed in full before simulation. Soil initialisation also checks
+spatial coverage for the requested gridlist. Messages identify the file and,
+where applicable, physical line, column, coordinate or date. If a file fails:</p>
+<ol>
+<li>Set <code>delimiter</code> and <code>header</code> explicitly to resolve detection ambiguities.</li>
+<li>Check exact data column names and mappings, and structural header names.</li>
+<li>For headerless input, check shape settings and column numbering.</li>
+<li>Check missing values, row widths, duplicate records and temporal gaps.</li>
+<li>Check coordinates and each file's <code>max_distance</code>; increase it only if using
+   a more distant soil location is appropriate for the simulation.</li>
+</ol>
+<p>For component authors, see the <a href="../../development/text-input/">developer overview</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
