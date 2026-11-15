@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Management Types - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../land-cover/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../prescribed-tree-establishment/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#management-types-for-natural-and-forest-stands" class="nav-link">Management types for natural and forest stands</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#assign-a-regime" class="nav-link">Assign a regime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#core-choices" class="nav-link">Core choices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#management-type-parameter-reference" class="nav-link">Management-type parameter reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="management-types-for-natural-and-forest-stands">Management types for natural and forest stands</h1>
+<p>A <strong>stand type</strong> describes an area of a grid cell, its land cover, and the
+management regimes it may use. A <strong>management type</strong> (<code>mt</code>) is a named set of
+rules for that stand: which plant functional types (PFTs) may be planted or
+establish, when and how trees are cut, and whether disturbance is suppressed.
+Each stand contains one or more replicate patches. Patch ages and vegetation
+can differ even when their stand type and management type are the same.</p>
+<p>Management rules become relevant when land-cover mode (<code>run_landcover 1</code>) is
+used. Normal forest cutting is evaluated for natural and forest stands at the
+start of each year. Treeinit can use these same regimes to specify what
+happens <strong>after</strong> its one-time replacement. <a href="../../science/harvesting/">Harvesting and vegetation
+removal</a> explains where biomass goes when a cut
+occurs; <a href="../land-cover/">land-cover change</a> explains how stand area changes.</p>
+<h2 id="assign-a-regime">Assign a regime</h2>
+<p>Define an <code>mt</code> block and assign it to a stand type with <code>management1</code>.
+<code>management2</code> and <code>management3</code> are optional later regimes. In a treeinit
+stand, <code>management2</code> is required: treeinit switches affected stands to it
+after installing the prescribed trees. The second regime can allow subsequent
+growth without scheduled cutting, or prescribe later thinning and cutting.
+Treeinit also adds the PFTs named in its input file to the second regime's
+selection. Set <code>cutfirstyear 0</code> if the new regime should preserve the trees
+through its first year.</p>
+<pre><code class="language-ins">mt &quot;Before_initialisation&quot; (
+    harvest_system &quot;continuous&quot;
+    cutfirstyear 0
+)
+
+mt &quot;After_initialisation&quot; (
+    planting_system &quot;selection&quot;
+    selection &quot;MRS&quot;
+    reestab &quot;restricted&quot;
+    harvest_system &quot;continuous&quot;
+    cutfirstyear 0
+)
+
+st &quot;Forest&quot; (
+    common_stand
+    stinclude 1
+    landcover &quot;forest&quot;
+    naturalveg &quot;all&quot;
+    management1 &quot;Before_initialisation&quot;
+    management2 &quot;After_initialisation&quot;
+    file_treeinit_st &quot;forest-treeinit.txt&quot;
+)
+</code></pre>
+<p>An alternative is to place management settings directly in <code>st</code>; these apply
+to its first regime. Prefer named <code>mt</code> blocks when using several regimes, and
+avoid mixing inline first-regime settings with a named <code>management1</code> because
+the named regime takes precedence. <code>mtinclude 0</code> excludes a named management
+type from the run. Stand-type keys <code>mt1_startyear</code>, <code>mt2_startyear</code>, and
+<code>mt3_startyear</code> set calendar years for normal regime rotation;
+<code>rotation_wait_for_cc 1</code> waits for a clearcut before switching under a
+clearcut system. Treeinit makes its own switch to regime 2 at the event.</p>
+<h2 id="core-choices">Core choices</h2>
+<p><code>planting_system</code> determines which tree PFTs are planted after cutting. An
+empty value leaves the stand's eligible tree PFTs available. <code>"selection"</code>
+uses the names in <code>selection</code>; <code>"monoculture"</code> uses <code>pft</code>. Other supported
+values select broad groups such as evergreen needleleaf or deciduous
+broadleaf trees. <code>reestab "all"</code> permits eligible PFTs to establish later;
+<code>"restricted"</code> limits tree reestablishment to planted PFTs, and <code>"none"</code>
+prevents tree reestablishment. The stand type's <code>landcover</code> and <code>naturalveg</code>
+settings still define the outer set of eligible vegetation. See
+<a href="../../science/establishment/">Establishment</a> for climatic establishment limits.</p>
+<p><code>harvest_system "clearcut"</code> uses rotations and optional intermediate
+thinnings. <code>"continuous"</code> schedules repeated partial cutting and may use a
+second cutting period. <code>"probability_input"</code> uses externally supplied
+cutting probabilities and intensities. An empty harvest system has no normal
+scheduled wood cutting; other events, including land-cover conversion and
+treeinit, may still remove vegetation. Parameters below are activated by the
+system or feature they describe; specifying a thinning strength alone does
+not schedule a cut.</p>
+<h2 id="management-type-parameter-reference">Management-type parameter reference</h2>
+<p>Values in the same row are related but remain separate input parameters.
+Years described as <em>calendar years</em> use the model's calendar, while intervals
+and patch ages count elapsed years. Fractions generally range from 0 to 1.
+Unless stated otherwise, switches use <code>0</code> for off and <code>1</code> for on.</p>
+<h3 id="selection-establishment-and-grazing">Selection, establishment, and grazing</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>planting_system</code></td>
+<td>Planting rule: empty, <code>selection</code>, <code>monoculture</code>, or a supported tree group.</td>
+</tr>
+<tr>
+<td><code>selection</code></td>
+<td>Space-separated PFT names used for selected planting and preferential cutting.</td>
+</tr>
+<tr>
+<td><code>pft</code></td>
+<td>Single PFT for <code>monoculture</code> planting; also used by crop regimes.</td>
+</tr>
+<tr>
+<td><code>plantdensity</code>, <code>plantdensity_pft</code></td>
+<td>Seedlings per hectare for selected PFTs, or the single <code>pft</code>, respectively.</td>
+</tr>
+<tr>
+<td><code>set_planting_density</code></td>
+<td>Use specified tree planting densities after a clearcut and bypass environmental establishment limits for that planting.</td>
+</tr>
+<tr>
+<td><code>reestab</code></td>
+<td><code>all</code>, <code>restricted</code>, or <code>none</code>: controls later tree establishment after planting.</td>
+</tr>
+<tr>
+<td><code>relaxed_establishment</code></td>
+<td>Ignore climatic limits on establishment once management starts.</td>
+</tr>
+<tr>
+<td><code>stochmort</code>, <code>stochestab</code></td>
+<td>Enable stochastic mortality or establishment, respectively. Both default to on.</td>
+</tr>
+<tr>
+<td><code>grazeintens</code></td>
+<td>Daily grazing fraction for managed grass vegetation.</td>
+</tr>
+</tbody>
+</table>
+<p>For managed grassland, <code>mowdates</code> (day-of-year values) and <code>mowintens</code>
+(fraction removed) can also be set <strong>inline in <code>st</code></strong>. They are not accepted
+inside a named <code>mt</code> block.</p>
+<h3 id="start-and-rotation-timing">Start and rotation timing</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>firstmanageyear</code></td>
+<td>First calendar year of management behavior, including relevant establishment and disturbance rules.</td>
+</tr>
+<tr>
+<td><code>firstcutyear</code></td>
+<td>Earliest calendar year of normal wood cutting.</td>
+</tr>
+<tr>
+<td><code>firstclearcutyear</code></td>
+<td>Earliest calendar year for a clearcut.</td>
+</tr>
+<tr>
+<td><code>clearcut_first_manageyear</code></td>
+<td>Clearcut when management first begins on an existing stand.</td>
+</tr>
+<tr>
+<td><code>firstcutyear_is_referenceyear</code></td>
+<td>Use years since <code>firstcutyear</code>, rather than patch age, to time thinning.</td>
+</tr>
+<tr>
+<td><code>cutfirstyear</code></td>
+<td>On entry to a new management regime: <code>0</code> preserve trees, <code>1</code> cut without cloning, <code>2</code> cut with cloning. The default is <code>1</code>; set this explicitly for treeinit stands.</td>
+</tr>
+<tr>
+<td><code>cutfirstyear_unsel</code></td>
+<td>Also cut PFTs outside the new selection on entry or cloning.</td>
+</tr>
+<tr>
+<td><code>cutinterval</code></td>
+<td>Main rotation or cutting interval in years.</td>
+</tr>
+<tr>
+<td><code>delayduecutting</code></td>
+<td>Spread overdue density-triggered clearcuts over this many years after <code>firstclearcutyear</code>.</td>
+</tr>
+<tr>
+<td><code>distribute_patch_ages</code></td>
+<td>Stagger patch ages in a newly managed forest stand.</td>
+</tr>
+<tr>
+<td><code>distribute_cuttings_among_patches</code></td>
+<td>Stagger cutting events among patches.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cutting-systems-and-thinnings">Cutting systems and thinnings</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>harvest_system</code></td>
+<td><code>clearcut</code>, <code>continuous</code>, <code>probability_input</code>, or empty. External probability inputs require their own forcing files.</td>
+</tr>
+<tr>
+<td><code>thintime</code></td>
+<td>One or more thinning times as fractions of the first rotation or cutting period.</td>
+</tr>
+<tr>
+<td><code>thinstrength</code>, <code>thinstrength_unsel</code></td>
+<td>Fractions cut at corresponding <code>thintime</code> entries for selected and unselected PFTs.</td>
+</tr>
+<tr>
+<td><code>thinselectpft</code></td>
+<td>PFT preference at thinning: <code>0</code> none, <code>1</code> unselected, <code>2</code> selected, <code>3</code> separate selected/unselected strengths, <code>4</code> shrubs and shade-intolerant PFTs.</td>
+</tr>
+<tr>
+<td><code>thinselectage</code></td>
+<td>Age preference: <code>0</code> none, <code>1</code> younger, <code>2</code> older trees.</td>
+</tr>
+<tr>
+<td><code>thinselectdiam</code></td>
+<td>Diameter preference: <code>0</code> none, <code>1</code> smaller, <code>2</code> larger, <code>3</code> diameter-limit cutting.</td>
+</tr>
+<tr>
+<td><code>secondintervalstart</code></td>
+<td>Years after the first period begins at which continuous cutting enters its second period.</td>
+</tr>
+<tr>
+<td><code>secondcutinterval</code></td>
+<td>Cutting interval in that second period.</td>
+</tr>
+<tr>
+<td><code>secondthintime</code>, <code>secondthinstrength</code>, <code>secondthinstrength_unsel</code></td>
+<td>Second-period counterparts of the first-period thinning times and strengths.</td>
+</tr>
+<tr>
+<td><code>secondthinselectpft</code>, <code>secondthinselectage</code>, <code>secondthinselectdiam</code></td>
+<td>Second-period counterparts of the PFT, age, and diameter preferences.</td>
+</tr>
+<tr>
+<td><code>diam_cut_low</code>, <code>diam_cut_high</code></td>
+<td>Diameter thresholds in centimetres for diameter-limit cutting; between them partial cutting applies and above the high limit all eligible trees are cut.</td>
+</tr>
+<tr>
+<td><code>adapt_diam_limit</code></td>
+<td>Adjust the low diameter threshold for stands with small trees.</td>
+</tr>
+<tr>
+<td><code>ifthin_reineke</code></td>
+<td>Use automatic thinning based on Reineke's stand-density rule.</td>
+</tr>
+<tr>
+<td><code>alpha_st</code>, <code>rdi_target</code></td>
+<td>Self-thinning coefficient and target relative density for Reineke thinning; a lower density target means stronger thinning.</td>
+</tr>
+<tr>
+<td><code>ifclearcut_by_density</code>, <code>dens_target_cc</code></td>
+<td>Enable clearcut when tree density falls below the specified trees-per-hectare threshold.</td>
+</tr>
+<tr>
+<td><code>ifclearcut_optimal_age</code></td>
+<td>Use the model's optimal rotation age as a clearcut trigger.</td>
+</tr>
+<tr>
+<td><code>killgrass_at_cc</code></td>
+<td>Remove grass vegetation during clearcut.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>thin*</code> and <code>secondthin*</code> parameters accept corresponding arrays: the
+first value in each array describes the first thinning, the second value the
+second thinning, and so on. A relative thinning time of <code>0.5</code> means halfway
+through the relevant period. Density and optimal-age triggers apply to
+clearcut management; if several triggers are set, the model resolves their
+priority internally, so avoid assuming all will cause independent cuts.</p>
+<h3 id="target-pft-composition">Target PFT composition</h3>
+<p>Target cutting aims to move the <strong>carbon biomass shares</strong> of selected PFTs
+towards prescribed fractions. It is separate from a rotation thinning.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>targetfrac</code></td>
+<td>Target biomass fractions corresponding to PFTs in <code>selection</code>.</td>
+</tr>
+<tr>
+<td><code>file_targetfrac_pft_mt</code></td>
+<td>File supplying time-varying PFT target fractions.</td>
+</tr>
+<tr>
+<td><code>targetfrac_input_mode</code></td>
+<td><code>0</code> use file fractions for cutting, retain instruction-file selection; <code>1</code> use file fractions and restrict selection to PFTs with nonzero fractions; <code>2</code> use file fractions only to define selection, without target cutting.</td>
+</tr>
+<tr>
+<td><code>firsttargetyear</code>, <code>lasttargetyear</code></td>
+<td>Calendar-year window for target cutting.</td>
+</tr>
+<tr>
+<td><code>targetstartage</code>, <code>targetcutinterval</code></td>
+<td>Minimum patch age and years between target cuts.</td>
+</tr>
+<tr>
+<td><code>targetcutmode</code></td>
+<td><code>1</code> calculate deviations at patch level; <code>2</code> or <code>3</code> use stand-level deviations.</td>
+</tr>
+<tr>
+<td><code>targetthinselectage</code>, <code>targetthinselectdiam</code></td>
+<td>Prefer younger/older (<code>0</code>/<code>1</code>/<code>2</code>) or smaller/larger (<code>0</code>/<code>1</code>/<code>2</code>) individuals during target cutting. Diameter preference can override age preference.</td>
+</tr>
+<tr>
+<td><code>suppress_second_target</code></td>
+<td>Stop target cutting when continuous management enters its second period.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disturbance-and-harvest-accounting">Disturbance and harvest accounting</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>suppress_fire</code></td>
+<td>Suppress prognostic fire while the regime is active and within its year window.</td>
+</tr>
+<tr>
+<td><code>suppress_fire_firstyear</code>, <code>suppress_fire_lastyear</code></td>
+<td>Calendar-year window for fire suppression.</td>
+</tr>
+<tr>
+<td><code>suppress_disturbance</code></td>
+<td>Suppress other prognostic disturbance while the regime is active and within its year window.</td>
+</tr>
+<tr>
+<td><code>suppress_disturbance_firstyear</code>, <code>suppress_disturbance_lastyear</code></td>
+<td>Calendar-year window for disturbance suppression.</td>
+</tr>
+<tr>
+<td><code>harv_eff_thin</code>, <code>harv_eff_cc</code></td>
+<td>Fractions of eligible stem wood exported at thinning and clearcut.</td>
+</tr>
+<tr>
+<td><code>res_outtake_twig_thin</code>, <code>res_outtake_twig_cc</code></td>
+<td>Fractions of twigs and attached leaves removed at thinning and clearcut.</td>
+</tr>
+<tr>
+<td><code>res_outtake_coarse_root_thin</code>, <code>res_outtake_coarse_root_cc</code></td>
+<td>Fractions of coarse roots and stumps removed at thinning and clearcut.</td>
+</tr>
+</tbody>
+</table>
+<p>The six harvest and residue values default to <em>unset</em>. Stem efficiency and
+twig removal then use PFT-level settings; coarse-root removal defaults to
+0.1. They affect normal management cuts, not the one-time
+vegetation removal performed by treeinit. See <a href="../../science/harvesting/">Harvesting and vegetation
+removal</a> for the resulting biomass pathways.</p>
+<h3 id="crop-specific-keys">Crop-specific keys</h3>
+<p>The parser also accepts <code>hydrology</code>, <code>sdate</code>, <code>hdate</code>, <code>nfert</code>, <code>tillage_fact</code>,
+and <code>fallow</code> in an <code>mt</code> block. They describe crop water supply, sowing and
+harvest dates, nitrogen fertilisation, tillage, and fallow. They are listed
+here for completeness but are outside the DAVE natural/forest workflow.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

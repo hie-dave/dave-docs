@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -352,7 +376,12 @@ placed at <code>benchmarks/ozflux/forcing/</code>.</p>
 VSCode</a>. That page shows how to run <code>CumberlandPlain</code>,
 where outputs are written, and what to check after the run. To run from the
 command line, see <a href="../run-serial/">Running Serially</a>.</p>
-<p>Outputs are written to <code>benchmarks/ozflux/&lt;SiteName&gt;/out/</code> by default.</p></div>
+<p>Outputs are written to <code>benchmarks/ozflux/&lt;SiteName&gt;/out/</code> by default.
+The model log is <code>benchmarks/ozflux/&lt;SiteName&gt;/guess.log</code>. Check it first if
+the run fails or an output looks wrong. <code>verbosity</code> in the site <code>.ins</code> file
+controls its detail; the shared <code>settings.ins</code> sets it to <code>3</code>. See
+<a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a> for the
+recommended diagnostic steps.</p></div>
             </div>
         </div>
 

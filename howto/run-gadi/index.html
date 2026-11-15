@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -496,7 +520,11 @@ qdel &lt;jobid&gt;
 runs/run2/out/lai.out ├──&gt; output/lai.out
 runs/run3/out/lai.out ┘
 </code></pre>
-<p>Check the top-level job log after every run. LPJ-GUESS jobs typically cost
+<p>Check the worker <code>guess.log</code> files first when the model fails or produces
+unexpected results. <code>verbosity</code> in the <code>.ins</code> file controls their detail;
+use at least <code>3</code> for investigation, or <code>4</code>/<code>5</code> for more detail. Check the
+top-level job log for PBS errors and resource usage after every run.
+LPJ-GUESS jobs typically cost
 around <strong>0.005–0.01 SU per patch</strong>, where the total number of patches is
 <code>npatch × number of gridcells</code>. A substantially higher or lower cost should be
 investigated.</p>

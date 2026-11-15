@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../../howto/text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../../howto/land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../../howto/management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../../howto/prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -313,6 +337,11 @@
   (no multiple coexisting cohorts for the same grass PFT within a patch)</li>
 </ul>
 <p>The annual establishment logic runs once per simulation year (after mortality).</p>
+<p>For prescribed initialisation of trees from an input file in a particular
+calendar year, see <a href="../../howto/prescribed-tree-establishment/">Prescribed tree establishment</a>.
+That pathway replaces existing vegetation in the affected stand type and
+supplies tree size, density, and age directly; it is separate from the annual
+recruitment process described below.</p>
 <p>If DAVE daily grass growth (<code>ifdailygrass</code> and <code>ifdavegrowth</code>) is enabled, those
 grasses are handled by the daily process, not by the annual process described on
 this page.</p>

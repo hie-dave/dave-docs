@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../../howto/text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../../howto/land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../../howto/management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../../howto/prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -247,7 +271,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../daily-growth-tree/" class="nav-link">
+                                <a rel="next" href="../disturbance/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -329,7 +353,8 @@ the yearly workflow.</p>
 <h2 id="annual-workflow">Annual Workflow</h2>
 <p>At year end, the main order is:</p>
 <ol>
-<li>disturbance check (<code>disturbance()</code> in <code>vegetation_dynamics()</code>)</li>
+<li>generic patch-destroying disturbance check (<code>disturbance()</code> in
+   <code>vegetation_dynamics()</code>; see <a href="../disturbance/">Disturbance</a>)</li>
 <li>demographic mortality (<code>mortality_guess()</code>)</li>
 <li>establishment (<code>establishment_guess()</code>)</li>
 </ol>
@@ -563,7 +588,10 @@ mortality equations in <code>mortality_guess()</code>, and so are not documented
 <h2 id="faq">FAQ</h2>
 <h3 id="why-are-my-trees-dying">Why are my trees dying?</h3>
 <p>First, check the simulation log file: <strong>guess.log</strong>, written to the same
-directory as the top-level instruction file.</p>
+directory from which the model was run (usually beside the top-level
+instruction file). Set <code>verbosity 3</code> or higher in that <code>.ins</code> file to see
+informational mortality messages; <code>4</code> and <code>5</code> provide more detail. For
+parallel runs, check each worker's <code>runN/guess.log</code>.</p>
 <p>All mortality events should be logged in this file along with causes. Searching
 through this log is a quick and easy way to see which high-level process is
 removing cohorts (e.g. carbon starvation, age, etc).</p>

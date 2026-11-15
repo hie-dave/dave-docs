@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Land-Cover Change - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../text-input/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../management/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#using-land-cover-change-in-dave" class="nav-link">Using land-cover change in DAVE</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#choose-the-mode" class="nav-link">Choose the mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#supply-the-net-fractions" class="nav-link">Supply the net fractions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#decide-whether-to-give-gross-transitions" class="nav-link">Decide whether to give gross transitions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stand-transfer-settings" class="nav-link">Stand transfer settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#run-and-inspect" class="nav-link">Run and inspect</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-input-problems" class="nav-link">Common input problems</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="using-land-cover-change-in-dave">Using land-cover change in DAVE</h1>
+<p>This guide configures a DAVE site simulation with natural vegetation, managed
+forest, and optionally pasture. It assumes the usual non-crop DAVE workflow.
+For the model concepts, see <a href="../../science/land-use-change/">Land cover and land-use change</a>.</p>
+<h2 id="choose-the-mode">Choose the mode</h2>
+<p>The committed <code>benchmarks/ozflux/settings.ins</code> imports
+<code>benchmarks/ozflux/landcover.ins</code>, which sets <code>run_landcover 0</code>. Use that setting
+for a site with one ordinary stand and no prescribed land-cover fractions.
+The <code>file_lu</code> parameter is ignored in this mode.</p>
+<p>For a run with prescribed fractions, add a site-specific instruction file
+<em>after</em> the shared OzFlux settings import and set <code>run_landcover 1</code>. Turn on
+only the classes to be simulated, and define at least one included <code>st</code> for
+each active class. A class can have several stand types; the <code>st</code> name is used
+in stand-type fraction and gross-transition column headers. Keep crop disabled
+for a DAVE run without crops.</p>
+<pre><code class="language-ins">! In the site-specific instruction file, imported after ../settings.ins
+run_landcover 1
+run_natural 1
+run_forest 1
+run_pasture 0
+run_crop 0
+run_urban 0
+run_peatland 0
+run_barren 0
+
+st &quot;Forest&quot; (
+    common_stand
+    stinclude 1
+    landcover &quot;forest&quot;
+    naturalveg &quot;all&quot;
+    harvest_system &quot;continuous&quot;
+)
+</code></pre>
+<p>The shared OzFlux land-cover file already defines <code>st "Natural"</code>. Its exact
+name matters for a <code>Natural_Forest</code> gross-transition column. If you enable
+pasture, also define an included pasture stand type and its appropriate PFTs
+and grazing settings. A managed forest stand type needs management choices
+suited to the experiment; the snippet is an area-configuration example.</p>
+<p>To initialise a forest stand from observed tree cohorts in a chosen year, see
+<a href="../prescribed-tree-establishment/">Prescribed tree establishment</a>.</p>
+<h2 id="supply-the-net-fractions">Supply the net fractions</h2>
+<p>Set <code>file_lu</code> to a text file of grid-cell fractions. For an annual site input,
+use a <code>Lon Lat Year</code> header followed by land-cover names in uppercase. Match
+the longitude and latitude to the site's <code>file_gridlist</code>. Values are fractions
+of the entire grid cell, from 0 to 1. Give one row per year and location; keep
+the classes summing to 1. This minimal non-crop example moves 0.10 of the grid
+cell from natural vegetation to forest in 1902:</p>
+<pre><code class="language-text">Lon Lat Year NATURAL FOREST
+150.723611 -33.615278 1901 1.00 0.00
+150.723611 -33.615278 1902 0.90 0.10
+150.723611 -33.615278 1903 0.90 0.10
+</code></pre>
+<pre><code class="language-ins">param &quot;file_lu&quot; (str &quot;my-landcover.txt&quot;)
+</code></pre>
+<p>Omitted inactive classes contribute zero. Include a column for every active
+class, even when its fraction is zero in some years. The reader supports other
+text input layouts, including year-only data shared by grid cells; the
+<code>Lon Lat Year</code> form makes a site file self-contained. File paths are resolved
+from the run's working directory, so run from the site directory as described
+in <a href="../run-serial/">Running Serially</a>.</p>
+<p>When <code>run_landcover 1</code> has no <code>file_lu</code>, the model gives the active classes
+equal fixed fractions. That is useful for a controlled test, but is usually not
+useful behaviour. If only <code>NATURAL</code> is active, it occupies the whole grid cell.
+When active fractions do not sum to one, the reader may rescale them or assign
+unrepresented area to <code>NATURAL</code>; do not rely on that correction for intended
+land use. Inspect log warnings and <code>frac_sts.out</code>.</p>
+<h2 id="decide-whether-to-give-gross-transitions">Decide whether to give gross transitions</h2>
+<p>For a straightforward conversion with one donor and one receiver, <code>file_lu</code>
+alone can be sufficient. DAVE infers a transfer from the net change. For
+several simultaneous changes, or for turnover with unchanged net fractions,
+give an explicit gross-transition file.</p>
+<p>For stand-type transitions, set <code>file_grossSTC</code> and use columns named
+<code>FromStandType_ToStandType</code>, with the exact <code>st</code> names and case from the
+instruction file. Its <code>Year</code> is the year <strong>before</strong> the target net-fraction
+row:</p>
+<pre><code class="language-text">Lon Lat Year Natural_Forest Forest_Natural
+150.723611 -33.615278 1901 0.10 0.00
+150.723611 -33.615278 1902 0.00 0.00
+</code></pre>
+<pre><code class="language-ins">param &quot;file_grossSTC&quot; (str &quot;my-stand-transfers.txt&quot;)
+param &quot;file_grossLUC&quot; (str &quot;&quot;)
+</code></pre>
+<p>The 1901 gross row creates the 1902 net fractions in the example above. A
+missing transfer column is treated as zero, so check spelling carefully.
+Each transfer is a fraction of the entire grid cell. Before running, verify
+for each year and stand type that <strong>incoming minus outgoing transfers equals
+the change in its net fraction</strong>. For a class with several stand types, also
+check that their target fractions add to the class fraction.</p>
+<p><code>file_grossLUC</code> is a different, LUH-style, <strong>land-cover-level</strong> transfer
+format with short category columns such as <code>vp</code> and <code>pv</code>; it is not a table
+of <code>Natural_Forest</code> columns. DAVE maps these class transfers to stand types
+and may adjust inconsistent gross transfers to match net fractions. Use
+<code>file_grossSTC</code> when the donor and receiver stand types are known. If both
+gross paths are configured, <code>file_grossLUC</code> wins, so keep the unused path
+empty.</p>
+<p>If a land-cover class contains multiple stand types, the optional
+<code>file_lunatural</code>, <code>file_luforest</code>, or <code>file_lupasture</code> supplies their fractions
+over time. Without such a file, active stand types in that class have equal
+shares. A stand-type fraction file uses stand-type names as columns. The
+reader infers whether its values are shares <em>within</em> the class or absolute
+grid-cell fractions by checking whether the numeric columns sum to one. Use
+one convention consistently across cells and years, and confirm the reported
+stand-type areas in <code>frac_sts.out</code>. For a single stand type in each class,
+these extra files are unnecessary.</p>
+<h2 id="stand-transfer-settings">Stand transfer settings</h2>
+<p>The shared <code>benchmarks/ozflux/landcover.ins</code> defines the following settings.
+Override only those needed by the experiment:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npatch_secondarystand</code></td>
+<td>Number of replicate patches in a newly created secondary stand.</td>
+</tr>
+<tr>
+<td><code>reduce_all_stands</code></td>
+<td>If <code>0</code>, use age and destination rules to choose donor stands; if <code>1</code>, reduce stands more evenly.</td>
+</tr>
+<tr>
+<td><code>age_limit_reduce</code></td>
+<td>Age threshold used when selecting stands to shrink.</td>
+</tr>
+<tr>
+<td><code>transfer_level</code></td>
+<td>Pool transferred state across the grid cell (<code>0</code>), land-cover class (<code>1</code>), or stand type (<code>2</code>).</td>
+</tr>
+<tr>
+<td><code>iftransfer_to_new_stand</code></td>
+<td>Allow eligible converted areas to become separate stands, with vegetation carried over or cleared according to the receiving stand's settings.</td>
+</tr>
+<tr>
+<td><code>ifslowharvestpool</code></td>
+<td>Include the slow harvested-product pool in land-cover harvest accounting.</td>
+</tr>
+</tbody>
+</table>
+<p><code>ifprimary_lc_transfer</code> and <code>ifprimary_to_secondary_transfer</code> are for detailed
+primary/secondary transition data; leave them at <code>0</code> for the simple
+stand-type example. <code>harvest_secondary_to_new_stand</code> controls a wood-harvest
+path that can create secondary stands, even with no change in broad class
+area. Harvest, planting, and disturbance settings can therefore change the
+result of an area transition. See <a href="../../science/disturbance/">Disturbance</a> when
+prescribed fire, wind, bark beetle, or clearcut input is also active.</p>
+<h2 id="run-and-inspect">Run and inspect</h2>
+<p>Run the site instruction file from its directory. With the standard build and
+NetCDF climate input, the form is:</p>
+<pre><code class="language-bash">cd benchmarks/ozflux/&lt;SiteName&gt;
+../../../build/guess -input nc &lt;SiteName&gt;.ins
+</code></pre>
+<p>Add output settings to the site-specific instruction file. These are useful
+starting points:</p>
+<pre><code class="language-ins">file_frac_sts &quot;frac_sts.out&quot;
+file_nstand_sts &quot;nstand_sts.out&quot;
+file_cmass_sts &quot;cmass_sts.out&quot;
+file_luc_cflux_sts &quot;luc_cflux_sts.out&quot;
+file_cflux_natural &quot;cflux_natural.out&quot;
+file_cflux_forest &quot;cflux_forest.out&quot;
+</code></pre>
+<p><code>frac_sts.out</code> reports stand-type fractions, class fractions, and a grid-cell
+total. <code>nstand_sts.out</code> reports how many runtime stands represent each type;
+its count can increase after a transfer even if the type's area does not.
+<code>cmass_sts.out</code> helps distinguish area changes from changes in vegetation
+carbon. <code>luc_cflux_sts.out</code> and the class carbon-flux files help check the
+carbon consequences of conversion. Set <code>printstandtypes 1</code> for stand-type
+columns; <code>printseparatestands 1</code> requests individual stand output where
+supported, but the model disables it for land-cover files covering more than
+100 grid cells to avoid too many files. Output is written under the configured
+<code>outputdirectory</code>.</p>
+<p>Check the first input year, the first year in which fractions change, and the
+year after the last supplied row. Compare <code>frac_sts.out</code> with the intended
+fractions, and check that an explicit gross row dated <span class="arithmatex">\(y-1\)</span> produces the
+expected transition into year <span class="arithmatex">\(y\)</span>. During spin-up, land-cover changes can be
+held until the soil spin-up threshold; read the log for the first active year.</p>
+<h2 id="common-input-problems">Common input problems</h2>
+<p>If the fractions, transfers, or carbon fluxes look wrong, check <code>guess.log</code>
+in the site run directory <strong>first</strong>. Search for the affected year, stand type,
+rescaling messages, warnings, and errors. Set <code>verbosity 3</code> in the <code>.ins</code> file
+for informational land-cover messages; <code>4</code> or <code>5</code> can provide more detail.
+See <a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All active land covers must have at least one stand type</code></td>
+<td>Define an included <code>st</code> with the matching <code>landcover</code> for every <code>run_* 1</code> class.</td>
+</tr>
+<tr>
+<td>Missing input or a site excluded</td>
+<td>Check <code>file_lu</code> path, <code>Lon</code>/<code>Lat</code> against <code>file_gridlist</code>, and that the file has data for the location.</td>
+</tr>
+<tr>
+<td>Fraction-sum or rescaling warning</td>
+<td>Check all active columns, their units, and that each year's fractions sum to one.</td>
+</tr>
+<tr>
+<td>No change in the expected year</td>
+<td>Check the initial row, spin-up timing, and the one-year offset of the gross file.</td>
+</tr>
+<tr>
+<td>Wrong or missing donor stand</td>
+<td>Check gross column names against <code>st</code> names and balance gross transfers against net stand-type fractions.</td>
+</tr>
+<tr>
+<td>Unexpected carbon flux or number of stands</td>
+<td>Inspect harvest, disturbance, <code>transfer_level</code>, and <code>iftransfer_to_new_stand</code> as well as the area files.</td>
+</tr>
+</tbody>
+</table>
+<p>The repository's <code>benchmarks/ozflux/CumberlandPlain/</code> directory contains a
+larger <code>cup.luc.txt</code> and <code>cup.gross_stc.txt</code> example with both directions of
+natural/forest conversion. Its site instruction imports <code>cup.luc.ins</code> after
+the shared settings; use it as a worked example and adjust the years, location,
+management, and input paths for your own site.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -336,6 +360,11 @@ operates at sub-daily time resolution.</p>
 </code></pre>
 <p><code>nc</code> is the current CLI key for DAVE climate input. A future breaking release
 may introduce <code>dave</code> as the module key.</p>
+<p>If an input file fails to load or the climate values look unexpected, start
+with <code>guess.log</code> in the working directory. Parallel runs have a separate
+<code>runN/guess.log</code> for each worker. Set <code>verbosity 3</code> in the <code>.ins</code> file for
+informational input messages, or <code>4</code>/<code>5</code> for more detail. See
+<a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a>.</p>
 <h2 id="instruction-file-parameters">Instruction File Parameters</h2>
 <p>All parameters are declared in <code>modules/daveinput.cpp</code>. Parameters with no
 default listed are required and must be set explicitly.</p>

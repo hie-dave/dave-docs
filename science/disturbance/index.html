@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Disturbance - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
+    <a href="../daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../../howto/common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../../howto/INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../../howto/sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../../howto/ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../../howto/climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../../howto/text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../../howto/land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../../howto/management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../../howto/prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
+</li>
+            
+<li>
+    <a href="../../howto/debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../../howto/run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../../howto/gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../howto/contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../../howto/migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../../howto/contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../../howto/markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../../howto/sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../../howto/git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../mortality/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../land-use-change/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#disturbance" class="nav-link">Disturbance</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#disturbance-concepts" class="nav-link">Disturbance Concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#precedence" class="nav-link">Precedence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#practical-guidance" class="nav-link">Practical Guidance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="disturbance">Disturbance</h1>
+<p>This page documents the disturbance pathways used by the DAVE fork of
+LPJ-GUESS. The word "disturbance" is used for several related but distinct
+mechanisms, so the important thing is to know which pathway is active in a
+given run.</p>
+<h2 id="disturbance-concepts">Disturbance Concepts</h2>
+<h3 id="generic-patch-destroying-disturbance">Generic Patch-Destroying Disturbance</h3>
+<p>The generic patch-destroying disturbance is implemented by
+<code>disturbance(Patch&amp;, double)</code> in <code>modules/vegdynam.cpp</code>.</p>
+<p>It is controlled by <code>ifdisturb</code>, <code>disttype</code>, and either <code>distinterval</code> or
+<code>file_disturb</code>, depending on the disturbance type. It applies in individual
+and cohort modes.</p>
+<p>When this pathway disturbs a patch, it:</p>
+<ul>
+<li>loops over every individual or cohort in the patch</li>
+<li>reports disturbance mortality fluxes with <code>MORT_DIST</code></li>
+<li>optionally routes biomass through harvest-style accounting when
+  <code>ifback_disturb_as_harv</code> is enabled</li>
+<li>kills and removes every vegetation object from the patch</li>
+<li>sets <code>patch.disturbed = true</code></li>
+<li>resets <code>patch.age = 0</code></li>
+</ul>
+<p>This is the trunk-style disturbance mechanism where a disturbance destroys all
+vegetation in the patch.</p>
+<h3 id="dave-deterministic-disturbance">Dave Deterministic Disturbance</h3>
+<p>Dave deterministic disturbance is a fixed-year wrapper around the generic
+patch-destroying disturbance.</p>
+<p>It is selected with the following combination of parameters:</p>
+<pre><code class="language-ins">ifdisturb 1
+disttype &quot;DETERMINISTIC&quot;
+file_disturb &quot;...&quot;
+</code></pre>
+<p>The <code>file_disturb</code> file contains one calendar year per line. In those years,
+every patch is disturbed by calling <code>disturbance(patch, 1.0)</code> (ie disturbance is
+triggered with probability 1).</p>
+<p>This pathway is mainly useful for controlled debugging or reproducibility runs
+where the desired behaviour is a known forest age at output time.</p>
+<h3 id="stochastic-generic-disturbance">Stochastic Generic Disturbance</h3>
+<p>Stochastic generic disturbance uses the same patch-destroying mechanism as the
+Dave deterministic pathway. The difference is only the probability source:
+stochastic disturbance calls <code>disturbance(patch, 1.0 / distinterval)</code>, using
+the gridcell or stand disturbance interval.</p>
+<h3 id="prescribed-disturbance-inputs">Prescribed Disturbance Inputs</h3>
+<p>Prescribed disturbance inputs are the disturbance machinery ported from
+<code>european_applications</code>. They are activated by one or more of:</p>
+<pre><code class="language-ins">file_dist_clearcut
+file_dist_fire
+file_dist_wind
+file_dist_barkbeetle
+</code></pre>
+<p>These inputs are handled by <code>prescribed_disturbance()</code> and
+<code>force_prescribed_disturbance()</code> in <code>modules/vegdynam.cpp</code>.</p>
+<p>This pathway is not the generic patch-destroying disturbance. The input is an
+area fraction for the whole gridcell, not a list of particular patches to
+disturb. For example, a prescribed wind input may say, in effect, "wind
+disturbed 8% of the forest/natural area in this gridcell this year". The model
+then has to decide which simulated stand area represents that disturbed 8%.</p>
+<p>The prescribed-disturbance code does this as an allocation problem for each
+disturbance type:</p>
+<ul>
+<li>start with the prescribed disturbed fraction</li>
+<li>convert it to an area over applicable stands</li>
+<li>rank the existing stands by a disturbance-specific susceptibility metric</li>
+<li>take stands from the high-susceptibility end of that ranking until the
+  prescribed disturbed area has been allocated</li>
+<li>apply the disturbance treatment to the selected stand area</li>
+</ul>
+<p>The stands are sorted because some stands may be more susceptible to a given
+disturbance type than other stands, and if the disturbed area is less than the
+stands' total area, only some stands are affected. The most susceptible stands
+are disturbed first, so that, of all the stands, those that are affected by a
+given disturbance type are those most susceptible to that type of disturbance.</p>
+<p>Different disturbance types use different rankings because "most susceptible"
+has different meanings for different processes:</p>
+<ul>
+<li>prescribed clearcut uses stand diameter structure, so larger/more harvestable
+  stands are cut first</li>
+<li>prescribed fire uses fire sensitivity, so the stands which are burnt are those
+  most susceptible to fire</li>
+<li>prescribed wind uses storm sensitivity</li>
+<li>prescribed bark-beetle disturbance uses a bark-beetle sensitivity metric based
+  on tree size, density, and PFT weighting</li>
+</ul>
+<p>These rankings do not make the total disturbed area larger or smaller. They
+only decide which simulated stand area receives the prescribed disturbance.</p>
+<p>If the remaining disturbance area is larger than a selected stand, the whole
+stand is disturbed. If the remaining disturbance area is smaller than the next
+selected stand, the code splits the stand area. It reduces the original stand's
+area, clones a new stand to represent the disturbed fraction, and applies the
+disturbance treatment to that cloned stand. This is why prescribed disturbance
+uses land-cover/stand-transfer machinery even though the land-cover class may
+not change: the model is carving out a fraction of a stand so that only the
+prescribed amount of area is disturbed.</p>
+<h2 id="precedence">Precedence</h2>
+<p>During active prescribed-disturbance input years, the generic patch-destroying
+disturbance pathway is suppressed in <code>vegetation_dynamics()</code>.</p>
+<p>This means that Dave deterministic disturbance and stochastic generic
+disturbance do not run in years covered by active prescribed clearcut, fire,
+wind, or bark-beetle disturbance inputs.</p>
+<p>The intent is to avoid two independent disturbance systems acting on the same
+patches in the same year.</p>
+<h2 id="practical-guidance">Practical Guidance</h2>
+<p>Use Dave deterministic disturbance when the desired behaviour is a controlled
+whole-patch vegetation reset in known calendar years. This is really only useful
+for single-patch debugging simulations.</p>
+<p>Use stochastic generic disturbance when the desired behaviour is the original
+LPJ-GUESS random patch-destroying disturbance.</p>
+<p>Use prescribed disturbance inputs when the desired behaviour is to impose
+external disturbed area fractions for clearcut, fire, wind, or bark beetle and
+allocate those disturbances across stands.</p>
+<p>Do not treat prescribed disturbance inputs as a drop-in replacement for Dave
+deterministic disturbance. They differ in allocation, biomass routing,
+treatment of non-tree vegetation, and patch-age handling.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Prescribed Tree Establishment - LPJ-GUESS DAVE</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">LPJ-GUESS DAVE</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Science</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../science/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../science/establishment/" class="dropdown-item">Establishment</a>
+</li>
+                                    
+<li>
+    <a href="../../science/mortality/" class="dropdown-item">Mortality</a>
+</li>
+                                    
+<li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
+</li>
+                                    
+<li>
+    <a href="../../science/daily-growth-grass/" class="dropdown-item">Daily Grass Growth</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">How-to</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Orientation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../repository-map/" class="dropdown-item">Repository Map</a>
+</li>
+            
+<li>
+    <a href="../common-failures/" class="dropdown-item">Common Failures</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Setup</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../INSTALL.windows/" class="dropdown-item">Windows</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.macos/" class="dropdown-item">macOS</a>
+</li>
+            
+<li>
+    <a href="../INSTALL.linux/" class="dropdown-item">Linux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Access</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../hie-storage/" class="dropdown-item">HIE-Storage</a>
+</li>
+            
+<li>
+    <a href="../sftp-filezilla/" class="dropdown-item">SFTP via FileZilla</a>
+</li>
+            
+<li>
+    <a href="../sftp-terminal/" class="dropdown-item">SFTP via Terminal</a>
+</li>
+            
+<li>
+    <a href="../ssh-keys/" class="dropdown-item">SSH Key Management</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Running</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../ozflux-simulations/" class="dropdown-item">OzFlux Site Simulations</a>
+</li>
+            
+<li>
+    <a href="../climate-input/" class="dropdown-item">Climate Input</a>
+</li>
+            
+<li>
+    <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Prescribed Tree Establishment</a>
+</li>
+            
+<li>
+    <a href="../debugging-vscode/" class="dropdown-item">Running and Debugging via VSCode</a>
+</li>
+            
+<li>
+    <a href="../run-serial/" class="dropdown-item">Running Serially (CLI)</a>
+</li>
+            
+<li>
+    <a href="../run-parallel/" class="dropdown-item">Running in Parallel (MPI)</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gadi</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../run-gadi/" class="dropdown-item">Running Jobs</a>
+</li>
+            
+<li>
+    <a href="../gadi-setup/" class="dropdown-item">Initial Setup</a>
+</li>
+            
+<li>
+    <a href="../gadi-troubleshooting/" class="dropdown-item">Troubleshooting Runs</a>
+</li>
+            
+<li>
+    <a href="../gadi-resources/" class="dropdown-item">Resources and Costs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Contributing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../contributing-code/" class="dropdown-item">Contributing Code (Workflow)</a>
+</li>
+            
+<li>
+    <a href="../migrate-from-upstream-repo/" class="dropdown-item">Migrating from Upstream Repo</a>
+</li>
+            
+<li>
+    <a href="../contributing-docs/" class="dropdown-item">Contributing to the Documentation</a>
+</li>
+            
+<li>
+    <a href="../markdown-math/" class="dropdown-item">Writing Equations</a>
+</li>
+            
+<li>
+    <a href="../sourcetree/" class="dropdown-item">Version Control via SourceTree</a>
+</li>
+            
+<li>
+    <a href="../git-cli/" class="dropdown-item">Version Control via CLI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../development/contributing-code/" class="dropdown-item">Contributing Code (Policy)</a>
+</li>
+                                    
+<li>
+    <a href="../../development/lpj-guess-development-ecosystem/" class="dropdown-item">LPJ-GUESS Development Ecosystem</a>
+</li>
+                                    
+<li>
+    <a href="../../development/toolchains/" class="dropdown-item">Dependencies and Toolchains</a>
+</li>
+                                    
+<li>
+    <a href="../../development/text-input/" class="dropdown-item">Plain Text Input</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../management/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../debugging-vscode/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#prescribed-tree-establishment-treeinit" class="nav-link">Prescribed tree establishment (treeinit)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#what-happens" class="nav-link">What happens</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configure-the-stand-type" class="nav-link">Configure the stand type</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prepare-the-input-file" class="nav-link">Prepare the input file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#run-and-verify" class="nav-link">Run and verify</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-problems" class="nav-link">Common problems</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="prescribed-tree-establishment-treeinit">Prescribed tree establishment (treeinit)</h1>
+<p>Treeinit places specified tree cohorts into a stand type in a chosen calendar
+year. Use it to initialise a stand from an observed tree size and density
+structure. It does not prescribe land-cover area or replace ordinary recruitment
+in later years. See <a href="../../science/establishment/">Establishment</a> for annual
+recruitment and <a href="../../science/land-use-change/">Land cover and land-use change</a>
+for stand areas.</p>
+<h2 id="what-happens">What happens</h2>
+<p>At the <strong>end of <code>init_year</code></strong>, after annual vegetation dynamics and prescribed
+disturbance, LPJ-GUESS removes the existing vegetation in each affected patch
+and creates the trees described by the input rows. Existing trees are cut and
+their biomass is divided among exported material and litter; existing grasses
+become litter. <a href="../../science/harvesting/">Harvesting and vegetation removal</a>
+explains this accounting. The new trees receive size, density, age, carbon,
+and nitrogen state. Their added carbon and nitrogen are recorded as prescribed
+inputs through seed flux accounting, rather than as growth during that year.
+Ordinary annual establishment is skipped for this stand type in the
+initialisation year. The affected stands then move to <code>management2</code>, the
+regime governing later cutting, planting, and establishment. See
+<a href="../management/">Management types</a> for the concepts and parameter reference.</p>
+<p>With the default <code>forest_init_poolsoil 0</code>, existing stands keep their area,
+patches, and soil state while their vegetation is replaced. With
+<code>forest_init_poolsoil 1</code>, LPJ-GUESS pools the soil and other non-living state
+across the stands being initialised, removes those stands, and creates one new
+stand per affected stand type. The new stands have <code>npatch_treeinit</code> replicate
+patches. Their area can be redistributed among affected stand types using
+next-year fractions while their combined area is preserved. All affected stand
+types must have the same initialisation year when pooling is enabled.</p>
+<h2 id="configure-the-stand-type">Configure the stand type</h2>
+<p>Set <code>file_treeinit_st</code> inside the <strong>stand type</strong> to be initialised. In the
+land-cover workflow, use <code>run_landcover 1</code>, ensure the type has positive area
+in <code>init_year</code>, and provide valid <code>management1</code> and <code>management2</code> regimes.
+Treeinit updates the second regime's PFT selection to include the PFTs in the
+input file. For example, in a site-specific instruction file imported after
+the shared OzFlux settings:</p>
+<pre><code class="language-ins">run_landcover 1
+run_natural 1
+run_forest 1
+run_crop 0
+
+mt &quot;Forest_before_init&quot; (
+    harvest_system &quot;continuous&quot;
+    cutfirstyear 0
+)
+mt &quot;Forest_after_init&quot; (
+    harvest_system &quot;continuous&quot;
+    cutfirstyear 0
+)
+
+st &quot;Forest&quot; (
+    common_stand
+    stinclude 1
+    landcover &quot;forest&quot;
+    naturalveg &quot;all&quot;
+    management1 &quot;Forest_before_init&quot;
+    management2 &quot;Forest_after_init&quot;
+    file_treeinit_st &quot;forest-treeinit.txt&quot;
+)
+
+forest_init_from_biomass 1
+forest_init_poolsoil 0
+</code></pre>
+<p>The shared OzFlux file already defines <code>st "Natural"</code>. Set forest area with
+<code>file_lu</code> as described in <a href="../land-cover/">Using land-cover change</a>. Ensure the
+stand permits each tree PFT named in the treeinit file. Choose the two
+management regimes for the experiment; treeinit does not prescribe future
+cutting or recruitment.</p>
+<h2 id="prepare-the-input-file">Prepare the input file</h2>
+<p>Use a whitespace-delimited file with one row per prescribed tree <strong>cohort</strong>.
+The same cohort description is applied to every affected patch of the stand
+type. <code>Tree_no</code> is a record index, starting at <code>0</code> and increasing by one; it
+need not identify an observed individual tree. Match <code>Lon</code> and <code>Lat</code> to the
+site grid list and <code>str_pft</code> to an included tree PFT exactly, including case.</p>
+<pre><code class="language-text">       Lon        Lat Tree_no init_year str_pft biomass  dbh dens tree_age
+150.723611 -33.615278       0      2015     MRS   0.180 18.0  450       20
+150.723611 -33.615278       1      2015     MRS   0.025  8.0  900        8
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Lon</code>, <code>Lat</code></td>
+<td>Grid-cell location. Each grid cell using this stand type needs a matching block of rows.</td>
+</tr>
+<tr>
+<td><code>Tree_no</code></td>
+<td>Consecutive cohort record index, starting at <code>0</code>; the limit is 100 rows per location and stand type.</td>
+</tr>
+<tr>
+<td><code>init_year</code></td>
+<td>Calendar year of the one-time event. Use the same year in all rows; the first row sets it.</td>
+</tr>
+<tr>
+<td><code>str_pft</code></td>
+<td>Exact name of a tree PFT included in the run.</td>
+</tr>
+<tr>
+<td><code>biomass</code></td>
+<td>Aboveground dry biomass per representative tree, in tonnes. Required with <code>forest_init_from_biomass 1</code>.</td>
+</tr>
+<tr>
+<td><code>dbh</code></td>
+<td>Diameter at breast height, in centimetres. Used as the size input with <code>forest_init_from_biomass 0</code>.</td>
+</tr>
+<tr>
+<td><code>dens</code></td>
+<td>Number of trees per hectare represented by the cohort.</td>
+</tr>
+<tr>
+<td><code>tree_age</code></td>
+<td>Age in years. If absent or nonpositive, DAVE estimates it from diameter.</td>
+</tr>
+</tbody>
+</table>
+<p>Rows after the first describe additional cohorts for the <strong>same event</strong>, not
+later initialisation years. Use a separate stand type for areas that require
+different event years or management histories. Give every cohort a positive
+size and density. The file must cover every simulated grid cell for which this
+stand type has <code>file_treeinit_st</code>.</p>
+<p><code>forest_init_from_biomass</code> defaults to <code>1</code>. In that mode, DAVE derives wood
+carbon and diameter from <code>biomass</code>; the supplied <code>dbh</code> is not the controlling
+size value. With <code>forest_init_from_biomass 0</code>, DAVE uses <code>dbh</code> and PFT allometry
+to calculate size and wood carbon. Supplying both columns makes the file
+easier to inspect and use with either setting. Supply <code>dens</code> explicitly: its
+units are converted internally from trees per hectare to trees per square
+metre, and the fallback for a missing value is not a site observation.</p>
+<h2 id="run-and-verify">Run and verify</h2>
+<p><a href="../ozflux-simulations/">Run the model</a> with the stand type and input
+file. The log reports the initialisation year and each prescribed cohort
+created. Enable stand-type outputs to check the area, structure, and carbon
+around the event:</p>
+<pre><code class="language-ins">printstandtypes 1
+file_frac_sts &quot;frac_sts.out&quot;
+file_nstand_sts &quot;nstand_sts.out&quot;
+file_dens_sts &quot;dens_sts.out&quot;
+file_diam_sts &quot;diam_sts.out&quot;
+file_cmass_sts &quot;cmass_sts.out&quot;
+file_dave_stand_frac &quot;dave_stand_frac.out&quot;
+file_dave_stand_type &quot;dave_stand_type.out&quot;
+</code></pre>
+<p>Check that the stand has positive area in <code>init_year</code>, every intended cohort
+appears in the log, and density, diameter, and carbon reflect the input.
+Inspect the following year too, when <code>management2</code> is active. If soil pooling
+is enabled, also inspect stand count and soil pools. The repository's
+<code>benchmarks/ozflux/CumberlandPlain/cup.treeinit.txt</code> and <code>cup.luc.ins</code> provide
+a worked example.</p>
+<h2 id="common-problems">Common problems</h2>
+<p>Start with <code>guess.log</code> in the directory from which you ran the site (for
+example, <code>benchmarks/ozflux/CumberlandPlain/guess.log</code>). Search for the stand
+type, PFT, <code>init_year</code>, warnings, and errors. If the reason is still unclear,
+set <code>verbosity 3</code> or higher in the <code>.ins</code> file and rerun; levels <code>4</code> and <code>5</code>
+give progressively more detail. The shared OzFlux settings already use <code>3</code>.
+See <a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a> for a
+general log-reading workflow. Check the log before using the symptom-specific
+checks below.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No prescribed trees appear</td>
+<td>Positive stand area in <code>init_year</code>, simulation reaches that year, and <code>str_pft</code> matches an included tree PFT.</td>
+</tr>
+<tr>
+<td>Input file fails to load</td>
+<td>File path relative to the run directory, site coordinates, and row block for every simulated grid cell.</td>
+</tr>
+<tr>
+<td>Missing biomass error</td>
+<td>Supply <code>biomass</code>, or set <code>forest_init_from_biomass 0</code> and supply <code>dbh</code>.</td>
+</tr>
+<tr>
+<td>Missing <code>management2</code> error</td>
+<td>Define and assign a valid second management regime.</td>
+</tr>
+<tr>
+<td>Cohorts appear wrong</td>
+<td>Use consecutive <code>Tree_no</code> indices from <code>0</code>, one row per cohort, and no more than 100 rows.</td>
+</tr>
+<tr>
+<td>Unexpected stand count or soil change</td>
+<td>Check <code>forest_init_poolsoil</code> and <code>npatch_treeinit</code>.</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

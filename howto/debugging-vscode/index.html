@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -242,7 +266,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../text-input/" class="nav-link">
+                                <a rel="prev" href="../prescribed-tree-establishment/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -352,7 +376,11 @@ terminated.</code> means the run failed; see <a href="../common-failures/">Commo
 <p>The full log is:</p>
 <pre><code class="language-text">benchmarks/ozflux/CumberlandPlain/guess.log
 </code></pre>
-<p>Open the log if the run failed or reported errors. The exact output files depend
+<p>Open the log first if the run failed, reported warnings or errors, <strong>or simply
+gave an unexpected result</strong>. Search for the relevant year, PFT, stand, and
+warning or error. <code>verbosity</code> in the <code>.ins</code> file controls the detail: use at
+least <code>3</code>, or <code>4</code>/<code>5</code> for more detail. See
+<a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a>. The exact output files depend
 on the shared <code>benchmarks/ozflux/outputs.ins</code> configuration; see <a href="../ozflux-simulations/">OzFlux Site
 Simulations</a> before changing it. Do not commit files in
 <code>out/</code> unless a maintainer has asked for them.</p>

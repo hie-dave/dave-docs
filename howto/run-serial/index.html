@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -312,6 +336,12 @@ which are resolved relative to the working directory, but when writing
 instruction files, one tends to think in terms of the instruction file itself.
 Therefore, it's easiest to just run from the same directory as the instruction
 file.</p>
+<p>After every run, especially if it fails or produces unexpected output, check
+<code>guess.log</code> in the directory where you started the model (for the example,
+<code>benchmarks/ozflux/CumberlandPlain/guess.log</code>). The <code>.ins</code> parameter
+<code>verbosity</code> controls its detail: use at least <code>verbosity 3</code> for investigation,
+or <code>4</code>/<code>5</code> for more detail. See <a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a>
+for what to look for.</p>
 <h2 id="ozflux-sites">OzFlux Sites</h2>
 <p>Each OzFlux site has its own instruction file at
 <code>benchmarks/ozflux/&lt;SiteName&gt;/&lt;SiteName&gt;.ins</code>. See

@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -271,11 +295,15 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#common-failures" class="nav-link">Common Failures</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#start-with-guesslog" class="nav-link">Start with guess.log</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#first-did-the-run-complete" class="nav-link">First: Did the Run Complete?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#couldnt-find-input-module-nc" class="nav-link">Couldn't find input module nc</a>
+            <li class="nav-item" data-bs-level="2"><a href="#specific-common-problems" class="nav-link">Specific Common Problems</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -325,6 +353,26 @@
 <h1 id="common-failures">Common Failures</h1>
 <p>This page lists common failures, and what to do about them. For the local
 VSCode workflow, see <a href="../debugging-vscode/">Running and Debugging via VSCode</a>.</p>
+<h2 id="start-with-guesslog">Start with <code>guess.log</code></h2>
+<p>When a run fails <strong>or produces an unexpected result</strong>, open <code>guess.log</code> first.
+For an OzFlux site run, it is in the working directory beside the site
+instruction file, for example
+<code>benchmarks/ozflux/CumberlandPlain/guess.log</code>, <strong>not</strong> in <code>out/</code>. Search it for
+<code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, the grid-cell coordinates, the affected stand or PFT,
+and the year when the problem appeared. Read the surrounding messages before
+changing inputs. The terminal may show a short error, but the log usually has
+more context.</p>
+<p>Set <code>verbosity</code> in the <code>.ins</code> file to control how much the log records:</p>
+<pre><code class="language-ins">verbosity 3
+</code></pre>
+<p>Use <strong>at least <code>3</code></strong> when investigating a run: this includes informational
+messages such as treeinit cohorts and land-cover input decisions. Set <code>4</code> for
+diagnostic messages or <code>5</code> for more detailed debug messages, then rerun and
+recheck the log. Higher levels can make large logs. The shared OzFlux
+<code>settings.ins</code> already sets <code>verbosity 3</code>; a site-specific setting can override
+it when imported afterward. For parallel runs, each worker writes its own
+<code>runN/guess.log</code>; see <a href="../run-parallel/">Running in Parallel</a>. On Gadi, see the
+<a href="../gadi-troubleshooting/">job and worker log guide</a>.</p>
 <h2 id="first-did-the-run-complete">First: Did the Run Complete?</h2>
 <p>When the model finishes normally, the terminal ends with text like:</p>
 <pre><code class="language-text">Simulation completed in 15.05 seconds with 0 errors and 0 warnings.
@@ -340,21 +388,22 @@ the model finished the simulation successfully and wrote outputs.</p>
 ...
 Simulation terminated.
 </code></pre>
-<p>the run failed. Read the first line after <code>FATAL ERROR:</code>; it is usually the
-useful part. In VSCode on Windows or Linux, open the <strong>Terminal</strong> panel at the
-bottom of the window and scroll up if needed. On macOS, open <strong>Debug Console</strong>
-from the panel dropdown instead.</p>
-<p>Whether the run completed or failed, the full log is in the site's directory.
+<p>the run failed. Note the first line after <code>FATAL ERROR:</code>, then open
+<code>guess.log</code> for the surrounding messages. In VSCode on Windows or Linux, open
+the <strong>Terminal</strong> panel at the bottom of the window and scroll up if needed. On
+macOS, open <strong>Debug Console</strong> from the panel dropdown instead.</p>
+<p>Whether the run completed or failed, check the log in the site's directory.
 For Cumberland Plain it is:</p>
 <pre><code class="language-text">benchmarks/ozflux/CumberlandPlain/guess.log
 </code></pre>
 <p>Open this file in VSCode, then use <code>Ctrl+F</code> (Windows/Linux) or <code>Cmd+F</code> (macOS)
-to search for <code>FATAL</code>, <code>ERROR</code>, or a distinctive word from the terminal
+to search for <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, or a distinctive word from the terminal
 message. See <a href="../debugging-vscode/">Running and Debugging via VSCode</a> for where
 outputs and logs are created. Where supported by the build platform, the log also includes a
 stack trace after a fatal error; this is mainly useful when reporting the
 problem to a developer.</p>
-<h2 id="couldnt-find-input-module-nc"><code>Couldn't find input module nc</code></h2>
+<h2 id="specific-common-problems">Specific Common Problems</h2>
+<h3 id="couldnt-find-input-module-nc"><code>Couldn't find input module nc</code></h3>
 <p>Typical terminal text:</p>
 <pre><code class="language-text">Couldn't find input module nc
 </code></pre>

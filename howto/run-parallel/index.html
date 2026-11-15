@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -365,6 +389,11 @@ hard-to-diagnose path resolution failures.</p>
 <p>The <code>-parallel</code> flag is required to activate the MPI code paths. Omitting it
 while using <code>mpirun</code> will cause each rank to run the full simulation
 independently rather than cooperating.</p>
+<p>When checking a run, start with each worker's <code>runN/guess.log</code> (for example,
+<code>run1/guess.log</code>) under the directory where <code>mpirun</code> was started. Look for
+warnings, errors, missing grid cells, or a worker doing unexpected work. Set
+<code>verbosity 3</code> in the <code>.ins</code> file for informational messages, or <code>4</code>/<code>5</code> for
+more detail, then rerun if needed. See <a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a>.</p>
 <h2 id="collating-outputs">Collating Outputs</h2>
 <p>Each rank writes output files (tab-separated values, <code>.out</code>) into its <code>runN/</code>
 directory. After the run, these must be merged. Since all files share the same

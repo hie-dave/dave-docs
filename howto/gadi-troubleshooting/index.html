@@ -55,6 +55,18 @@
 </li>
                                     
 <li>
+    <a href="../../science/disturbance/" class="dropdown-item">Disturbance</a>
+</li>
+                                    
+<li>
+    <a href="../../science/land-use-change/" class="dropdown-item">Land Cover and Land-Use Change</a>
+</li>
+                                    
+<li>
+    <a href="../../science/harvesting/" class="dropdown-item">Harvesting and Vegetation Removal</a>
+</li>
+                                    
+<li>
     <a href="../../science/daily-growth-tree/" class="dropdown-item">Daily Tree Growth</a>
 </li>
                                     
@@ -139,6 +151,18 @@
             
 <li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
+</li>
+            
+<li>
+    <a href="../land-cover/" class="dropdown-item">Land-Cover Change</a>
+</li>
+            
+<li>
+    <a href="../management/" class="dropdown-item">Management Types</a>
+</li>
+            
+<li>
+    <a href="../prescribed-tree-establishment/" class="dropdown-item">Prescribed Tree Establishment</a>
 </li>
             
 <li>
@@ -271,7 +295,7 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#checking-and-troubleshooting-gadi-runs" class="nav-link">Checking and Troubleshooting Gadi Runs</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#start-with-the-top-level-job-log" class="nav-link">Start with the Top-level Job Log</a>
+            <li class="nav-item" data-bs-level="2"><a href="#start-with-the-job-and-worker-logs" class="nav-link">Start with the Job and Worker Logs</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -298,12 +322,19 @@
 <p>This page explains how to check a completed LPJ-GUESS DAVE job on Gadi and
 diagnose common failures. For building and submitting a job, see
 <a href="../run-gadi/">Running on Gadi</a>.</p>
-<h2 id="start-with-the-top-level-job-log">Start with the Top-level Job Log</h2>
+<h2 id="start-with-the-job-and-worker-logs">Start with the Job and Worker Logs</h2>
 <p>The main job writes <code>&lt;job name&gt;.log</code> in the run directory. The bottom of this
 file contains the PBS resource summary, including the resources requested and
 used and the total job cost in service units (SU). Check this summary after
 each run, especially if the job took substantially more or less time than
 expected.</p>
+<p>For a model error or an unexpected scientific result, open the affected
+worker's <code>runs/runX/guess.log</code> first. The top-level job log is especially
+useful for PBS startup, resource, and walltime problems. The instruction
+file's <code>verbosity</code> controls each worker's model log: use at least <code>3</code> for
+informational messages, or <code>4</code>/<code>5</code> for more detail, and rerun if needed. See
+<a href="../common-failures/#start-with-guesslog">Start with <code>guess.log</code></a> for a search
+strategy.</p>
 <p>As a rough guide, LPJ-GUESS jobs should cost approximately <strong>0.005–0.01 SU per
 patch</strong>, where:</p>
 <pre><code class="language-text">total patches = npatch × number of gridcells
