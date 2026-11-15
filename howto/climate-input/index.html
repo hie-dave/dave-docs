@@ -150,6 +150,10 @@
 </li>
             
 <li>
+    <a href="../soil-input/" class="dropdown-item">Soil Input</a>
+</li>
+            
+<li>
     <a href="../text-input/" class="dropdown-item">Plain Text Input Files</a>
 </li>
             
@@ -271,7 +275,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../text-input/" class="nav-link">
+                                <a rel="next" href="../soil-input/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -337,6 +341,7 @@
 <h1 id="climate-input">Climate Input</h1>
 <p>The DAVE input module is the standard input module for DAVE simulations. It
 reads subdaily, CF-compliant NetCDF forcing data into LPJ-GUESS.</p>
+<p>For soil properties, profile depth and slope, see <a href="../soil-input/">Soil Input</a>.</p>
 <h2 id="background">Background</h2>
 <p>The DAVE climate input stack is loosely based on the <code>cf</code> input module used by
 upstream LPJ-GUESS, but adds support for <strong>subdaily meteorological inputs</strong>.
@@ -417,12 +422,6 @@ default listed are required and must be set explicitly.</p>
 <td>string</td>
 <td>—</td>
 <td>Path to gridlist file (one <code>lon lat</code> pair per line)</td>
-</tr>
-<tr>
-<td><code>file "soildata" (...)</code></td>
-<td>block</td>
-<td>—</td>
-<td>Soil properties; see <a href="../text-input/#soil-input">Plain Text Input</a> for formats and alternatives</td>
 </tr>
 <tr>
 <td><code>file_ndep</code></td>

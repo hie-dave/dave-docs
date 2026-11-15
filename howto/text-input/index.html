@@ -150,6 +150,10 @@
 </li>
             
 <li>
+    <a href="../soil-input/" class="dropdown-item">Soil Input</a>
+</li>
+            
+<li>
     <a href="./" class="dropdown-item active" aria-current="page">Plain Text Input Files</a>
 </li>
             
@@ -266,7 +270,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../climate-input/" class="nav-link">
+                                <a rel="prev" href="../soil-input/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -315,10 +319,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#soil-input" class="nav-link">Soil input</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#diagnosing-errors" class="nav-link">Diagnosing errors</a>
               <ul class="nav flex-column">
               </ul>
@@ -335,7 +335,8 @@
 files. Currently, these are only supported by soil inputs, but other existing
 plaintext inputs will be gradually migrated to this form. The plain text file
 reader supports static (time-invariant), annual and daily tables, but each model
-component decides which of those formats it can use. Soil inputs are static.
+component decides which of those formats it can use. For supported soil file
+blocks, required columns and complete examples, see <a href="../soil-input/">Soil Input</a>.
 Other inputs, including CO₂, grazing and land cover, still use their existing
 settings and readers; adding a <code>file</code> block does not switch those readers.</p>
 <h2 id="a-first-example">A first example</h2>
@@ -350,13 +351,11 @@ settings and readers; adding a <code>file</code> block does not switch those rea
     column &quot;ph&quot; (source &quot;pH&quot;)
     max_distance 0.1
 )
-slope 0
-depth_soil 1500
 </code></pre>
-<p>This supplies soil properties for locations within 0.1 degrees of the table
-coordinate, with a fixed slope of zero degrees and soil depth of 1500 mm.
-The reader detects the comma separator and header. Column mappings connect
-the model's names, <code>orgc</code> and <code>ph</code>, to the file's names, <code>orgC</code> and <code>pH</code>.</p>
+<p>The reader detects the comma separator and header. Column mappings connect
+the model's names, <code>orgc</code> and <code>ph</code>, to the file's names, <code>orgC</code> and <code>pH</code>.
+<code>max_distance</code> allows matching within 0.1 degrees of the table coordinate.
+See <a href="../soil-input/">Soil Input</a> for the accompanying model settings.</p>
 <p><code>path</code> is the only mandatory option inside a <code>file</code> block. Relative paths
 start at the simulation's working directory, including when the block is in
 an imported instruction file. Absolute paths are also accepted. A later block
@@ -400,7 +399,7 @@ with the same name replaces the <strong>whole</strong> earlier block.</p>
 <tr>
 <td><code>timestep</code></td>
 <td><code>"infer"</code></td>
-<td><code>"none"</code> for static values, <code>"annual"</code> for yearly values, <code>"daily"</code> for daily values. Inference uses year/day headers. Soil files must be static.</td>
+<td><code>"none"</code> for static values, <code>"annual"</code> for yearly values, <code>"daily"</code> for daily values. Inference uses year/day headers. The consuming component determines which timesteps it supports.</td>
 </tr>
 <tr>
 <td><code>calendar</code></td>
@@ -439,7 +438,7 @@ separators. If a file is ambiguous, set <code>delimiter</code> explicitly. Incre
 <code>sample_rows</code> can help when the beginning is not representative of the entire
 file.</p>
 <p>Set <code>header</code> explicitly if a row of text is actually data, or your column names
-are numeric..</p>
+are numeric.</p>
 <h2 id="columns-and-table-layouts">Columns and table layouts</h2>
 <p>Structural headers are case insensitive:</p>
 <table>
@@ -478,8 +477,8 @@ once; mappings cannot create duplicate exposed names. Coordinate/time columns
 cannot be mapped: rename those headers to a recognised structural name instead.
 Extra columns are accepted, but still parsed and validated.</p>
 <p>For headerless tables, set <code>header "absent"</code> and specify <code>domain</code> and
-<code>timestep</code>. Soil sets the static timestep automatically. Column order for such
-files is:</p>
+<code>timestep</code>, unless the consuming component already sets them. Column order for
+such files is:</p>
 <table>
 <thead>
 <tr>
@@ -522,16 +521,8 @@ files is:</p>
 </tbody>
 </table>
 <p>Headerless <strong>data</strong> columns are numbered <code>"0"</code>, <code>"1"</code>, etc., excluding
-coordinates and dates. For example, a headerless depth map with rows
-<code>150.75 -33.5 1.5</code> uses:</p>
-<pre><code class="language-text">file &quot;soildepth&quot; (
-    path &quot;depth.dat&quot;
-    domain &quot;local&quot;
-    timestep &quot;none&quot;
-    header &quot;absent&quot;
-    column &quot;depth&quot; (source &quot;0&quot;)
-)
-</code></pre>
+coordinates and dates. Map them with <code>column "name" (source "0")</code>, using a
+column name supported by the consuming component.</p>
 <p>A reader with both shape settings left as <code>infer</code> can also recognise one
 headerless row as global static data. Downstream components may impose a shape,
 so explicit settings are preferable for headerless input.</p>
@@ -566,72 +557,16 @@ converted first. Binary control characters are rejected.</p>
 <code>max_distance</code>. Distance is straight-line distance in longitude/latitude
 degrees, not kilometres. Longitude does not wrap at the date line. Equal
 distances choose the smaller longitude, then the smaller latitude. Each file
-has its own radius and matching grid; global input needs no spatial match.
-The legacy <code>searchstep_soil</code> setting does not control this matching; set each
-file block's <code>max_distance</code> instead.</p>
+has its own radius and matching grid; global input needs no spatial match.</p>
 <p>Static input must have one row per coordinate. Annual input must have one row
 for every consecutive year. Daily input must have complete consecutive years,
 with day numbers starting at 1. All coordinates must have the same year range.
 Rows may be out of order or interleaved between locations; duplicate
 coordinate/date records are errors. The reader does not fill gaps,
 interpolate, recycle years or extend values beyond the available year range.</p>
-<h2 id="soil-input">Soil input</h2>
-<p>Choose exactly one soil description: <code>soildata</code>, <code>soilcode</code>, or the pair
-<code>soilclay</code> and <code>soilsand</code>. File block names below are literal, case sensitive
-names. The old <code>file_soildata</code> path and <code>param "file_soil..."</code> settings do not
-configure this reader. Replace them with named <code>file</code> blocks.</p>
-<h3 id="uniform-texture-with-depth">Uniform texture with depth</h3>
-<p><code>file "soildata"</code> requires <code>sand</code>, <code>clay</code>, <code>orgc</code> and <code>ph</code>. Sand, clay and
-organic content are fractions, not percentages. Optional <code>soilc</code> is carbon
-content in kg C/m² and defaults to zero. Columns <code>silt</code>, <code>cn</code> and <code>bulkdensity</code>
-may also be supplied and mapped; they are checked as numeric but currently do
-not feed the soil calculations. In particular, bulk density is not applied to
-the soil profile. Use mappings for legacy headers such as <code>orgC</code>, <code>pH</code>, <code>CN</code>
-and <code>soilC</code>. An explicitly mapped optional column must exist.</p>
-<h3 id="lpj-soil-codes">LPJ soil codes</h3>
-<p><code>file "soilcode"</code> has exactly one integer data column, with codes 0–9. Its
-header may have any name. A headerless coordinate/code file can be used directly:</p>
-<pre><code class="language-text">file &quot;soilcode&quot; (
-    path &quot;soils_lpj.dat&quot;
-    domain &quot;local&quot;
-    timestep &quot;none&quot;
-    header &quot;absent&quot;
-    max_distance 0.5
-)
-</code></pre>
-<p>You can explicitly map <code>column "soilcode" (source "class")</code> when the source
-column is named <code>class</code>.</p>
-<h3 id="texture-varying-with-depth">Texture varying with depth</h3>
-<p>Supply both <code>soilclay</code> and <code>soilsand</code>; optionally add <code>soilcoarse</code> and
-<code>soilph</code>. Each file needs a header whose data columns name contiguous depth
-intervals in centimetres, starting at the surface:</p>
-<pre><code class="language-text">lon lat 0-20 20-60 60-100
-150.75 -33.5 20 30 35
-</code></pre>
-<p>All files must use the same intervals in the same order. Sand, clay and coarse
-fragments are <strong>percentages</strong> in these files. pH uses ordinary pH units.
-Without optional files, coarse fragments default to zero and pH to 6.5.
-Organic fraction defaults to 0.05 and soil carbon to zero. Use interval names
-directly; do not add <code>column "clay"</code> or <code>column "sand"</code> mappings.</p>
-<pre><code class="language-text">file &quot;soilclay&quot; (path &quot;clay.txt&quot;)
-file &quot;soilsand&quot; (path &quot;sand.txt&quot;)
-file &quot;soilcoarse&quot; (path &quot;coarse.txt&quot;)
-file &quot;soilph&quot; (path &quot;ph.txt&quot;)
-</code></pre>
-<h3 id="soil-depth-and-slope">Soil depth and slope</h3>
-<p>Set <code>slope</code> to a nonnegative fixed value in degrees, or to <code>-1</code> to select
-<code>file "soilslope"</code>, which requires a <code>slope</code> column. A source column named
-<code>median</code> can be selected with <code>column "slope" (source "median")</code>. Each cell
-gets its own slope. Values are limited to 0–90 degrees.</p>
-<p>With Richards hydrology, positive <code>depth_soil</code> specifies a fixed depth in
-<strong>millimetres</strong>. Set <code>depth_soil 0</code> to use <code>file "soildepth"</code>, whose <code>depth</code>
-column is in <strong>metres</strong>. Depth maps work with all three soil descriptions.
-The resulting depth is limited to 0.2–50 m and rounded to 100 mm intervals.
-Other hydrology schemes use the model's fixed upper plus lower soil depth.
-Depth and slope files are opened only when the corresponding map is selected.</p>
 <h2 id="diagnosing-errors">Diagnosing errors</h2>
-<p>Files are parsed in full before simulation. Soil initialisation also checks
-spatial coverage for the requested gridlist. Messages identify the file and,
+<p>Files are parsed in full before simulation. Components can also check spatial
+coverage for the requested gridlist. Messages identify the file and,
 where applicable, physical line, column, coordinate or date. If a file fails:</p>
 <ol>
 <li>Set <code>delimiter</code> and <code>header</code> explicitly to resolve detection ambiguities.</li>
@@ -639,7 +574,7 @@ where applicable, physical line, column, coordinate or date. If a file fails:</p
 <li>For headerless input, check shape settings and column numbering.</li>
 <li>Check missing values, row widths, duplicate records and temporal gaps.</li>
 <li>Check coordinates and each file's <code>max_distance</code>; increase it only if using
-   a more distant soil location is appropriate for the simulation.</li>
+   a more distant location is appropriate for the simulation.</li>
 </ol>
 <p>For component authors, see the <a href="../../development/text-input/">developer overview</a>.</p></div>
             </div>
