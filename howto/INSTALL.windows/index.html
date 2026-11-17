@@ -350,6 +350,13 @@ scope of this guide (ie: you're on your own).</p>
 <h2 id="software-configurationsetup">Software Configuration/Setup</h2>
 <h3 id="msys2">MSYS2</h3>
 <p>Run the following command from inside msys2:</p>
+<pre><code class="language-bash">pacman -Syu
+</code></pre>
+<p>This will update the msys2 package manager and all installed packages. You may
+need to close and reopen msys2 after this command - it will prompt you to do so
+in that case. Repeat this until the command completes successfully and reports
+"there is nothing to do". This usually takes 2 runs (plus a third to confirm
+that there is nothing to do). Then install the required packages:</p>
 <pre><code class="language-bash">pacman -S mingw-w64-x86_64-{gcc,cmake,netcdf,gdb,make,ninja}
 </code></pre>
 <h3 id="update-path-to-include-mingw64">Update PATH to include MinGW64</h3>
